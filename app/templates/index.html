@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<!-- <div id="heads">LIBRARY</div> -->
+	<div id="divcons">
+		<table id = "console">
+		<tr valign="top" height="60%">
+			<th>
+				{% if output %}
+					<p>{{ output|safe }}</p>
+				{% endif %}
+			</th>
+		</tr>
+		<tr valign="middle">
+			<th>
+				{% if help %}
+					{{ help|safe }}
+				{% else %}
+					<p></p>
+				{% endif %}				
+			</th>	
+		</tr>
+		</table>
+		<form id="input" action="/" method="POST">
+
+			{{ form.chatstring(class_="inputdesign") }}
+
+		</form>
+	</div>
+{% endblock %}

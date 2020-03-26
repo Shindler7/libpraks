@@ -1,0 +1,12 @@
+astroid==2.3.3
+colorama==0.4.3
+DAWG-Python==0.7.2
+docopt==0.6.2
+isort==4.3.21
+lazy-object-proxy==1.4.3
+mccabe==0.6.1
+pylint==2.4.4
+pymorphy2==0.8
+pymorphy2-dicts==2.4.393442.3710985
+pymorphy2-dicts-ru==2.4.404381.4453942
+wrapt==1.11.2
