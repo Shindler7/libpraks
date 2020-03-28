@@ -1,0 +1,11 @@
+# git rm -r --cached app/__pycache__/* - удаление каталога в репозитории, но сохранение локальной копии.
+# git rm --cached file1.txt - тоже самое в отношении файла.
+.vscode/
+/venv*
+app/__pycache__/*
+passenger_wsgi.py
+libprak.fsgi
+lib_prak.code-workspace
+config.py
+#.gitignore
+__pycache__/*
