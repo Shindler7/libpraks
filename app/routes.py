@@ -9,7 +9,7 @@ from flask_mobility.decorators import mobilized
 
 @application.route('/', methods=['GET', 'POST'])
 @application.route('/index', methods=['GET', 'POST'])
-def index(template):
+def index():
     form=ChatForm()
     output = ''
     helps = help()
