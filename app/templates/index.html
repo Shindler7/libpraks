@@ -2,10 +2,21 @@
 
 {% block content %}
 	<!-- работа с мобильной версией -->
-	{% if request.MOBILE %}True
-		<button>тест</button>
-	{% else %}
+	{% if request.MOBILE %}
+	<form id="mobinput" action="/" method="GET">
+		{{ form.chatstring(class_="mobinputdesign") }}
+		<br><br>
+		{{ form.submit(class_="mobutton") }}
+	</form>
+	<br><br>
+	<div class="mobcontainer">
+	{% if output %}
+		{{ output|safe }}
+		<br><br><br>
+	{% endif %}
+	</div>
 
+	{% else %}
 	<div id="divcons">
 		<table id = "console">
 		<tr valign="top" height="60%">

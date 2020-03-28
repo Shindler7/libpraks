@@ -10,6 +10,8 @@ URL_LANG = 2
 URL_TYPE = 3
 URL_TAGS = 4
 
+ALL_DATA = False
+
 # запуск морфологии
 morh = pymorphy2.MorphAnalyzer()
 
@@ -48,8 +50,15 @@ def inuserstring(txt):
   ustr = txt.lower()
   ustr = re.split(r'\W+', ustr)
   
-  key_dict = {'tag':[], 'lang': [], 'type': []} # lang, type, tag
+  key_dict = {'tag': [], 'lang': [], 'type': []} # lang, type, tag
   
+  # Кроличья нора: выводится всё, поэтому тратить время на подборку не нужно.
+  if ustr[0] == 'всё' or ustr[0] == 'все':
+      res = returnLib(key_dict)
+      res = printLib(res)
+      return res
+  
+  # Стандартный путь - с отбором. 
   for key in ustr:
     ma = morh.parse(key)[0]
 
@@ -73,7 +82,7 @@ def inuserstring(txt):
   
   # Выборка статей по типу и тэгам.
   res = returnLib(key_dict)
-
+  
   # Подготовка к выводу
   res = printLib(res)
 

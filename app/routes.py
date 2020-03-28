@@ -25,6 +25,10 @@ def index():
 
     return render_template('index.html', title='online', form=form, output=output, help=helps)
 
+@mobilized(index)
+def index_v():
+    return 'Здесь'
+
 def help():
     from app._dblib import keytypedisp
     from app.generator import compilereq
