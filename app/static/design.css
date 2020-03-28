@@ -64,6 +64,7 @@ html, body {
 /* МОБИЛЬНАЯ ВЕРСИЯ НАСТРОЙКИ */
 #mobinput {
 	text-align: center;
+	height: 10%;
 }
 
 .mobutton {
@@ -81,13 +82,13 @@ html, body {
 
 .mobinputdesign {
 	outline: none;
-	height: 60px;
+	height: 90px;
 	border:none;
 	background-color: #00BFFF;
 	color: black;
-	width: 100%;
+	width: 97%;
 	letter-spacing: 1px;
-	font-size: 140%;
+	font-size: 200%;
 	
 }
 

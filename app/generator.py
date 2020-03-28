@@ -141,7 +141,8 @@ def printLib(dicts):
         txt_r += '<ul id="db">'
         for pri in range(0,len(dicts[key]),2):
 
-            txt_r += f'<li><a id="urldb" href="{dicts[key][pri+1]}">{dicts[key][pri]}</a></li>'        
+            #txt_r += f'<li><a id="urldb" href="{dicts[key][pri+1]}">{dicts[key][pri]}</a></li>'        # Целиком ссылка
+            txt_r += f'<li id="urldb">{dicts[key][pri]} (<a id="urldb" href="{dicts[key][pri+1]}">></a>)</li>'
 
         txt_r += '</ul><br>'
 
