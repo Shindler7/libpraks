@@ -18,11 +18,11 @@ def startmodule(text):
         try:     # Путь 1: пользователь ввёл калькуляторную строку
             return eval(text)
         except:
-            return 'Something input error'
+            return 'Ошибка расчёта.'
 
     # Проверка 2: пользователь ввёл запрос для БД.
     answer = inuserstring(text)
-    if not answer: return 'Неверный или непонятный запрос, либо нет данных под запрос.'
+    if not answer: return 'Нет подходящих данных, ну или неверный запрос.'
 
     return answer
 
@@ -66,11 +66,11 @@ def inuserstring(txt):
     # Анализ других слов
     for id, string in db.keytype.items():
       if ma.normal_form in string and ma.normal_form not in key_dict['type']: key_dict['type'].append(id)
-
+  
   # Не разобрали ни одного слова. Пустой словарь, пустой.
   if not key_dict['tag'] and not key_dict['lang'] and not key_dict['type']:
     return ''
-
+  
   # Выборка статей по типу и тэгам.
   res = returnLib(key_dict)
 

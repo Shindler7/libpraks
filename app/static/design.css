@@ -3,12 +3,13 @@
 
 html, body {
     /*background-color: rgb(242, 240, 233);*/
-	background-color: black;
+	/*background-color: black;*/
+	background-color: white;
 	font-family: 'Inter', sans-serif;
-    font-size: 90%;
+    font-size: 120%;
     font-weight: normal;
     text-align: center;
-	color:white;
+	color:black;
 	height: 100%;
 }
 
@@ -37,11 +38,13 @@ html, body {
 
 .inputdesign {
 	outline: none;
+	height: 30px;
 	border:none;
 	background-color:navy;
 	color: yellow;
 	width: 100%;
 	letter-spacing: 1px;
+	font-size: 100%;
 }
 
 #helpus {
@@ -54,6 +57,11 @@ html, body {
 }
 
 #urldb {
-	color: white;
+	color: black;
 	font-weight: normal;
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ НАСТРОЙКИ */
+#button {
+	border: none;
 }

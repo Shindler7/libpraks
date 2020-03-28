@@ -4,23 +4,26 @@ from flask import render_template, flash, redirect, request
 from app.forms import ChatForm
 from app import application
 from app.generator import startmodule
+from flask_mobility.decorators import mobile_template
+from flask_mobility.decorators import mobilized
 
 @application.route('/', methods=['GET', 'POST'])
 @application.route('/index', methods=['GET', 'POST'])
-def index():
+def index(template):
     form=ChatForm()
     output = ''
     helps = help()
     
-    # Обработчик запроса пользователя
-    #if form.validate_on_submit():
-    #    txt_ans = 'Привет, мир!'
-    if request.method == 'POST':
-        
-        output = startmodule(form.chatstring.data)
+    # Обработка в режиме POST
+    #if request.method == 'POST':
+        #output = startmodule(form.chatstring.data)
+    
+    # Обработчик запроса пользователя GET
+    if request.method == 'GET':
+        if request.args.get(form.chatstring.name, None):
+            output = startmodule(request.args[form.chatstring.name])
 
     return render_template('index.html', title='online', form=form, output=output, help=helps)
-
 
 def help():
     from app._dblib import keytypedisp

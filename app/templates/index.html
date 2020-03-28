@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<!-- <div id="heads">LIBRARY</div> -->
+	<!-- работа с мобильной версией -->
+	{% if request.MOBILE %}True
+		<button>тест</button>
+	{% else %}
+
 	<div id="divcons">
 		<table id = "console">
 		<tr valign="top" height="60%">
@@ -21,10 +25,12 @@
 			</th>	
 		</tr>
 		</table>
-		<form id="input" action="/" method="POST">
+		<form id="input" action="/" method="GET">
 
 			{{ form.chatstring(class_="inputdesign") }}
 
 		</form>
 	</div>
+
+	{% endif %}
 {% endblock %}
