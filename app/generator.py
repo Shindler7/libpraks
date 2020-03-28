@@ -29,7 +29,7 @@ def startmodule(text):
 
     # Проверка 2: пользователь ввёл запрос для БД.
     p = inuserstring(text)
-    if p=='': p = 'Неверный или непонятный запрос.'
+    if p=='': p = 'Неверный или непонятный запрос, либо нет данных под запрос.'
 
     return p
 
@@ -75,7 +75,7 @@ def inuserstring(txt):
       if ma.normal_form in string and ma.normal_form not in key_dict['type']: key_dict['type'].append(id)
 
   # Не разобрали ни одного слова. Пустой словарь, пустой.
-  if not key_dict:
+  if not key_dict['tag'] and not key_dict['lang'] and not key_dict['type']:
     return ''
 
   # Выборка статей по типу и тэгам.
