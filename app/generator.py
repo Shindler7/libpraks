@@ -14,24 +14,17 @@ URL_TAGS = 4
 morh = pymorphy2.MorphAnalyzer()
 
 def startmodule(text):
-    
-    def evex(text):
-
-        try:
-            ev = eval(text)
+    if not re.match(r'.*[^0-9 +\-\*\/()].*', text): #валидируем ввод на что-то еще кроме цифр, матем.знаков и скобок
+        try:     # Путь 1: пользователь ввёл калькуляторную строку
+            return eval(text)
         except:
-           ev = ''
-        return ev
-
-    # Проверка 1: пользователь ввёл калькуляторную строку
-    p = evex(text)
-    if p != '' : return p
+            return 'Something input error'
 
     # Проверка 2: пользователь ввёл запрос для БД.
-    p = inuserstring(text)
-    if p=='': p = 'Неверный или непонятный запрос, либо нет данных под запрос.'
+    answer = inuserstring(text)
+    if not answer: return 'Неверный или непонятный запрос, либо нет данных под запрос.'
 
-    return p
+    return answer
 
 class compilereq():
   # Проверка базы и рекомпиляция списков: типы ссылок и существующие тэги.
