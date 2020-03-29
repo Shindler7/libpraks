@@ -42,42 +42,91 @@ class compilereq():
   def getTag(self):
     return self._tagurl
 
-
 def inuserstring(txt):
   # Разбор запроса пользователя.
-  pa = compilereq()  # запросили класс тэгов. 
   
   ustr = txt.lower()
-  ustr = re.split(r'\W+', ustr)
-  
-  key_dict = {'tag': [], 'lang': [], 'type': []} # lang, type, tag
+  ustr = re.findall(r'\S+', ustr)
+  lenUstr = len(ustr)-1 # индекс от длины.
+
+  key_dict = {'tag': [], 'lang': [], 'type': [], 'extag': [], 'exlang': [], 'extype': []} # lang, type, tag
   
   # Кроличья нора: выводится всё, поэтому тратить время на подборку не нужно.
-  if ustr[0] == 'всё' or ustr[0] == 'все':
+  TakeAll = ['всё', 'все', 'all']
+  if ustr[0] in TakeAll:
       res = returnLib(key_dict)
       res = printLib(res)
       return res
   
-  # Стандартный путь - с отбором. 
-  for key in ustr:
-    ma = morh.parse(key)[0]
-
-    if ma.tag.POS == 'PREP': continue  # предлоги не обрабатываем
+  # Подготовительные процедуры для цикла.
+  clTagGl = compilereq()
+  INLEFT = 0  # флаг сдвига по строке.
+  
+  # Цикл обработки фразы пользователя.
+  while True:
     
-    if key in pa.getTag() and key not in key_dict['tag']:          # тэги отдельно
-      key_dict['tag'].append(key)
-      continue
-    
-    # Языковой ключ
-    for id, string in db.langtype.items():
-      if ma.normal_form in string and ma.normal_form not in key_dict['lang']: key_dict['lang'].append(id)
+    # СЛОВО1 СЛОВО2 СЛОВО3 - возможно СЛОВО1 и СЛОВО2 - ключевая фраза (база данных), и возможно отрицание (исключение)
+    # Поэтому проверка идёт от последнего слова к первому. С накоплением фразы.
+    # 'Статичное напряжение во Flask без базы данных'.
+    # данных - не ключевое слово
+    # базы данных - ключевая фраза (+)
+    # без - отрицание - и фраза уходит в исключение.
+    # Flask - ключевое слово
+    # во - предлог. Flask (+)
 
-    # Анализ других слов
-    for id, string in db.keytype.items():
-      if ma.normal_form in string and ma.normal_form not in key_dict['type']: key_dict['type'].append(id)
+    if lenUstr-INLEFT < 0 or not ustr: break    # выход после анализа или если строка пустая.
+
+    # ********** внутренняя процедура проверки по базе
+    def checkinBD(word):
+      
+      try:
+        smorh = morh.parse(word)[0]      # Подключили морфологию.  
+        if smorh.tag.POS == 'PREP':      # Сами по себе предлоги опускаются.
+          return -1
+
+        # тэги
+        if word in clTagGl.getTag() and word not in key_dict['tag'] and word not in key_dict['extag']: return f'tag*{word}'
+      
+        # Языковой ключ
+        for id, string in db.langtype.items():
+          if smorh.normal_form in string and smorh.normal_form not in key_dict['lang'] and word not in key_dict['exlang']: return f'lang*{id}'
+
+        # Анализ других слов
+        for id, string in db.keytype.items():
+          if smorh.normal_form in string and smorh.normal_form not in key_dict['type'] and word not in key_dict['extype']: return f'type*{id}'
+      except:
+        return -1
+      else:
+        return 0 # Все проверки провалены.
+    # ********** внутренняя процедура проверки по базе
+
+    # проверка очередного слова в строке.
+    userword = ustr[lenUstr]
+    if INLEFT > 0: userword = f'{ustr[lenUstr-INLEFT]} {userword}'  # расширенное слово
+
+    # проверка слова по совпадению с БД и выводы.
+    wordcheck = checkinBD(userword) 
+    if wordcheck == -1:
+      lenUstr, INLEFT = lenUstr-INLEFT-1, 0
+    elif wordcheck == 0:
+      if INLEFT == 0: INLEFT = 1
+      else: lenUstr, INLEFT = lenUstr-INLEFT, 0
+    else:
+      keyname = wordcheck.split('*')
+      try:  # обработка out of range
+        smorh = morh.parse(ustr[lenUstr-INLEFT-1])[0]
+      except:
+        smorh = ''
+      finally:  # проверка исключения ("не flask")
+        if smorh.normal_form in ['без', 'не', 'исключить']: key_dict[f'ex{keyname[0]}'].append(keyname[1])
+        else: key_dict[keyname[0]].append(keyname[1])
+
+      # убираемся на столе, снимаем флаги
+      lenUstr, INLEFT = lenUstr-INLEFT-1, 0
   
   # Не разобрали ни одного слова. Пустой словарь, пустой.
-  if not key_dict['tag'] and not key_dict['lang'] and not key_dict['type']:
+  # Как более элегантно проверить, что key_dict.values() пустые?
+  if not key_dict['tag'] and not key_dict['lang'] and not key_dict['type'] and not key_dict['extag'] and not key_dict['exlang'] and not key_dict['extype']:
     return ''
   
   # Выборка статей по типу и тэгам.
@@ -101,22 +150,22 @@ def returnLib(dicts):
     lang = False
 
     # Проверка тэгов
-    if not dicts['tag']:
-      intag=True
-    elif (set(string[URL_TAGS]) >= set(dicts['tag'])) == True:
-      intag=True
-    
+    if not dicts['tag']: intag=True
+    elif (set(string[URL_TAGS]) >= set(dicts['tag'])) == True: intag=True
+    # исключение
+    if dicts['extag'] and (set(string[URL_TAGS]) >= set(dicts['extag'])) == True: intag=False
+
     # Проверка категории
-    if not dicts['type']:
-      incat=True
-    elif string[URL_TYPE] in dicts['type']: 
-      incat=True
+    if not dicts['type']: incat=True
+    elif string[URL_TYPE] in dicts['type']: incat=True
+    # исключение
+    if string[URL_TYPE] in dicts['extype']: incat=False
 
     # Проверка языка (проверяем только если указано, иначе - берём всё). 
-    if not dicts['lang']:
-      lang=True
-    elif string[URL_LANG] in dicts['lang']: 
-      lang = True
+    if not dicts['lang']: lang=True
+    elif string[URL_LANG] in dicts['lang']: lang = True
+    # исключение
+    if string[URL_LANG] in dicts['exlang']: lang = False
     
     if intag and incat and lang:    # Строка включается
       # Если категории в словаре нет, создадим. 
@@ -129,7 +178,7 @@ def returnLib(dicts):
 
     intag, incat, lang = False, False, False
 
-  return dic_result      
+  return dic_result            
 
 def printLib(dicts):
   txt_r = ''
