@@ -68,6 +68,13 @@ html, body {
 	padding-top: 30px;
 }
 
+#mobhelp {
+	text-align: left;
+	font-size: 60%;
+	padding-top: 60px;
+	padding-left: 40px;
+}
+
 .mobutton {
 	border: none;
     cursor:pointer;

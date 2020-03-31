@@ -8,7 +8,12 @@
 		<br><br>
 		{{ form.submit(class_="mobutton") }}
 	</form>
-	<br><br>
+	<div id="mobhelp">
+		{% if help %}
+			{{ help|safe }}
+		{% endif %}
+
+	</div>
 	<div class="mobcontainer">
 	{% if output %}
 		{{ output|safe }}

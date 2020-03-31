@@ -25,10 +25,6 @@ def index():
 
     return render_template('index.html', title='online', form=form, output=output, help=helps)
 
-@mobilized(index)
-def index_v():
-    return 'Здесь'
-
 def help():
     from app._dblib import keytypedisp
     from app.generator import compilereq
@@ -50,3 +46,28 @@ def help():
             '''
 
     return txt
+
+# ******
+# Экспериментальные функции
+
+@application.route('/newindex', methods=['GET', 'POST'])
+def newindex(urs=''):
+    # Тестирование новых возможностей.
+    output=str(request.method)
+    if request.method == 'POST':
+        if request.form['submit_button'] == 'Do Something':
+            output = startmodule('сайты')
+        elif request.form['submit_button'] == 'Do Something Else':
+            output = startmodule('python')
+
+    if request.method == 'GET':
+        pass
+
+    return render_template('newindex.html', title='test', output=output)
+
+@application.route('/button', methods=['GET', 'POST'])
+def button():
+    return redirect('newindex/2')
+    #return render_template('newindex.html', title='test')
+
+
