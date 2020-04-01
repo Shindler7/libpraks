@@ -34,7 +34,8 @@ urlbase = {
 29: ['Учебник по Flask', 'https://pythonru.com/uroki/1-vvedenie-vo-flask', 'ru', 'site', ['python', 'flask', 'фласк']],
 30: ['Документация Flask (русский перевод)', 'https://flask-russian-docs.readthedocs.io/ru/latest/quickstart.html#quickstart-deployment', 'ru', 'site', ['python', 'flask', 'фласк']],
 31: ['Учебник «A Byte of Python» (русский перевод)', 'https://wombat.org.ua/AByteOfPython/toc.html#', 'ru', 'site', ['python']],
-32: ['Пишем ботов для Telegram на языке Python', 'https://groosha.gitbook.io/telegram-bot-lessons/', 'ru', 'site', ['python', 'telegram', 'bot', 'телеграм-бот', 'бот']]
+32: ['Пишем ботов для Telegram на языке Python', 'https://groosha.gitbook.io/telegram-bot-lessons/', 'ru', 'site', ['python', 'telegram', 'bot', 'телеграм-бот', 'бот']],
+33: ['Про Git (автор: Скотт Шакон)', 'https://git-scm.com/book/ru/v2', 'ru', 'ebook', ['git']]
 
 }
 
