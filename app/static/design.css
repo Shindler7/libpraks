@@ -66,6 +66,11 @@ ul, li {
 	color: chocolate;
 }
 
+.outputs {
+	line-height: 1.6;
+	font-size: 90%;
+}
+
 #urldb {
 	color: black;
 	font-weight: normal;

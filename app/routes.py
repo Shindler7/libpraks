@@ -12,7 +12,7 @@ from flask_mobility.decorators import mobilized
 def index():
     form=ChatForm()
     output = ''
-    helps = help()
+    helps = help_text()
     
     # Обработка в режиме POST
     #if request.method == 'POST':
@@ -25,13 +25,16 @@ def index():
 
     return render_template('index.html', title='online', form=form, output=output, help=helps)
 
-def help():
+def help_text():
+    """ Возвращает текст с подсказкой для командной строки
+    :return: str
+    """
+    
     from app._dblib import keytypedisp
     from app.generator import compilereq
 
     req = compilereq()
     tags = keytypedisp.values()
-    
 
     txt = f'''<div id = "helpus">Библиотека ЯП: коллекция. Допустимые команды:<br>
             <ol>

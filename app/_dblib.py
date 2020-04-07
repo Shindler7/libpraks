@@ -36,7 +36,8 @@ urlbase = {
 31: ['Учебник «A Byte of Python» (русский перевод)', 'https://wombat.org.ua/AByteOfPython/toc.html#', 'ru', 'site', ['python']],
 32: ['Пишем ботов для Telegram на языке Python', 'https://groosha.gitbook.io/telegram-bot-lessons/', 'ru', 'site', ['python', 'telegram', 'bot', 'телеграм-бот', 'бот']],
 33: ['Про Git (автор: Скотт Шакон)', 'https://git-scm.com/book/ru/v2', 'ru', 'ebook', ['git']],
-34: ['Руководство Django Girls', 'https://tutorial.djangogirls.org/ru/', 'ru', 'site', ['django', 'python']]
+34: ['Руководство Django Girls', 'https://tutorial.djangogirls.org/ru/', 'ru', 'site', ['django', 'python']],
+35: ['Скринкаст по Git', 'https://learn.javascript.ru/screencast/git#intro-starting-video', 'ru', 'course', ['git']]
 
 }
 

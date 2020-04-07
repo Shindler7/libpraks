@@ -10,164 +10,172 @@ URL_LANG = 2
 URL_TYPE = 3
 URL_TAGS = 4
 
-ALL_DATA = False
-
-# запуск морфологии
 morh = pymorphy2.MorphAnalyzer()
 
-def startmodule(text):
-    if not re.match(r'.*[^0-9 +\-\*\/()].*', text): #валидируем ввод на что-то еще кроме цифр, матем.знаков и скобок
-        try:     # Путь 1: пользователь ввёл калькуляторную строку
-            return eval(text)
-        except:
-            return 'Ошибка расчёта.'
+def startmodule(user_req):
+  """
+  Возвращает данные по запросу пользователя или ошибку.
+  :param user_req: Строка (str) с запросом пользователя или текстом ошибки.
+  :return: Str
+  """
+  
+  if not re.match(r'.*[^0-9 +\-\*\/()].*', user_req): #валидируем ввод на что-то еще кроме цифр, матем.знаков и скобок
+    try:     # Путь 1: пользователь ввёл калькуляторную строку
+      return eval(user_req)
+    except:
+      return 'Ошибка расчёта.'
 
-    # Проверка 2: пользователь ввёл запрос для БД.
-    answer = inuserstring(text)
-    if not answer: return 'Нет подходящих данных, ну или неверный запрос.'
+  # Проверка 2: пользователь ввёл запрос для БД.
+  answer = inuserstring(user_req)
+  if not answer: return 'Нет подходящих данных или неверный запрос.'
 
-    return answer
+  return answer
 
 class compilereq():
-  # Проверка базы и рекомпиляция списков: типы ссылок и существующие тэги.
+  """
+  Класс производит компиляцию списка уникальных тэгов в базе данных (urlbase).
+  """
+
   def __init__(self):
     
-    at = []
+    tag_lst = list()
     for key in db.urlbase.values():
-      for item in key[URL_TAGS]: # уникальный набор тэгов.
-        if item.strip() not in at: at.append(item.strip())
+      [tag_lst.append(item.strip()) for item in key[URL_TAGS] if item.strip() not in tag_lst]
 
-    self._tagurl = at
+    self._tag_lst = tag_lst
 
   def getTag(self):
-    return self._tagurl
+    """
+    Возвращается list уникальных тэгов в базе данных (urlbase)
+    :return: List()
+    """
+    return self._tag_lst
 
-def inuserstring(txt):
-  # Разбор запроса пользователя.
+def inuserstring(user_req):
+  """
+  Анализ строки запроса пользователя и выделение ключевых слов-зависимостей.
+  :param user_req: Строка запроса пользователя (str).
+  :return: Словарь (dict) содержащий обнаруженные слова предпочтений и исключений (отрицаний).
+  """
   
-  ustr = txt.lower()
-  ustr = re.findall(r'\S+', ustr)
-  lenUstr = len(ustr)-1 # индекс от длины.
-
   key_dict = {'tag': [], 'lang': [], 'type': [], 'extag': [], 'exlang': [], 'extype': []} # lang, type, tag
+
+  user_phrase = re.findall(r'\S+', user_req.lower())
+  point_uphrase = len(user_phrase)-1
   
-  # Кроличья нора: выводится всё, поэтому тратить время на подборку не нужно.
-  TakeAll = ['всё', 'все', 'all']
-  if ustr[0] in TakeAll:
-      res = returnLib(key_dict)
-      res = printLib(res)
-      return res
+  # Кроличья нора: вывести всё сразу.
+  if user_phrase[0] in ['всё', 'все', 'all'] or not user_phrase:
+    return returnLib(key_dict, to_print=True)
   
-  # Подготовительные процедуры для цикла.
-  clTagGl = compilereq()
-  INLEFT = 0  # флаг сдвига по строке.
+  cq_tag = compilereq()
+  shift_inleft = 0  # флаг сдвига по строке.
   
-  # Цикл обработки фразы пользователя.
-  while True:
+  while point_uphrase-shift_inleft >= 0:
     
-    # СЛОВО1 СЛОВО2 СЛОВО3 - возможно СЛОВО1 и СЛОВО2 - ключевая фраза (база данных), и возможно отрицание (исключение)
-    # Поэтому проверка идёт от последнего слова к первому. С накоплением фразы.
-    # 'Статичное напряжение во Flask без базы данных'.
-    # данных - не ключевое слово
-    # базы данных - ключевая фраза (+)
-    # без - отрицание - и фраза уходит в исключение.
-    # Flask - ключевое слово
-    # во - предлог. Flask (+)
+    # Проверка ведётся от последнего слова к первому. Цель - поиск словосочетаний и отрицаний (не, нет)
 
-    if lenUstr-INLEFT < 0 or not ustr: break    # выход после анализа или если строка пустая.
-
-    # ********** внутренняя процедура проверки по базе
+    # * Внутренняя функция проверки слов по базе данных.
     def checkinBD(word):
-      
+      """
+      Проверяется принятая фраза (слово) на присутствие в базе данных, а также в локальном словаре уже отобранных слов.
+      :param word: Слово или фраза (str) для проверки.
+      :return: Str, в формате 'видфразы*фраза' - когда фраза и её принадлежность определены.
+      :return: 0, слово не опознано. 
+      :return: None, фраза не для обработки (предлоги) или возникло исключение (например, out of range).
+      """
+
       try:
-        smorh = morh.parse(word)[0]      # Подключили морфологию.  
-        if smorh.tag.POS == 'PREP':      # Сами по себе предлоги опускаются.
-          return -1
+        word_morh = morh.parse(word)[0]      
+        if word_morh.tag.POS == 'PREP':      # Предлоги опускаются.
+          return 
 
         # тэги
-        if word in clTagGl.getTag() and word not in key_dict['tag'] and word not in key_dict['extag']: return f'tag*{word}'
+        if word in cq_tag.getTag() and word not in key_dict['tag'] and word not in key_dict['extag']: 
+          return f'tag*{word}'
       
-        # Языковой ключ
+        # язык
         for id, string in db.langtype.items():
-          if smorh.normal_form in string and smorh.normal_form not in key_dict['lang'] and word not in key_dict['exlang']: return f'lang*{id}'
-
-        # Анализ других слов
+          if word_morh.normal_form in string and word_morh.normal_form not in key_dict['lang'] and word not in key_dict['exlang']: 
+            return f'lang*{id}'
+        
+        # другие слова
         for id, string in db.keytype.items():
-          if smorh.normal_form in string and smorh.normal_form not in key_dict['type'] and word not in key_dict['extype']: return f'type*{id}'
-      except:
-        return -1
+          if word_morh.normal_form in string and word_morh.normal_form not in key_dict['type'] and word not in key_dict['extype']: 
+            return f'type*{id}'
+      except: 
+        return
       else:
         return 0 # Все проверки провалены.
-    # ********** внутренняя процедура проверки по базе
+    # * Конец внутренней процедуры.
 
-    # проверка очередного слова в строке.
-    userword = ustr[lenUstr]
-    if INLEFT > 0: userword = f'{ustr[lenUstr-INLEFT]} {userword}'  # расширенное слово
-
-    # проверка слова по совпадению с БД и выводы.
-    wordcheck = checkinBD(userword) 
-    if wordcheck == -1:
-      lenUstr, INLEFT = lenUstr-INLEFT-1, 0
-    elif wordcheck == 0:
-      if INLEFT == 0: INLEFT = 1
-      else: lenUstr, INLEFT = lenUstr-INLEFT, 0
+    actualy_word = user_phrase[point_uphrase]
+    if shift_inleft > 0:
+      actualy_word = f'{user_phrase[point_uphrase-shift_inleft]} {actualy_word}'
+    
+    actualy_word_check = checkinBD(actualy_word)
+    if actualy_word_check is None:
+      point_uphrase, shift_inleft = point_uphrase-shift_inleft-1, 0
+    elif actualy_word_check == 0:
+      if shift_inleft == 0:
+        shift_inleft = 1
+      else:
+        point_uphrase, shift_inleft = point_uphrase-shift_inleft, 0
     else:
-      keyname = wordcheck.split('*')
       try:  # обработка out of range
-        smorh = morh.parse(ustr[lenUstr-INLEFT-1])[0]
+        word_negative = morh.parse(user_phrase[point_uphrase-shift_inleft-1])[0]
       except:
-        smorh = ''
+        word_negative = None
       finally:  # проверка исключения ("не flask")
-        if smorh.normal_form in ['без', 'не', 'исключить']: key_dict[f'ex{keyname[0]}'].append(keyname[1])
-        else: key_dict[keyname[0]].append(keyname[1])
+        key_name = actualy_word_check.split('*')
+        if word_negative.normal_form in ['без', 'не', 'исключить']: 
+          key_dict[f'ex{key_name[0]}'].append(key_name[1])
+        else: 
+          key_dict[key_name[0]].append(key_name[1])
 
-      # убираемся на столе, снимаем флаги
-      lenUstr, INLEFT = lenUstr-INLEFT-1, 0
+      point_uphrase, shift_inleft = point_uphrase-shift_inleft-1, 0
   
-  # Не разобрали ни одного слова. Пустой словарь, пустой.
-  # Как более элегантно проверить, что key_dict.values() пустые?
-  if not key_dict['tag'] and not key_dict['lang'] and not key_dict['type'] and not key_dict['extag'] and not key_dict['exlang'] and not key_dict['extype']:
+  # Не найдено ни одного ключевого слова.
+  if sum(True for values in key_dict.values() if values) == 0:
     return ''
   
-  # Выборка статей по типу и тэгам.
-  res = returnLib(key_dict)
-  
-  # Подготовка к выводу
-  res = printLib(res)
+  return returnLib(key_dict, to_print=True)
 
-  return res
 
-def returnLib(dicts):
-  # Если есть категория - выборка, если нет - всё;
-  # если есть тэги - выборка, если нет - все;
-  # если есть язык - выборка, если нет - все языки.
+def returnLib(dict_req, to_print=False):
+  """
+  Возвращает словарь с выборкой результатов на основе словаря расшифрованных запросов пользователя.
+  :param dict_req: Словарь (dict) с фразами для выборки на основе запроса пользователя.
+  :param to_print: True - возврат текста для печати, False - возврат только словаря с выборкой.
+  :return: Str, dict
+  """
+
   dic_result = {}
 
   for string in db.urlbase.values():
-    # Построчная сверка БД с типом, тэгами и языком. 
-    intag = False      # Флаг включения строки в выборку, false - нет
-    incat = False
-    lang = False
+    # Флаг включения строки в выборку, false - нет
+    in_tag=False      
+    in_cat=False
+    lang=False
 
     # Проверка тэгов
-    if not dicts['tag']: intag=True
-    elif (set(string[URL_TAGS]) >= set(dicts['tag'])) == True: intag=True
+    if not dict_req['tag']: in_tag=True
+    elif (set(string[URL_TAGS]) >= set(dict_req['tag'])) == True: in_tag=True
     # исключение
-    if dicts['extag'] and (set(string[URL_TAGS]) >= set(dicts['extag'])) == True: intag=False
+    if dict_req['extag'] and (set(string[URL_TAGS]) >= set(dict_req['extag'])) == True: in_tag=False
 
     # Проверка категории
-    if not dicts['type']: incat=True
-    elif string[URL_TYPE] in dicts['type']: incat=True
+    if not dict_req['type']: in_cat=True
+    elif string[URL_TYPE] in dict_req['type']: in_cat=True
     # исключение
-    if string[URL_TYPE] in dicts['extype']: incat=False
+    if string[URL_TYPE] in dict_req['extype']: in_cat=False
 
     # Проверка языка (проверяем только если указано, иначе - берём всё). 
-    if not dicts['lang']: lang=True
-    elif string[URL_LANG] in dicts['lang']: lang = True
+    if not dict_req['lang']: lang=True
+    elif string[URL_LANG] in dict_req['lang']: lang = True
     # исключение
-    if string[URL_LANG] in dicts['exlang']: lang = False
+    if string[URL_LANG] in dict_req['exlang']: lang = False
     
-    if intag and incat and lang:    # Строка включается
+    if in_tag and in_cat and lang:    # Строка включается
       # Если категории в словаре нет, создадим. 
       if dic_result.get(string[URL_TYPE]) is None: dic_result.update({string[URL_TYPE]:[]})
       if string[URL_LANG] != 'ru':
@@ -176,33 +184,31 @@ def returnLib(dicts):
         dic_result[string[URL_TYPE]].append(string[URL_NAME])
       dic_result[string[URL_TYPE]].append(string[URL_URL])
 
-    intag, incat, lang = False, False, False
+    in_tag, in_cat, lang = False, False, False
 
-  return dic_result            
+  if to_print:
+    return printLib(dic_result)
+  else:
+    return dic_result            
 
-def printLib(dicts):
-  txt_r = ''
-  for key in db.keytypedisp.keys():
-    if dicts.get(key) is not None:
+def printLib(dict_to_print):
+  """
+  Возвращает текст для печати, сформированный на основе переданного словаря с выборкой по запросу пользователя.
+  :param: dict_to_print - словарь (dict) с выборкой по запросу пользователя.
+  :return: str
+  """
+
+  text_print = ''
+
+  for key_type in db.keytypedisp.keys():
+    if dict_to_print.get(key_type): #is not None
+      text_print += f'<span id="hehe">{db.keytypedisp[key_type]}</span><br>'
+      text_print += '<p>'
+
+      for to_print in range(0, len(dict_to_print[key_type]), 2):
+        text_print += f'<a id="urldb" href="{dict_to_print[key_type][to_print+1]}">{dict_to_print[key_type][to_print]}</a><br>'
       
-        #txt_r += '<br>'
-        txt_r += f'<span id="hehe">{db.keytypedisp[key]}</span><br><br>'        # Добавление заголовка (категория)
-        txt_r += '<ul id="db">'
-        for pri in range(0,len(dicts[key]),2):
+      text_print += '</p><br>'
 
-            # Вся фраза является гиперссылкой
-            txt_r += f'<li><a id="urldb" href="{dicts[key][pri+1]}">{dicts[key][pri]}</a></li>'        
-            # В конце фразы (>) сделано гиперссылкой.
-            #txt_r += f'<li id="urldb">{dicts[key][pri]} (<a id="urldb" href="{dicts[key][pri+1]}">></a>)</li>'
+  return text_print
 
-        txt_r += '</ul><br>'
-
-        # Проверка валидности url (ОТКЛЮЧЕНО, ВРЕМЯЗАТРАТНО)
-        #url = dicts[key][pri+1]   # проверка валидности ссылки
-        #try:
-        #  urllib.request.urlopen(url).getcode()
-        #  txt_r += f'* {dicts[key][pri]} ({url})\n'
-        #except:
-        #  txt_r += f'* {dicts[key][pri]} - заморожено, сайт не отвечает\n'          
-
-  return txt_r
