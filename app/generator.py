@@ -12,7 +12,7 @@ URL_TAGS = 4
 
 morh = pymorphy2.MorphAnalyzer()
 
-def startmodule(user_req):
+def startmodule(user_req) -> str:
   """
   Возвращает данные по запросу пользователя или ошибку.
   :param user_req: Строка (str) с запросом пользователя или текстом ошибки.
@@ -51,7 +51,7 @@ class compilereq():
     """
     return self._tag_lst
 
-def inuserstring(user_req):
+def inuserstring(user_req) -> dict:
   """
   Анализ строки запроса пользователя и выделение ключевых слов-зависимостей.
   :param user_req: Строка запроса пользователя (str).
@@ -141,10 +141,11 @@ def inuserstring(user_req):
   return returnLib(key_dict, to_print=True)
 
 
-def returnLib(dict_req, to_print=False):
+def returnLib(dict_req, to_print=False) -> dict or str:
   """
   Возвращает словарь с выборкой результатов на основе словаря расшифрованных запросов пользователя.
-  :param dict_req: Словарь (dict) с фразами для выборки на основе запроса пользователя.
+  При to_print == True возвращает обработанный текст для печати.
+  :param dict_req: Словарь (dict) с фразами для выборки на основе запроса пользователя. 
   :param to_print: True - возврат текста для печати, False - возврат только словаря с выборкой.
   :return: Str, dict
   """
@@ -191,7 +192,7 @@ def returnLib(dict_req, to_print=False):
   else:
     return dic_result            
 
-def printLib(dict_to_print):
+def printLib(dict_to_print) -> str:
   """
   Возвращает текст для печати, сформированный на основе переданного словаря с выборкой по запросу пользователя.
   :param: dict_to_print - словарь (dict) с выборкой по запросу пользователя.
