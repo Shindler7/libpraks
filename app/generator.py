@@ -91,17 +91,17 @@ def inuserstring(user_req) -> dict:
 
         # тэги
         if word in cq_tag.getTag() and word not in key_dict['tag'] and word not in key_dict['extag']: 
-          return f'tag*{word}'
+          return ['tag', word]
       
         # язык
         for id, string in db.langtype.items():
           if word_morh.normal_form in string and word_morh.normal_form not in key_dict['lang'] and word not in key_dict['exlang']: 
-            return f'lang*{id}'
+            return ['lang', id]
         
         # другие слова
         for id, string in db.keytype.items():
           if word_morh.normal_form in string and word_morh.normal_form not in key_dict['type'] and word not in key_dict['extype']: 
-            return f'type*{id}'
+            return ['type', id]
       except: 
         return
       else:
@@ -121,17 +121,12 @@ def inuserstring(user_req) -> dict:
       else:
         point_uphrase, shift_inleft = point_uphrase-shift_inleft, 0
     else:
-      try:  # обработка out of range
-        word_negative = morh.parse(user_phrase[point_uphrase-shift_inleft-1])[0]
-      except:
-        word_negative = None
-      finally:  # проверка исключения ("не flask")
-        key_name = actualy_word_check.split('*')
-        if word_negative.normal_form in ['без', 'не', 'исключить']: 
-          key_dict[f'ex{key_name[0]}'].append(key_name[1])
-        else: 
-          key_dict[key_name[0]].append(key_name[1])
-
+      word_negative = (morh.parse(user_phrase[point_uphrase-shift_inleft-1])[0] if point_uphrase-shift_inleft-1 >=0 else None)
+      if world_negative.normal_form in ['без', 'не', 'исключить']: 
+        key_dict[f'ex{actualy_word_check[0]}'].append(actualy_word_check[1])
+      else:
+        key_dict[actualy_word_check[0]].append(actualy_word_check[1])
+        
       point_uphrase, shift_inleft = point_uphrase-shift_inleft-1, 0
   
   # Не найдено ни одного ключевого слова.
