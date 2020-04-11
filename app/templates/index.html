@@ -2,25 +2,24 @@
 
 
 {% block content %}
-    <div class="d-flex justify-content-center">
 
-            <div class="row">
-                {% if tag_links %}
-                    {% for tag_link in tag_links %}
-                        <a href= {{ url_for('index', tagstring=tag_link.lower()) }}>
-                            <button type="button" class="btn btn-outline-primary btn-sm mr-1">{{ tag_link }}</button>
-                        </a>
-                    {% endfor %}
-                {% endif %}
-            </div>
+    <div class="d-flex justify-content-center">
+        {% if tag_links %}
+            {% for tag_link in tag_links %}
+                <a href= {{ url_for('index', tagstring=tag_link.lower()) }}>
+                    <button type="button" class="btn btn-outline-primary btn-sm mr-1 {% if tag_link.lower() in request.url %} active {% endif %} ">{{ tag_link }}</button>
+                </a>
+            {% endfor %}
+        {% endif %}
     </div>
-        <div class="row">
-            <div class="col-12">
-                {% if output %}
-                    {{ output|safe }}
-                {% endif %}
-            </div>
+
+    <div class="row mt-2">
+        <div class="col-12">
+            {% if output %}
+                {{ output|safe }}
+            {% endif %}
         </div>
+    </div>
 {% endblock %}
 
 
