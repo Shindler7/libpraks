@@ -48,6 +48,7 @@ def index():
     return render_template('index.html', title='online', output=output, exoutput=active_output,
                            category_links=keytypedisp.values(), tag_links=tag_links)
 
+
 @nav.navigation()
 def lib_navbar():
     return Navbar(
