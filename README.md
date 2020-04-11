@@ -10,8 +10,7 @@
 
 ### Использованные ресурсы ###
 
-* Flask, Flask-WTF, Flask-SSLify, Flask-Mobility, Flask-Bootstrap
-* PyMorphy2 (библиотека: pip install -U pymorphy2-dicts-ru)
+* pip install -r requirements.txt (установит все необходимые библиотеки).
 
 ### Задачи развития ###
 

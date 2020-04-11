@@ -16,6 +16,7 @@ active_output: str = ''
 
 # https://jinja.palletsprojects.com/en/2.11.x/
 
+
 @application.route('/', methods=['GET', 'POST'])
 @application.route('/index', methods=['GET', 'POST'])
 def index():

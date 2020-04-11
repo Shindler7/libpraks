@@ -9,3 +9,4 @@ lib_prak.code-workspace
 config.py
 #.gitignore
 __pycache__/*
+_sources/
