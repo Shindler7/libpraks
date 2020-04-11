@@ -1,65 +1,25 @@
 {% extends "base.html" %}
 
-{% block navbar %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">ЯП:4 Library</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <!-- <li class="nav-item active">
-        <a class="nav-link" href="/">Весь контент<span class="sr-only">(current)</span></a>
-      </li> -->
-        {% for category_link in category_links %}
-        <li class="nav-item">
-            <a class="nav-link" href={{ url_for('index', chatstring=category_link.lower()) }}>{{ category_link }}</a>
-        </li>
-        {% endfor %}
-
-    </ul>
-  </div>
-</nav>
-
-{% endblock %}
 
 {% block content %}
 
-    <div>
-        <!-- class="category_links">
-            Категории:
-            {% for category_link in category_links %}
-                <a href= {{ url_for('index', chatstring=category_link.lower()) }}>{{ category_link }}</a>
+    <div class="d-flex justify-content-center">
+        {% if tag_links %}
+            {% for tag_link in tag_links %}
+                <a href= {{ url_for('index', tagstring=tag_link.lower()) }}>
+                    <button type="button" class="btn btn-outline-primary btn-sm mr-1 {% if tag_link.lower() in request.url %} active {% endif %} ">{{ tag_link }}</button>
+                </a>
             {% endfor %}
-        <-->
-        <div class="row">
-            <div class="mx-auto">
-            {% if tag_links %}
-                {% for tag_link in tag_links %}
-                    <a href= {{ url_for('index', tagstring=tag_link.lower()) }}>
-                        <button type="button" class="btn btn-outline-primary btn-sm">{{ tag_link }}</button>
-                    </a>
-                {% endfor %}
-            {% endif %}
-            </div>
-        </div>
-        <!-- class="tags_links">
-            {% if tag_links %}
-            Тэги:
-                {% for tag_link in tag_links %}
-                    <a href= {{ url_for('index', tagstring=tag_link.lower()) }}>{{ tag_link }}</a>
-                {% endfor %}
-            {% endif %}
-        </-->
+        {% endif %}
+    </div>
 
-        <div class="output">
+    <div class="row mt-2">
+        <div class="col-12">
             {% if output %}
                 {{ output|safe }}
             {% endif %}
         </div>
-        <b></b>
     </div>
-
 {% endblock %}
 
 

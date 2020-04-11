@@ -3,7 +3,6 @@
 from flask import render_template, flash, redirect, request
 from app import application
 from app.generator import start_module
-from app import nav
 from flask_nav.elements import *
 #from app.forms import ChatForm
 #from flask_mobility.decorators import mobile_template
@@ -48,12 +47,5 @@ def index():
     return render_template('index.html', title='online', output=output, exoutput=active_output,
                            category_links=keytypedisp.values(), tag_links=tag_links)
 
-
-@nav.navigation()
-def lib_navbar():
-    return Navbar(
-        'ЯП:4 Library',
-        View('Весь контент', 'index'),
-    )
 
 
