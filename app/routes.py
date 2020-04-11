@@ -49,11 +49,4 @@ def index():
                            category_links=keytypedisp.values(), tag_links=tag_links)
 
 
-@nav.navigation()
-def lib_navbar():
-    return Navbar(
-        'ЯП:4 Library',
-        View('Весь контент', 'index'),
-    )
-
 

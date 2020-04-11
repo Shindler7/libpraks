@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-2">
+  <a class="navbar-brand" href="/">ЯП:4 Library</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+        {% for category_link in category_links %}
+        <li class="nav-item mr-1">
+            <a class="nav-link" href={{ url_for('index', chatstring=category_link.lower()) }}>{{ category_link }}</a>
+        </li>
+        {% endfor %}
+
+    </ul>
+  </div>
+</nav>
