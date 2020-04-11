@@ -10,3 +10,4 @@ config.py
 #.gitignore
 __pycache__/*
 _sources/
+tmp/
