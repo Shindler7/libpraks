@@ -16,6 +16,7 @@ active_output: str = ''
 
 # https://jinja.palletsprojects.com/en/2.11.x/
 
+
 @application.route('/', methods=['GET', 'POST'])
 @application.route('/index', methods=['GET', 'POST'])
 def index():
@@ -46,6 +47,7 @@ def index():
 
     return render_template('index.html', title='online', output=output, exoutput=active_output,
                            category_links=keytypedisp.values(), tag_links=tag_links)
+
 
 @nav.navigation()
 def lib_navbar():
