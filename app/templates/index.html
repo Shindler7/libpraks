@@ -1,53 +1,48 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<!-- работа с мобильной версией -->
-	{% if request.MOBILE %}
-	<form id="mobinput" action="/" method="GET">
-		{{ form.chatstring(class_="mobinputdesign") }}
-		<br><br>
-		{{ form.submit(class_="mobutton") }}
-	</form>
-	<div id="mobhelp">
-		{% if help %}
-			{{ help|safe }}
-		{% endif %}
 
-	</div>
-	<div class="mobcontainer">
-	{% if output %}
-		{{ output|safe }}
-	{% endif %}
-	</div>
+    <div>
+        <div class="category_links">
+            Категории: 
+            {% for category_link in category_links %}
+                <a href= {{ url_for('index', chatstring=category_link.lower()) }}>{{ category_link }}</a>
+            {% endfor %}
+        </div>
 
-	{% else %}
-	<form id="input" action="/" method="GET">
+        <div class="tags_links">
+            {% if tag_links %}
+            Тэги: 
+                {% for tag_link in tag_links %}
+                    <a href= {{ url_for('index', tagstring=tag_link.lower()) }}>{{ tag_link }}</a>
+                {% endfor %}
+            {% endif %}
+        </div>
 
-		{{ form.chatstring(class_="inputdesign") }}
+        <div class="output">
+            {% if output %}
+                {{ output|safe }}
+            {% endif %}
+        </div>
+    </div>
 
-	</form>
-
-	<div id="divcons">
-
-		<table id = "console">
-		<tr valign="middle">
-			<th>
-				{% if help %}
-					{{ help|safe }}
-				{% endif %}				
-			</th>	
-		</tr>
-
-		<tr valign="top" height="60%" class="outputs">
-			<th>
-				{% if output %}
-					<p>{{ output|safe }}</p>
-				{% endif %}
-			</th>
-		</tr>
-
-	</table>
-	</div>
-
-	{% endif %}
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

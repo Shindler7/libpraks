@@ -1,14 +1,30 @@
-<!DOCTYPE html>
+{%- extends "bootstrap/base.html" %}
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="{{ url_for('static', filename='design.css', v=3) }}">
-        <title>Library {{title}}</title>
-        
-    </head>
-    <body>
-        {% block content %}
-        {% endblock %}
-    </body>
-</html>
+{% block title %}ЯП:4 Library {{title}}{% endblock %}
+{% import "bootstrap/fixes.html" as fixes %}
+
+{% block head %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    {{super()}}
+    {{fixes.ie8()}}
+{%- endblock %}
+
+{% block styles -%}
+    {{super()}}
+    <link rel="stylesheet" type="text/css"
+          href="{{url_for('static', filename='design.css')}}">
+{% endblock %}
+
+{% block navbar %}
+    {{nav.lib_navbar.render()}}
+{% endblock %}
+
+{% block content %}
+    {# Основное содержание страницы #}
+{% endblock %}
+
+{% import "bootstrap/google.html" as google %}
+{% block scripts %}
+  {{super()}}
+  {{google.uanalytics('UA-163374186-1')}}
+{% endblock %}

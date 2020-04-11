@@ -10,146 +10,172 @@ URL_LANG = 2
 URL_TYPE = 3
 URL_TAGS = 4
 
-morh = pymorphy2.MorphAnalyzer()
+morphy = pymorphy2.MorphAnalyzer()
 
-def startmodule(user_req) -> str:
+
+def start_module(user_req) -> str:
   """
-  Возвращает данные по запросу пользователя или ошибку.
-  :param user_req: Строка (str) с запросом пользователя или текстом ошибки.
-  :return: Str
+  Возвращает данные по запросу пользователя или сообщение об ошибке.
+
+  :param user_req: Текст запроса пользователя.
+  :return: Подготовленный к публикации ответ по запросу пользователя.
+
   """
-  
-  if not re.match(r'.*[^0-9 +\-\*\/()].*', user_req): #валидируем ввод на что-то еще кроме цифр, матем.знаков и скобок
+
+  if not re.match(r'.*[^0-9 +\-\*\/()].*', user_req):
     try:     # Путь 1: пользователь ввёл калькуляторную строку
       return eval(user_req)
-    except:
+    except ValueError:
       return 'Ошибка расчёта.'
 
-  # Проверка 2: пользователь ввёл запрос для БД.
-  answer = inuserstring(user_req)
-  if not answer: return 'Нет подходящих данных или неверный запрос.'
+# Проверка 2: пользователь ввёл запрос для БД.
+  answer = in_user_string(user_req)
+  if not answer:
+    answer = 'Нет подходящих данных или неверный запрос.'
 
   return answer
 
-class compilereq():
+
+class CompileReq:
   """
-  Класс производит компиляцию списка уникальных тэгов в базе данных (urlbase).
+  Формирует по базе данных полный или частный набор тэгов для записей.
+
+  :param key: Ключ категории записей в базе данных для отбора тэгов (не обязательно).
+
   """
 
-  def __init__(self):
-    
-    tag_lst = list()
-    for key in db.urlbase.values():
-      [tag_lst.append(item.strip()) for item in key[URL_TAGS] if item.strip() not in tag_lst]
+  def __init__(self, *, key=None):
 
-    self._tag_lst = tag_lst
+    self.key = key
+    self.tag_lst = list()
 
-  def getTag(self):
+    if self.key is None:
+      for tag in db.urlbase.values():
+        [self.tag_lst.append(item.strip()) for item in tag[URL_TAGS] if item.strip() not in self.tag_lst]
+    else:
+      for key, for_key in db.keytypedisp.items():
+        if for_key.lower() == self.key.lower():
+          find_key = key
+          break
+      else:
+        find_key=''
+
+      for tag in db.urlbase.values():
+        [self.tag_lst.append(item.strip()) for item in tag[URL_TAGS] if item.strip() not in self.tag_lst and tag[URL_TYPE]==find_key]
+
+  def get_tag(self) -> list:
     """
-    Возвращается list уникальных тэгов в базе данных (urlbase)
-    :return: List()
-    """
-    return self._tag_lst
+    Возвращает список тэгов.
 
-def inuserstring(user_req) -> dict:
+    :return: Список выбранных тэгов.
+
+    """
+
+    return self.tag_lst
+
+
+def in_user_string(user_req) -> dict or str:
   """
-  Анализ строки запроса пользователя и выделение ключевых слов-зависимостей.
-  :param user_req: Строка запроса пользователя (str).
-  :return: Словарь (dict) содержащий обнаруженные слова предпочтений и исключений (отрицаний).
+  Распознаёт слова (фразы) в запросе пользователя. Формирует словарь по предустановленному шаблону.
+
+  :param user_req: Строка запроса пользователя.
+  :return: Словарь содержащий обнаруженные слова предпочтений и исключений (отрицаний).
+
   """
-  
+
   key_dict = {'tag': [], 'lang': [], 'type': [], 'extag': [], 'exlang': [], 'extype': []} # lang, type, tag
 
   user_phrase = re.findall(r'\S+', user_req.lower())
-  point_uphrase = len(user_phrase)-1
-  
+  point_in_phrase = len(user_phrase)-1
+
   # Кроличья нора: вывести всё сразу.
   if user_phrase[0] in ['всё', 'все', 'all'] or not user_phrase:
-    return returnLib(key_dict, to_print=True)
-  
-  cq_tag = compilereq()
-  shift_inleft = 0  # флаг сдвига по строке.
-  
-  while point_uphrase-shift_inleft >= 0:
-    
+    return return_lib(key_dict, to_print=True)
+
+  cq_tag = CompileReq()
+  shift_in_left = 0  # флаг сдвига по строке.
+
+  while point_in_phrase-shift_in_left >= 0:
+
     # Проверка ведётся от последнего слова к первому. Цель - поиск словосочетаний и отрицаний (не, нет)
 
     # * Внутренняя функция проверки слов по базе данных.
-    def checkinBD(word):
+
+    def check_in_bd(word) -> list or 0 or None:
       """
-      Проверяется принятая фраза (слово) на присутствие в базе данных, а также в локальном словаре уже отобранных слов.
-      :param word: Слово или фраза (str) для проверки.
-      :return: Str, в формате 'видфразы*фраза' - когда фраза и её принадлежность определены.
-      :return: 0, слово не опознано. 
-      :return: None, фраза не для обработки (предлоги) или возникло исключение (например, out of range).
+      Проверяет слово (фразу) на присутствие в базе данных и локальном словаре уже отобранных слов.
+      Применяет морфологический анализ для идентификации слов в различных склонениях.
+
+      :param word: Слово (фраза) для проверки.
+      :return: Список из двух значений: [вид фразы, фраза].
+      0 - если предлог (неисследуемое слово).
+      None - если слово не найдено в словарях.
+
       """
 
-      try:
-        word_morh = morh.parse(word)[0]      
-        if word_morh.tag.POS == 'PREP':      # Предлоги опускаются.
-          return 
+      word_morph = morphy.parse(word)[0]
+      if word_morph.tag.POS == 'PREP':      # Предлоги опускаются.
+        return 0
 
         # тэги
-        if word in cq_tag.getTag() and word not in key_dict['tag'] and word not in key_dict['extag']: 
-          return ['tag', word]
-      
+      if word in cq_tag.get_tag() and word not in key_dict['tag'] and word not in key_dict['extag']:
+        return ['tag', word]
+
         # язык
-        for id, string in db.langtype.items():
-          if word_morh.normal_form in string and word_morh.normal_form not in key_dict['lang'] and word not in key_dict['exlang']: 
-            return ['lang', id]
-        
-        # другие слова
-        for id, string in db.keytype.items():
-          if word_morh.normal_form in string and word_morh.normal_form not in key_dict['type'] and word not in key_dict['extype']: 
-            return ['type', id]
-      except: 
-        return
-      else:
-        return 0 # Все проверки провалены.
+      for id, string in db.langtype.items():
+        if word_morph.normal_form in string and word_morph.normal_form not in key_dict['lang'] and word_morph not in key_dict['exlang']:
+          return ['lang', id]
+
+        # категории
+      for id, string in db.keytypedisp.items():
+        if word == string.lower() and word not in key_dict['type'] and word not in key_dict['extype']:
+          return ['type', id]
+
+      return
+
     # * Конец внутренней процедуры.
 
-    actualy_word = user_phrase[point_uphrase]
-    if shift_inleft > 0:
-      actualy_word = f'{user_phrase[point_uphrase-shift_inleft]} {actualy_word}'
-    
-    actualy_word_check = checkinBD(actualy_word)
-    if actualy_word_check is None:
-      point_uphrase, shift_inleft = point_uphrase-shift_inleft-1, 0
-    elif actualy_word_check == 0:
-      if shift_inleft == 0:
-        shift_inleft = 1
-      else:
-        point_uphrase, shift_inleft = point_uphrase-shift_inleft, 0
+    actually_word = user_phrase[point_in_phrase]
+    if shift_in_left > 0:
+      actually_word = f'{user_phrase[point_in_phrase-shift_in_left]} {actually_word}'
+
+    actually_word_check = check_in_bd((actually_word))
+
+    if actually_word_check==0 or (actually_word_check is None and shift_in_left > 0):
+      point_in_phrase, shift_in_left = point_in_phrase-shift_in_left-1, 0
+    elif actually_word_check is None:
+        shift_in_left = 1
     else:
-      word_negative = (morh.parse(user_phrase[point_uphrase-shift_inleft-1])[0] if point_uphrase-shift_inleft-1 >=0 else None)
-      if world_negative.normal_form in ['без', 'не', 'исключить']: 
-        key_dict[f'ex{actualy_word_check[0]}'].append(actualy_word_check[1])
+      word_negative = (morphy.parse(user_phrase[point_in_phrase-shift_in_left-1])[0] if point_in_phrase-shift_in_left-1 >=0 else morphy.parse('')[0])
+
+      if word_negative.normal_form in ['без', 'не', 'исключить']:
+        key_dict[f'ex{actually_word_check[0]}'].append(actually_word_check[1])
       else:
-        key_dict[actualy_word_check[0]].append(actualy_word_check[1])
-        
-      point_uphrase, shift_inleft = point_uphrase-shift_inleft-1, 0
-  
+        key_dict[actually_word_check[0]].append(actually_word_check[1])
+
+      point_in_phrase, shift_in_left = point_in_phrase-shift_in_left-1, 0
+
   # Не найдено ни одного ключевого слова.
   if sum(True for values in key_dict.values() if values) == 0:
     return ''
-  
-  return returnLib(key_dict, to_print=True)
+
+  return return_lib(key_dict, to_print=True)
 
 
-def returnLib(dict_req, to_print=False) -> dict or str:
+def return_lib(dict_req, *, to_print=False) -> dict or str:
   """
-  Возвращает словарь с выборкой результатов на основе словаря расшифрованных запросов пользователя.
-  При to_print == True возвращает обработанный текст для печати.
-  :param dict_req: Словарь (dict) с фразами для выборки на основе запроса пользователя. 
+  Формирует и возвращает словарь со значениями из базы данных, собранных по распознаным словам.
+
+  :param dict_req: Словарь распознанных слов, сформированный по шаблону.
   :param to_print: True - возврат текста для печати, False - возврат только словаря с выборкой.
-  :return: Str, dict
+
   """
 
   dic_result = {}
 
   for string in db.urlbase.values():
     # Флаг включения строки в выборку, false - нет
-    in_tag=False      
+    in_tag=False
     in_cat=False
     lang=False
 
@@ -165,14 +191,14 @@ def returnLib(dict_req, to_print=False) -> dict or str:
     # исключение
     if string[URL_TYPE] in dict_req['extype']: in_cat=False
 
-    # Проверка языка (проверяем только если указано, иначе - берём всё). 
+    # Проверка языка (проверяем только если указано, иначе - берём всё).
     if not dict_req['lang']: lang=True
     elif string[URL_LANG] in dict_req['lang']: lang = True
     # исключение
     if string[URL_LANG] in dict_req['exlang']: lang = False
-    
+
     if in_tag and in_cat and lang:    # Строка включается
-      # Если категории в словаре нет, создадим. 
+      # Если категории в словаре нет, создадим.
       if dic_result.get(string[URL_TYPE]) is None: dic_result.update({string[URL_TYPE]:[]})
       if string[URL_LANG] != 'ru':
         dic_result[string[URL_TYPE]].append(f'({string[URL_LANG]}) {string[URL_NAME]}')
@@ -183,28 +209,30 @@ def returnLib(dict_req, to_print=False) -> dict or str:
     in_tag, in_cat, lang = False, False, False
 
   if to_print:
-    return printLib(dic_result)
+    return print_lib(dic_result)
   else:
-    return dic_result            
+    return dic_result
 
-def printLib(dict_to_print) -> str:
+
+def print_lib(dict_to_print) -> str:
   """
-  Возвращает текст для печати, сформированный на основе переданного словаря с выборкой по запросу пользователя.
-  :param: dict_to_print - словарь (dict) с выборкой по запросу пользователя.
-  :return: str
+  Формирует текстовый блок для вывода пользователю на основе полученного словаря с выборкой из базы данных.
+
+  :param dict_to_print: Словарь с выборкой результатов из базы данных.
+
   """
 
   text_print = ''
 
   for key_type in db.keytypedisp.keys():
     if dict_to_print.get(key_type): #is not None
-      text_print += f'<span id="hehe">{db.keytypedisp[key_type]}</span><br>'
-      text_print += '<p>'
+      text_print += f'<h3>{db.keytypedisp[key_type]}</h3>'
+      text_print += '<p class="lead">'
 
       for to_print in range(0, len(dict_to_print[key_type]), 2):
         text_print += f'<a id="urldb" href="{dict_to_print[key_type][to_print+1]}">{dict_to_print[key_type][to_print]}</a><br>'
-      
-      text_print += '</p><br>'
+
+      text_print += '</p>'
 
   return text_print
 
