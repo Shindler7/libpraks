@@ -11,6 +11,10 @@
 	padding: 0 5%;
 } */
 
-h3 {
+.btn-round{
+	border-radius: 17px;
+}
+.green_color {
 	color: yellowgreen;
 }
+
