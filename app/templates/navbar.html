@@ -7,7 +7,11 @@
     <ul class="navbar-nav">
         {% for category_link in category_links %}
         <li class="nav-item mr-1">
+          {% if category_link.lower() == exoutput.lower() %}
+            <a class="nav-link disabled" href={{ url_for('index', chatstring=category_link.lower()) }}>{{ category_link }}</a>
+          {% else %}
             <a class="nav-link" href={{ url_for('index', chatstring=category_link.lower()) }}>{{ category_link }}</a>
+          {% endif %}
         </li>
         {% endfor %}
     </ul>

@@ -1,28 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
 
-html, body {
+/* html, body {
 	background-color: white;
 	font-family: 'Inter', sans-serif;
     font-size: 110%;
     font-weight: normal;
-    /*text-align: center;*/
-	/*color:black;*/
+    text-align: center;
+	color:black;
 	padding: 0 5%;
-}
+} */
 
 h3 {
 	color: yellowgreen;
-}
-
-.category_links {
-	color: black;
-}
-
-.tags_links {
-
-}
-
-.output {
-	
 }
