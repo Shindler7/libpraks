@@ -213,7 +213,7 @@ def return_lib(dict_req, *, to_print=False) -> dict or str:
                 dic_result[string[URL_TYPE]].append(f'({string[URL_LANG]}) {string[URL_NAME]}')
             else:
                 dic_result[string[URL_TYPE]].append(string[URL_NAME])
-            dic_result[string[URL_TYPE]].append(string[URL_URL].lower()) # NB: здесь ссылки переводятся в lowercase
+            dic_result[string[URL_TYPE]].append(string[URL_URL]) 
 
         in_tag, in_cat, lang = False, False, False
 
