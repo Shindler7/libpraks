@@ -3,7 +3,9 @@
 from flask import render_template, flash, redirect, request
 from app import application
 from app.generator import start_module
-from flask_nav.elements import *
+
+# Отключено. К исключению после проверки. 
+#from flask_nav.elements import *
 #from app.forms import ChatForm
 #from flask_mobility.decorators import mobile_template
 #from flask_mobility.decorators import mobilized
@@ -22,7 +24,7 @@ def index():
     output = ''
     tag_links = []
     global active_output
-
+    
     # Обработчик запроса пользователя GET
     if request.method == 'GET':
 

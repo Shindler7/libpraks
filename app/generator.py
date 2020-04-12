@@ -21,7 +21,7 @@ def start_module(user_req) -> str:
   :return: Подготовленный к публикации ответ по запросу пользователя.
 
   """
-
+    
     if not re.match(r'.*[^0-9 +\-\*\/()].*', user_req):
         try:  # Путь 1: пользователь ввёл калькуляторную строку
             return eval(user_req)
@@ -85,10 +85,10 @@ def in_user_string(user_req) -> dict or str:
   """
 
     key_dict = {'tag': [], 'lang': [], 'type': [], 'extag': [], 'exlang': [], 'extype': []}  # lang, type, tag
-
+    
     user_phrase = re.findall(r'\S+', user_req.lower())
     point_in_phrase = len(user_phrase) - 1
-
+    
     # Кроличья нора: вывести всё сразу.
     if user_phrase[0] in ['всё', 'все', 'all'] or not user_phrase:
         return return_lib(key_dict, to_print=True)
@@ -213,7 +213,7 @@ def return_lib(dict_req, *, to_print=False) -> dict or str:
                 dic_result[string[URL_TYPE]].append(f'({string[URL_LANG]}) {string[URL_NAME]}')
             else:
                 dic_result[string[URL_TYPE]].append(string[URL_NAME])
-            dic_result[string[URL_TYPE]].append(string[URL_URL])
+            dic_result[string[URL_TYPE]].append(string[URL_URL].lower()) # NB: здесь ссылки переводятся в lowercase
 
         in_tag, in_cat, lang = False, False, False
 

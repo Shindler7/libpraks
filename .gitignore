@@ -11,3 +11,6 @@ config.py
 __pycache__/*
 _sources/
 tmp/
+
+# временное отключение
+app/datebase.py
