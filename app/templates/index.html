@@ -3,17 +3,21 @@
 
 {% block content %}
 
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mt-3">
         {% if tag_links %}
             {% for tag_link in tag_links %}
                 <a href= {{ url_for('index', tagstring=tag_link.lower()) }}>
-                    <button type="button" class="btn btn-outline-primary btn-sm mr-1 {% if tag_link.lower() in request.url %} active {% endif %} ">{{ tag_link }}</button>
+                    {% if tag_link.lower() in request.url %}
+                        <button type="button" class="btn btn-outline-primary btn-sm mr-1 btn-round active">{{ tag_link }}</button>
+                    {% else %}
+                        <button type="button" class="btn btn-outline-primary btn-sm mr-1 btn-round">{{ tag_link }}</button>
+                    {% endif %}
                 </a>
             {% endfor %}
         {% endif %}
     </div>
 
-    <div class="row mt-2">
+    <div class="row mt-3">
         <div class="col-12">
             {% if output %}
                 {{ output|safe }}

@@ -235,7 +235,7 @@ def print_lib(dict_to_print) -> str:
 
     for key_type in db.keytypedisp.keys():
         if dict_to_print.get(key_type):  # is not None
-            text_print += f'<h3>{db.keytypedisp[key_type]}</h3>'
+            text_print += f'<h3><span class="green_color">{db.keytypedisp[key_type]}</span></h3>'
             text_print += '<p class="lead">'
 
             for to_print in range(0, len(dict_to_print[key_type]), 2):
