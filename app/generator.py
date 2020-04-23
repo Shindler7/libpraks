@@ -2,6 +2,7 @@
 import app._dblib as db
 import pymorphy2
 import re
+import logging
 
 # Тэги для БД urlbase
 URL_NAME = 0
@@ -21,7 +22,8 @@ def start_module(user_req) -> str:
   :return: Подготовленный к публикации ответ по запросу пользователя.
 
   """
-    
+    logging.info(f'{start_module.__name__} start')
+
     if not re.match(r'.*[^0-9 +\-\*\/()].*', user_req):
         try:  # Путь 1: пользователь ввёл калькуляторную строку
             return eval(user_req)
@@ -33,6 +35,7 @@ def start_module(user_req) -> str:
     if not answer:
         answer = 'Нет подходящих данных или неверный запрос.'
 
+    logging.info(f'{start_module.__name__} finish')
     return answer
 
 
@@ -119,19 +122,24 @@ def in_user_string(user_req) -> dict or str:
                 return 0
 
                 # тэги
-            if word in cq_tag.get_tag() and word not in key_dict['tag'] and word not in key_dict['extag']:
+            if word in cq_tag.get_tag() and \
+                    word not in key_dict['tag'] and \
+                    word not in key_dict['extag']:
                 return ['tag', word]
 
                 # язык
-            for id, string in db.langtype.items():
-                if word_morph.normal_form in string and word_morph.normal_form not in key_dict[
-                    'lang'] and word_morph not in key_dict['exlang']:
-                    return ['lang', id]
+            for id_, string in db.langtype.items():
+                if word_morph.normal_form in string and \
+                        word_morph.normal_form not in key_dict['lang'] \
+                        and word_morph not in key_dict['exlang']:
+                    return ['lang', id_]
 
                 # категории
-            for id, string in db.keytypedisp.items():
-                if word == string.lower() and word not in key_dict['type'] and word not in key_dict['extype']:
-                    return ['type', id]
+            for id_, string in db.keytypedisp.items():
+                if word == string.lower() and \
+                        word not in key_dict['type'] and \
+                        word not in key_dict['extype']:
+                    return ['type', id_]
 
             return
 
@@ -141,7 +149,7 @@ def in_user_string(user_req) -> dict or str:
         if shift_in_left > 0:
             actually_word = f'{user_phrase[point_in_phrase - shift_in_left]} {actually_word}'
 
-        actually_word_check = check_in_bd((actually_word))
+        actually_word_check = check_in_bd(actually_word)
 
         if actually_word_check == 0 or (actually_word_check is None and shift_in_left > 0):
             point_in_phrase, shift_in_left = point_in_phrase - shift_in_left - 1, 0
@@ -159,7 +167,7 @@ def in_user_string(user_req) -> dict or str:
             point_in_phrase, shift_in_left = point_in_phrase - shift_in_left - 1, 0
 
     # Не найдено ни одного ключевого слова.
-    if sum(True for values in key_dict.values() if values) == 0:
+    if not all(True for values in key_dict.values() if values):
         return ''
 
     return return_lib(key_dict, to_print=True)
@@ -185,10 +193,11 @@ def return_lib(dict_req, *, to_print=False) -> dict or str:
         # Проверка тэгов
         if not dict_req['tag']:
             in_tag = True
-        elif (set(string[URL_TAGS]) >= set(dict_req['tag'])) == True:
+        elif set(string[URL_TAGS]) >= set(dict_req['tag']):
             in_tag = True
         # исключение
-        if dict_req['extag'] and (set(string[URL_TAGS]) >= set(dict_req['extag'])) == True: in_tag = False
+        if dict_req['extag'] and set(string[URL_TAGS]) >= set(dict_req['extag']):
+            in_tag = False
 
         # Проверка категории
         if not dict_req['type']:
@@ -196,7 +205,8 @@ def return_lib(dict_req, *, to_print=False) -> dict or str:
         elif string[URL_TYPE] in dict_req['type']:
             in_cat = True
         # исключение
-        if string[URL_TYPE] in dict_req['extype']: in_cat = False
+        if string[URL_TYPE] in dict_req['extype']:
+            in_cat = False
 
         # Проверка языка (проверяем только если указано, иначе - берём всё).
         if not dict_req['lang']:
@@ -204,18 +214,20 @@ def return_lib(dict_req, *, to_print=False) -> dict or str:
         elif string[URL_LANG] in dict_req['lang']:
             lang = True
         # исключение
-        if string[URL_LANG] in dict_req['exlang']: lang = False
+        if string[URL_LANG] in dict_req['exlang']:
+            lang = False
 
         if in_tag and in_cat and lang:  # Строка включается
             # Если категории в словаре нет, создадим.
-            if dic_result.get(string[URL_TYPE]) is None: dic_result.update({string[URL_TYPE]: []})
+            if dic_result.get(string[URL_TYPE]) is None:
+                dic_result.update({string[URL_TYPE]: []})
             if string[URL_LANG] != 'ru':
                 dic_result[string[URL_TYPE]].append(f'({string[URL_LANG]}) {string[URL_NAME]}')
             else:
                 dic_result[string[URL_TYPE]].append(string[URL_NAME])
             dic_result[string[URL_TYPE]].append(string[URL_URL]) 
 
-        in_tag, in_cat, lang = False, False, False
+        in_tag = in_cat = lang = False
 
     if to_print:
         return print_lib(dic_result)

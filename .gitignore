@@ -11,6 +11,7 @@ config.py
 __pycache__/*
 _sources/
 tmp/
+libprakt.log
 
 # временное отключение
 app/datebase.py
