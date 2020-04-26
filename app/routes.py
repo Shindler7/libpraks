@@ -2,12 +2,11 @@
 
 from flask import render_template, flash, redirect, request
 from app import application
-from app.generator import start_module
-
+from app.generator import start_module, CompileReq
 from app._dblib import keytypedisp
-from app.generator import CompileReq
 
 active_output: str = ''
+
 
 # https://jinja.palletsprojects.com/en/2.11.x/
 
@@ -18,7 +17,7 @@ def index():
     output = ''
     tag_links = []
     global active_output
-    
+
     # Обработчик запроса пользователя GET
     if request.method == 'GET':
 
@@ -48,4 +47,8 @@ def index():
                            tag_links=tag_links)
 
 
-
+@application.route('/createbase')
+def createbase():
+    from app.dbpanel import create_all_tables
+    create_all_tables()
+    return 'Выполнено'
