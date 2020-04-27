@@ -3,24 +3,21 @@
 from flask import Flask
 from config import Config
 from flask_sslify import SSLify
-from flask_mobility import Mobility
-from flask_bootstrap import Bootstrap
-from flask_nav import Nav
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy as SQLA
+
+import logging
+
+logging.basicConfig(filename='libprakt.log', level=logging.INFO)
 
 # Flask
 application = Flask(__name__)
 application.config.from_object(Config)
-# Подключение (обслуживание) SSL (https://)
+
+# Подключение (обслуживание) SSL
 sslify = SSLify(application)  
-# Мобильная версия
-Mobility(application)  
-# Bootstrap
-Bootstrap(application)  
-nav = Nav()
-nav.init_app(application)
+
 # SQLAlchemy
-sql_user_lib = SQLAlchemy(application)
+db_lib = SQLA(application)
 
 from app import routes
 

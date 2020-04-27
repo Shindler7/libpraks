@@ -2,18 +2,11 @@
 
 from flask import render_template, flash, redirect, request
 from app import application
-from app.generator import start_module
-
-# Отключено. К исключению после проверки. 
-#from flask_nav.elements import *
-#from app.forms import ChatForm
-#from flask_mobility.decorators import mobile_template
-#from flask_mobility.decorators import mobilized
-
+from app.generator import start_module, CompileReq
 from app._dblib import keytypedisp
-from app.generator import CompileReq
 
 active_output: str = ''
+
 
 # https://jinja.palletsprojects.com/en/2.11.x/
 
@@ -24,7 +17,7 @@ def index():
     output = ''
     tag_links = []
     global active_output
-    
+
     # Обработчик запроса пользователя GET
     if request.method == 'GET':
 
@@ -35,7 +28,7 @@ def index():
         elif request.args.get(key='tagstring'):
             output = start_module(f"{active_output} {request.args['tagstring']}")
         else:
-            output = start_module('всё')
+            output = start_module('all')
             active_output = ''
 
         if active_output == '':
@@ -46,8 +39,16 @@ def index():
             if len(tag_links) <= 1:
                 tag_links = []
 
-    return render_template('index.html', title='online', output=output, exoutput=active_output,
-                           category_links=keytypedisp.values(), tag_links=tag_links)
+    return render_template('index.html',
+                           title='online',
+                           output=output,
+                           exoutput=active_output,
+                           category_links=keytypedisp.values(),
+                           tag_links=tag_links)
 
 
-
+@application.route('/createbase')
+def createbase():
+    from app.dbpanel import create_all_tables
+    create_all_tables()
+    return 'Выполнено'
