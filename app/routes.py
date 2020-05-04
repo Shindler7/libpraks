@@ -49,6 +49,12 @@ def index():
 
 @application.route('/createbase')
 def createbase():
-    from app.dbpanel import create_all_tables
-    create_all_tables()
-    return 'Выполнено'
+    from app.dbpanel import tech_all_tables, add_to_db
+    tech_all_tables(command='create')
+    # query = {'name': 'Empire of Code',
+    #          'url': 'https://empireofcode.com/',
+    #          'lang': 'en',
+    #          'type': 'game',
+    #          'category': 'python'}
+
+    return 'Успешно'
