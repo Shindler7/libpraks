@@ -5,6 +5,7 @@
 
 from app import db_lib
 from datetime import datetime
+from sqlalchemy.orm import relationship
 
 
 class Category(db_lib.Model):
@@ -18,7 +19,7 @@ class Category(db_lib.Model):
     id = db_lib.Column(db_lib.Integer, primary_key=True)
     name = db_lib.Column(db_lib.String(100), nullable=False, unique=True)
 
-    content = db_lib.relationship('Content', backref='Category')
+    content = relationship('Content', backref='Category')
 
     def __repr__(self):
         return f'<Types(id="{self.id}", name="{self.name}")>'
@@ -38,7 +39,7 @@ class Types(db_lib.Model):
     id = db_lib.Column(db_lib.Integer, primary_key=True)
     name = db_lib.Column(db_lib.String(200), nullable=False, unique=True)
 
-    content = db_lib.relationship('Content', backref='Types')
+    content = relationship('Content', backref='Types')
 
     def __repr__(self):
         return f'<Types(id="{self.id}", name="{self.name}")>'

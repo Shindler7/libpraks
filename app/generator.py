@@ -105,42 +105,40 @@ def in_user_string(user_req) -> dict or str:
     cq_tag = CompileReq()
     shift_in_left = 0  # флаг сдвига по строке.
 
+    # Проверка ведётся от последнего слова к первому. Цель - поиск словосочетаний и отрицаний (не, нет)
     while point_in_phrase - shift_in_left >= 0:
-
-        # Проверка ведётся от последнего слова к первому. Цель - поиск словосочетаний и отрицаний (не, нет)
-
-        # * Внутренняя функция проверки слов по базе данных.
 
         def check_in_bd(word) -> list or 0 or None:
             """
-      Проверяет слово (фразу) на присутствие в базе данных и локальном словаре уже отобранных слов.
-      Применяет морфологический анализ для идентификации слов в различных склонениях.
+          Проверяет слово (фразу) на присутствие в базе данных и локальном словаре уже отобранных слов.
+          Применяет морфологический анализ для идентификации слов в различных склонениях.
 
-      :param word: Слово (фраза) для проверки.
-      :return: Список из двух значений: [вид фразы, фраза].
-      0 - если предлог (неисследуемое слово).
-      None - если слово не найдено в словарях.
+          :param word: Слово (фраза) для проверки.
+          :return: Список из двух значений: [вид фразы, фраза].
+          0 - если предлог (неисследуемое слово).
+          None - если слово не найдено в словарях.
 
       """
 
             word_morph = morphy.parse(word)[0]
-            if word_morph.tag.POS == 'PREP':  # Предлоги опускаются.
+            # Предлоги опускаются.
+            if word_morph.tag.POS == 'PREP':
                 return 0
 
-                # тэги
+            # Тэги.
             if word in cq_tag.get_tag() and \
                     word not in key_dict['tag'] and \
                     word not in key_dict['extag']:
                 return ['tag', word]
 
-                # язык
+            # Язык.
             for id_, string in db.langtype.items():
                 if word_morph.normal_form in string and \
                         word_morph.normal_form not in key_dict['lang'] \
                         and word_morph not in key_dict['exlang']:
                     return ['lang', id_]
 
-                # категории
+            # Категории
             for id_, string in db.keytypedisp.items():
                 if word == string.lower() and \
                         word not in key_dict['type'] and \
@@ -148,8 +146,6 @@ def in_user_string(user_req) -> dict or str:
                     return ['type', id_]
 
             return
-
-        # * Конец внутренней процедуры.
 
         actually_word = user_phrase[point_in_phrase]
         if shift_in_left > 0:

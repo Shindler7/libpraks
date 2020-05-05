@@ -3,7 +3,7 @@
 from flask import render_template, flash, redirect, request
 from app import application
 from app.generator import start_module, CompileReq
-from app._dblib import keytypedisp
+from app._dblib import keytypedisp, urlbase
 
 active_output: str = ''
 
@@ -50,11 +50,21 @@ def index():
 @application.route('/createbase')
 def createbase():
     from app.dbpanel import tech_all_tables, add_to_db
-    tech_all_tables(command='create')
+
+    # tech_all_tables(command='create.all')
     # query = {'name': 'Empire of Code',
     #          'url': 'https://empireofcode.com/',
     #          'lang': 'en',
     #          'type': 'game',
     #          'category': 'python'}
 
-    return 'Успешно'
+    dict_from = urlbase[0]
+    querys = {'name': dict_from[0], 'url': dict_from[1], 'lang': dict_from[2], 'types': dict_from[3],
+              'category': dict_from[4][0]}
+
+    if add_to_db(**querys):
+        msg = 'Успешно'
+    else:
+        msg = 'Ошибка'
+
+    return msg
