@@ -41,6 +41,27 @@ def tech_all_tables(*, command: str = 'test') -> bool:
     return False
 
 
+def migrate_to_db() -> bool:
+    """
+    Временная техническая функция. Экспортирует записи из словаря в БД.
+    Использует словарь _dblib.urlbasesource.
+    :return: True - при успешном завершении, False - при ошибке.
+    """
+
+    from app._dblib import urlbasesource
+
+    if not urlbasesource:
+        return False
+
+    for string in urlbasesource.values():
+        query_new = {'name': string[0], 'url': string[1], 'lang': string[2], 'types': string[3],
+                     'category': string[4][0]}
+        if not add_to_db(**query_new):
+            return False
+
+    return True
+
+
 def add_to_db(*, create_types: bool = True, create_category: bool = True, **kwargs) -> bool:
     """
     Добавляет записи из переданного словаря в базу данных.

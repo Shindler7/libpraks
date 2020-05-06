@@ -8,7 +8,6 @@
 import app._dblib as db
 import pymorphy2
 import re
-import logging
 
 # Тэги для БД urlbase
 URL_NAME = 0
@@ -28,7 +27,6 @@ def start_module(user_req) -> str:
   :return: Подготовленный к публикации ответ по запросу пользователя.
 
   """
-    logging.info(f'{start_module.__name__} start')
 
     if not re.match(r'.*[^0-9 +\-\*\/()].*', user_req):
         try:  # Путь 1: пользователь ввёл калькуляторную строку
@@ -41,7 +39,6 @@ def start_module(user_req) -> str:
     if not answer:
         answer = 'Нет подходящих данных или неверный запрос.'
 
-    logging.info(f'{start_module.__name__} finish')
     return answer
 
 
@@ -82,6 +79,19 @@ class CompileReq:
     """
 
         return self.tag_lst
+
+
+class CompileNav:
+
+    def __init__(self):
+        self.category = list()
+        self.types = list()
+
+    def get_category(self):
+        pass
+
+    def get_types(self, *, category=None):
+        pass
 
 
 def in_user_string(user_req) -> dict or str:

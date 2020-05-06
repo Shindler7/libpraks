@@ -18,6 +18,7 @@ class Category(db_lib.Model):
 
     id = db_lib.Column(db_lib.Integer, primary_key=True)
     name = db_lib.Column(db_lib.String(100), nullable=False, unique=True)
+    fname = db_lib.Column(db_lib.String(100))
 
     content = relationship('Content', backref='Category')
 
@@ -38,6 +39,7 @@ class Types(db_lib.Model):
 
     id = db_lib.Column(db_lib.Integer, primary_key=True)
     name = db_lib.Column(db_lib.String(200), nullable=False, unique=True)
+    fname = db_lib.Column(db_lib.String(100))
 
     content = relationship('Content', backref='Types')
 
@@ -59,7 +61,7 @@ class Content(db_lib.Model):
     name = db_lib.Column(db_lib.String(200), nullable=False)
     url = db_lib.Column(db_lib.String(300), nullable=False, unique=True)
     date = db_lib.Column(db_lib.DateTime, nullable=False, default=datetime.now)
-    lang = db_lib.Column(db_lib.String(10), nullable=False, unique=True)
+    lang = db_lib.Column(db_lib.String(10), nullable=False)
 
     category_id = db_lib.Column(db_lib.Integer(), db_lib.ForeignKey('Category.id'))
     types_id = db_lib.Column(db_lib.Integer(), db_lib.ForeignKey('Types.id'))

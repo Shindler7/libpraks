@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-from flask import render_template, flash, redirect, request
+from flask import render_template, redirect, request
 from app import application
 from app.generator import start_module, CompileReq
-from app._dblib import keytypedisp, urlbase
+from app._dblib import keytypedisp
 
 active_output: str = ''
 
@@ -49,20 +49,14 @@ def index():
 
 @application.route('/createbase')
 def createbase():
-    from app.dbpanel import tech_all_tables, add_to_db
+    from app.dbpanel import migrate_to_db, tech_all_tables
 
-    # tech_all_tables(command='create.all')
-    # query = {'name': 'Empire of Code',
-    #          'url': 'https://empireofcode.com/',
-    #          'lang': 'en',
-    #          'type': 'game',
-    #          'category': 'python'}
+    # msg = 'Нет команд'
 
-    dict_from = urlbase[0]
-    querys = {'name': dict_from[0], 'url': dict_from[1], 'lang': dict_from[2], 'types': dict_from[3],
-              'category': dict_from[4][0]}
+    if not tech_all_tables(command='create.all'):
+        return 'Провал создания таблиц'
 
-    if add_to_db(**querys):
+    if migrate_to_db():
         msg = 'Успешно'
     else:
         msg = 'Ошибка'
