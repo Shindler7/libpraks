@@ -8,6 +8,7 @@
 import app._dblib as db
 import pymorphy2
 import re
+from app.dbpanel import DBWork, get_content
 
 # Тэги для БД urlbase
 URL_NAME = 0
@@ -35,70 +36,20 @@ def start_module(user_req) -> str:
             return 'Ошибка расчёта.'
 
     # Проверка 2: пользователь ввёл запрос для БД.
-    answer = in_user_string(user_req)
+    answer = in_user_string(user_req, to_print=False)
     if not answer:
         answer = 'Нет подходящих данных или неверный запрос.'
 
     return answer
 
 
-class CompileReq:
-    """
-  Формирует по базе данных полный или частный набор тэгов для записей.
-
-  :param key: Ключ категории записей в базе данных для отбора тэгов (не обязательно).
-
-  """
-
-    def __init__(self, *, key=None):
-
-        self.key = key
-        self.tag_lst = list()
-
-        if self.key is None:
-            for tag in db.urlbase.values():
-                [self.tag_lst.append(item.strip()) for item in tag[URL_TAGS] if item.strip() not in self.tag_lst]
-        else:
-            for key, for_key in db.keytypedisp.items():
-                if for_key.lower() == self.key.lower():
-                    find_key = key
-                    break
-            else:
-                find_key = ''
-
-            for tag in db.urlbase.values():
-                [self.tag_lst.append(item.strip()) for item in tag[URL_TAGS] if
-                 item.strip() not in self.tag_lst and tag[URL_TYPE] == find_key]
-
-    def get_tag(self) -> list:
-        """
-    Возвращает список тэгов.
-
-    :return: Список выбранных тэгов.
-
-    """
-
-        return self.tag_lst
-
-
-class CompileNav:
-
-    def __init__(self):
-        self.category = list()
-        self.types = list()
-
-    def get_category(self):
-        pass
-
-    def get_types(self, *, category=None):
-        pass
-
-
-def in_user_string(user_req) -> dict or str:
+def in_user_string(user_req, *, to_print=True) -> dict or str:
     """
   Распознаёт слова (фразы) в запросе пользователя. Формирует словарь по предустановленному шаблону.
 
   :param user_req: Строка запроса пользователя.
+  :param to_print: Технический параметр. Если False - возвращает словарь.
+  True - возвращает текст подготовленный для публикации.
   :return: Словарь содержащий обнаруженные слова предпочтений и исключений (отрицаний).
 
   """
@@ -110,9 +61,9 @@ def in_user_string(user_req) -> dict or str:
 
     # Кроличья нора: вывести всё сразу.
     if user_phrase[0] in ['всё', 'все', 'all'] or not user_phrase:
-        return return_lib(key_dict, to_print=True)
+        return new_print_lib(key_dict)
 
-    cq_tag = CompileReq()
+    cq_new_tag = DBWork()
     shift_in_left = 0  # флаг сдвига по строке.
 
     # Проверка ведётся от последнего слова к первому. Цель - поиск словосочетаний и отрицаний (не, нет)
@@ -135,25 +86,20 @@ def in_user_string(user_req) -> dict or str:
             if word_morph.tag.POS == 'PREP':
                 return 0
 
-            # Тэги.
-            if word in cq_tag.get_tag() and \
-                    word not in key_dict['tag'] and \
-                    word not in key_dict['extag']:
-                return ['tag', word]
+            # Категории.
+            if word in cq_new_tag.category_list.keys() and \
+                    cq_new_tag.category_list[word] not in key_dict['tag']:
+                return ['tag', cq_new_tag.category_list[word]]
 
             # Язык.
-            for id_, string in db.langtype.items():
-                if word_morph.normal_form in string and \
-                        word_morph.normal_form not in key_dict['lang'] \
-                        and word_morph not in key_dict['exlang']:
-                    return ['lang', id_]
+            if word in cq_new_tag.lang_list and \
+                    word not in key_dict['lang']:
+                return ['lang', word]
 
-            # Категории
-            for id_, string in db.keytypedisp.items():
-                if word == string.lower() and \
-                        word not in key_dict['type'] and \
-                        word not in key_dict['extype']:
-                    return ['type', id_]
+            # Типы
+            if word in cq_new_tag.types_list.keys() and \
+                    cq_new_tag.types_list[word] not in key_dict['type']:
+                return ['type', cq_new_tag.types_list[word]]
 
             return
 
@@ -168,104 +114,31 @@ def in_user_string(user_req) -> dict or str:
         elif actually_word_check is None:
             shift_in_left = 1
         else:
-            word_negative = (morphy.parse(user_phrase[point_in_phrase - shift_in_left - 1])[
-                                 0] if point_in_phrase - shift_in_left - 1 >= 0 else morphy.parse('')[0])
-
-            if word_negative.normal_form in ['без', 'не', 'исключить']:
-                key_dict[f'ex{actually_word_check[0]}'].append(actually_word_check[1])
-            else:
-                key_dict[actually_word_check[0]].append(actually_word_check[1])
-
+            key_dict[actually_word_check[0]].append(actually_word_check[1])
             point_in_phrase, shift_in_left = point_in_phrase - shift_in_left - 1, 0
 
     # Не найдено ни одного ключевого слова.
     if not all(True for values in key_dict.values() if values):
         return ''
 
-    return return_lib(key_dict, to_print=True)
+    return new_print_lib(key_dict)
 
 
-def return_lib(dict_req, *, to_print=False) -> dict or str:
-    """
-  Формирует и возвращает словарь со значениями из базы данных, собранных по распознаным словам.
+def new_print_lib(query: dict) -> str:
 
-  :param dict_req: Словарь распознанных слов, сформированный по шаблону.
-  :param to_print: True - возврат текста для печати, False - возврат только словаря с выборкой.
-
-  """
-
-    dic_result = {}
-
-    for string in db.urlbase.values():
-        # Флаг включения строки в выборку, false - нет
-        in_tag = False
-        in_cat = False
-        lang = False
-
-        # Проверка тэгов
-        if not dict_req['tag']:
-            in_tag = True
-        elif set(string[URL_TAGS]) >= set(dict_req['tag']):
-            in_tag = True
-        # исключение
-        if dict_req['extag'] and set(string[URL_TAGS]) >= set(dict_req['extag']):
-            in_tag = False
-
-        # Проверка категории
-        if not dict_req['type']:
-            in_cat = True
-        elif string[URL_TYPE] in dict_req['type']:
-            in_cat = True
-        # исключение
-        if string[URL_TYPE] in dict_req['extype']:
-            in_cat = False
-
-        # Проверка языка (проверяем только если указано, иначе - берём всё).
-        if not dict_req['lang']:
-            lang = True
-        elif string[URL_LANG] in dict_req['lang']:
-            lang = True
-        # исключение
-        if string[URL_LANG] in dict_req['exlang']:
-            lang = False
-
-        if in_tag and in_cat and lang:  # Строка включается
-            # Если категории в словаре нет, создадим.
-            if dic_result.get(string[URL_TYPE]) is None:
-                dic_result.update({string[URL_TYPE]: []})
-            if string[URL_LANG] != 'ru':
-                dic_result[string[URL_TYPE]].append(f'({string[URL_LANG]}) {string[URL_NAME]}')
-            else:
-                dic_result[string[URL_TYPE]].append(string[URL_NAME])
-            dic_result[string[URL_TYPE]].append(string[URL_URL])
-
-        in_tag = in_cat = lang = False
-
-    if to_print:
-        return print_lib(dic_result)
-    else:
-        return dic_result
-
-
-def print_lib(dict_to_print) -> str:
-    """
-  Формирует текстовый блок для вывода пользователю на основе полученного словаря с выборкой из базы данных.
-
-  :param dict_to_print: Словарь с выборкой результатов из базы данных.
-
-  """
-
+    in_print = get_content(**query)
+    types = {val: key for key, val in DBWork().get_types_name().items()}
+    types_id = None
     text_print = ''
-
-    for key_type in db.keytypedisp.keys():
-        if dict_to_print.get(key_type):  # is not None
-            text_print += f'<h3><span class="green_color">{db.keytypedisp[key_type]}</span></h3>'
+    for string in in_print:
+        if types_id != string.types_id:
+            text_print += '</p>' if text_print else ''
+            text_print += f'<h3><span class="green_color">{types[string.types_id].title()}</span></h3>'
             text_print += '<p class="lead">'
+            types_id = string.types_id
 
-            for to_print in range(0, len(dict_to_print[key_type]), 2):
-                text_print += f'<a id="urldb" href="{dict_to_print[key_type][to_print + 1]}">{dict_to_print[key_type][to_print]}</a><br>'
-
-            text_print += '</p>'
+        text_print += f'<a id="urldb" href="{string.url}">{string.name}</a><br>'
+    text_print += '</p>'
 
     return text_print
 

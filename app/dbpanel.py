@@ -73,9 +73,6 @@ def add_to_db(*, create_types: bool = True, create_category: bool = True, **kwar
     :return: True - при успешном завершении и False при ошибке.
     """
 
-    # {'name='Empire of Code', url='http://empireofcode.com,
-    # lang='en', types='game', category='Python'}
-
     if not kwargs:
         return False
 
@@ -108,6 +105,67 @@ def add_to_db(*, create_types: bool = True, create_category: bool = True, **kwar
     db_lib.session.add(content)
     db_lib.session.commit()
     return True
+
+
+class DBWork:
+
+    category = None
+    types = None
+    category_list = None
+    types_list = None
+    lang_list = None
+
+    def __init__(self, *, reload=False):
+        if self.category is None or self.types is None or reload:
+            self.category = Category.query.all()
+            self.types = Types.query.all()
+            self.category_list = self.get_category_name()
+            self.types_list = self.get_types_name()
+            self.lang_list = self.get_lang_list()
+
+    def get_category_name(self) -> dict:
+        if self.category_list:
+            return self.category_list
+        return {ids.name: ids.id for ids in self.category}
+
+    def get_types_name(self, *, category=None) -> dict:
+        if category is not None:
+            types = []
+            for ty in db_lib.session.query(Content.types_id).filter(Content.category_id==category).all():
+                if ty.types_id not in types:
+                    types.append(ty.types_id)
+            return types.sort()
+
+        if self.types_list:
+            return self.types_list
+        return {ids.fname: ids.id for ids in self.types}
+
+    def get_lang_list(self) -> list:
+        if self.lang_list:
+            return self.lang_list
+        # lang = Content.query.distinct(Content.lang).order_by(Content.lang).all()
+        lang = db_lib.session.query(Content.lang).distinct()
+
+        return [lg.lang for lg in lang]
+
+
+def get_content(**key_dict):
+    # key_dict = {'tag': [], 'lang': [], 'type'}
+
+    content = Content.query
+
+    if key_dict['tag']:
+        content = content.filter(Content.category_id.in_(key_dict['tag']))
+    if key_dict['type']:
+        content = content.filter(Content.types_id.in_(key_dict['type']))
+    if key_dict['lang']:
+        content = content.filter(Content.lang.in_([key_dict['lang']]))
+
+    return content.order_by(Content.types_id).all()
+
+
+def read_tables_from_db(**kwargs) -> dict:
+    pass
 
 
 def read_from_db(userquery: dict) -> dict:

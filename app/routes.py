@@ -2,8 +2,8 @@
 
 from flask import render_template, redirect, request
 from app import application
-from app.generator import start_module, CompileReq
-from app._dblib import keytypedisp
+from app.generator import start_module
+from app.dbpanel import DBWork
 
 active_output: str = ''
 
@@ -14,6 +14,7 @@ active_output: str = ''
 @application.route('/', methods=['GET', 'POST'])
 @application.route('/index', methods=['GET', 'POST'])
 def index():
+    db_source = DBWork()
     output = ''
     tag_links = []
     global active_output
@@ -34,16 +35,13 @@ def index():
         if active_output == '':
             tag_links = []
         else:
-            tags = CompileReq(key=active_output)
-            tag_links = tags.get_tag()
-            if len(tag_links) <= 1:
-                tag_links = []
+            tag_links = db_source.get_types_name(category=db_source.category_list[active_output])
 
     return render_template('index.html',
                            title='online',
                            output=output,
                            exoutput=active_output,
-                           category_links=keytypedisp.values(),
+                           category_links=db_source.category_list,
                            tag_links=tag_links)
 
 
