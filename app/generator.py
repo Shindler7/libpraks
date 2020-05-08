@@ -5,7 +5,6 @@
 
 """
 
-import app._dblib as db
 import pymorphy2
 import re
 from app.dbpanel import DBWork, get_content
