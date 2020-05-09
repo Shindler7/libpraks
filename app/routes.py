@@ -33,6 +33,8 @@ def index():
             tag_links = []
         else:
             tag_links = db_source.get_types_name(category=db_source.category_list[active_output])
+            if len(tag_links) < 2:
+                tag_links = []
 
     return render_template('index.html',
                            title='online',
@@ -42,18 +44,6 @@ def index():
                            tag_links=tag_links)
 
 
-@application.route('/createbase')
+@application.route('/datebase')
 def createbase():
-    from app.dbpanel import migrate_to_db, tech_all_tables
-
-    # msg = 'Нет команд'
-
-    if not tech_all_tables(command='create.all'):
-        return 'Провал создания таблиц'
-
-    if migrate_to_db():
-        msg = 'Успешно'
-    else:
-        msg = 'Ошибка'
-
-    return msg
+    pass

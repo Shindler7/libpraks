@@ -4,6 +4,7 @@
 {% block content %}
 
     <div class="d-flex justify-content-center mt-3">
+        {{ temp }}
         {% if tag_links %}
             {% for tag_link in tag_links %}
                 <a href= {{ url_for('index', tagstring=tag_link.lower()) }}>

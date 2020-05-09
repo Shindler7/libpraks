@@ -131,10 +131,13 @@ class DBWork:
     def get_types_name(self, *, category=None) -> dict:
         if category is not None:
             types = []
-            for ty in db_lib.session.query(Content.types_id).filter(Content.category_id==category).all():
-                if ty.types_id not in types:
-                    types.append(ty.types_id)
-            return types.sort()
+            temp = {val: key for key, val in self.types_list.items()}
+            query = db_lib.session.query(Content.types_id).filter(Content.category_id==category).all()
+            for ty in query:
+                if temp[ty.types_id] not in types:
+                    types.append(temp[ty.types_id])
+            types.sort()
+            return types
 
         if self.types_list:
             return self.types_list
