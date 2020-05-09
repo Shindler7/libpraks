@@ -136,11 +136,14 @@ def new_print_lib(query: dict) -> str:
             text_print += '<p class="lead">'
             types_id = string.types_id
 
-        text_print += f'<a id="urldb" href="{string.url}">{string.name}</a><br>'
+        text_print += f'<a id="urldb" href="{string.url}">{string.name}</a>'
+        # text_print += f' ({string.lang})<br>' if string.lang is not 'ru' else '<br>'
+        text_print += '<br>' if string.lang == 'ru' else f' ({string.lang})<br>'
+
     text_print += '</p>'
 
     return text_print
 
 
 # Документирование.
-__all__ = ['start_module', 'CompileReq']
+__all__ = ['start_module']

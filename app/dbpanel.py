@@ -3,7 +3,7 @@
 Обработка запросов по взаимодействию с SQL.
 """
 
-from datetime import datetime as dt
+# https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_orm_filter_operators.htm
 
 from app import db_lib
 from app.models import Content, Types, Category
