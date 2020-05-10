@@ -1,6 +1,5 @@
 """
 Конфигурационные модели для SQL.
-
 """
 
 from app import db_lib

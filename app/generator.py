@@ -2,21 +2,10 @@
 Обработчик запроса пользователя.
 Принимает через функцию start_module запрос пользователя (user_req).
 Возвращает подготовленный для публикации текст.
-
 """
 
-import pymorphy2
 import re
 from app.dbpanel import DBWork, get_content
-
-# Тэги для БД urlbase
-URL_NAME = 0
-URL_URL = 1
-URL_LANG = 2
-URL_TYPE = 3
-URL_TAGS = 4
-
-morphy = pymorphy2.MorphAnalyzer()
 
 
 def start_module(user_req) -> str:
@@ -28,28 +17,20 @@ def start_module(user_req) -> str:
 
   """
 
-    if not re.match(r'.*[^0-9 +\-\*\/()].*', user_req):
-        try:  # Путь 1: пользователь ввёл калькуляторную строку
-            return eval(user_req)
-        except ValueError:
-            return 'Ошибка расчёта.'
-
-    # Проверка 2: пользователь ввёл запрос для БД.
-    answer = in_user_string(user_req, to_print=False)
+    answer = get_key_from_request(user_req)
     if not answer:
-        answer = 'Нет подходящих данных или неверный запрос.'
+        return 'Нет подходящих данных или неверный запрос.'
 
-    return answer
+    return get_print_text(answer_bd=get_content(**answer))
 
 
-def in_user_string(user_req, *, to_print=True) -> dict or str:
+def get_key_from_request(user_req: str) -> dict:
     """
   Распознаёт слова (фразы) в запросе пользователя. Формирует словарь по предустановленному шаблону.
 
   :param user_req: Строка запроса пользователя.
-  :param to_print: Технический параметр. Если False - возвращает словарь.
-  True - возвращает текст подготовленный для публикации.
-  :return: Словарь содержащий обнаруженные слова предпочтений и исключений (отрицаний).
+  :return: Словарь содержащий обнаруженные слова предпочтений и исключений (отрицаний),
+  либо пустой словарь, если запрос неизвестный.
 
   """
 
@@ -60,45 +41,39 @@ def in_user_string(user_req, *, to_print=True) -> dict or str:
 
     # Кроличья нора: вывести всё сразу.
     if user_phrase[0] in ['всё', 'все', 'all'] or not user_phrase:
-        return new_print_lib(key_dict)
+        return key_dict
 
-    cq_new_tag = DBWork()
-    shift_in_left = 0  # флаг сдвига по строке.
+    dbw = DBWork()
+    shift_in_left: int = 0  # флаг сдвига по строке.
 
     # Проверка ведётся от последнего слова к первому. Цель - поиск словосочетаний и отрицаний (не, нет)
     while point_in_phrase - shift_in_left >= 0:
 
-        def check_in_bd(word) -> list or 0 or None:
+        def check_in_bd(word) -> list or None:
             """
           Проверяет слово (фразу) на присутствие в базе данных и локальном словаре уже отобранных слов.
           Применяет морфологический анализ для идентификации слов в различных склонениях.
 
           :param word: Слово (фраза) для проверки.
           :return: Список из двух значений: [вид фразы, фраза].
-          0 - если предлог (неисследуемое слово).
           None - если слово не найдено в словарях.
 
       """
 
-            word_morph = morphy.parse(word)[0]
-            # Предлоги опускаются.
-            if word_morph.tag.POS == 'PREP':
-                return 0
-
             # Категории.
-            if word in cq_new_tag.category_list.keys() and \
-                    cq_new_tag.category_list[word] not in key_dict['tag']:
-                return ['tag', cq_new_tag.category_list[word]]
+            if word in dbw.get_list_category.keys() and \
+                    dbw.get_list_category[word] not in key_dict['tag']:
+                return ['tag', dbw.get_list_category[word]]
 
             # Язык.
-            if word in cq_new_tag.lang_list and \
+            if word in dbw.get_list_language and \
                     word not in key_dict['lang']:
                 return ['lang', word]
 
             # Типы
-            if word in cq_new_tag.types_list.keys() and \
-                    cq_new_tag.types_list[word] not in key_dict['type']:
-                return ['type', cq_new_tag.types_list[word]]
+            if word in dbw.get_list_types.keys() and \
+                    dbw.get_list_types[word] not in key_dict['type']:
+                return ['type', dbw.get_list_types[word]]
 
             return
 
@@ -118,18 +93,23 @@ def in_user_string(user_req, *, to_print=True) -> dict or str:
 
     # Не найдено ни одного ключевого слова.
     if not all(True for values in key_dict.values() if values):
-        return ''
+        return dict()
 
-    return new_print_lib(key_dict)
+    return key_dict
 
 
-def new_print_lib(query: dict) -> str:
+def get_print_text(*, answer_bd: list) -> str:
+    """
+    Обрабатывает результаты запроса базы данных и переводит
+    в html-текст.
+    :param {dict} answer_bd: Список с результатами обработки в базе данных.
+    :return: Форматированный текст с HTML-тегами.
+    """
 
-    in_print = get_content(**query)
-    types = {val: key for key, val in DBWork().get_types_name().items()}
-    types_id = None
-    text_print = ''
-    for string in in_print:
+    types = DBWork().get_list_types_reverse
+    types_id: int = -1
+    text_print: str = ''
+    for string in answer_bd:
         if types_id != string.types_id:
             text_print += '</p>' if text_print else ''
             text_print += f'<h3><span class="green_color">{types[string.types_id].title()}</span></h3>'
@@ -139,9 +119,7 @@ def new_print_lib(query: dict) -> str:
         text_print += f'<a id="urldb" href="{string.url}">{string.name}</a>'
         text_print += '<br>' if string.lang == 'ru' else f' ({string.lang})<br>'
 
-    text_print += '</p>'
-
-    return text_print
+    return f'{text_print}</p>'
 
 
 # Документирование.

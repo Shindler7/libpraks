@@ -8,61 +8,10 @@
 from app import db_lib
 from app.models import Content, Types, Category
 from sqlalchemy.exc import SQLAlchemyError
+from app.exc import *
 
 
-def tech_all_tables(*, command: str = 'test') -> bool:
-    """
-    Создаёт таблицы по предустановленным условиям.
-    Техническая функция.
-
-    Важно! Проверки и подтверждения не осуществляются. Команды исполняются по вызову.
-    Неосторожное использование может привести к потере всей базы данных.
-
-    :param command: 'test' - действий не производится.
-    'create.all' - создание таблиц в БД по моделям.
-    'delete.all' - удаление всех таблиц в БД.
-    """
-    command = command.lower()
-    if command == 'test':
-        return True
-
-    try:
-        if command == 'create.all':
-            db_lib.create_all()
-            return True
-
-        if command == 'delete.all':
-            db_lib.drop_all()
-            return True
-
-    except SQLAlchemyError:
-        return False
-
-    return False
-
-
-def migrate_to_db() -> bool:
-    """
-    Временная техническая функция. Экспортирует записи из словаря в БД.
-    Использует словарь _dblib.urlbasesource.
-    :return: True - при успешном завершении, False - при ошибке.
-    """
-
-    from app._dblib import urlbasesource
-
-    if not urlbasesource:
-        return False
-
-    for string in urlbasesource.values():
-        query_new = {'name': string[0], 'url': string[1], 'lang': string[2], 'types': string[3],
-                     'category': string[4][0]}
-        if not add_to_db(**query_new):
-            return False
-
-    return True
-
-
-def add_to_db(*, create_types: bool = True, create_category: bool = True, **kwargs) -> bool:
+def add_to_db(*, create_types: bool = True, create_category: bool = True, **kwargs):
     """
     Добавляет записи из переданного словаря в базу данных.
     :param create_types: Если переданный тип отсутствует, создать и связать с ним запись.
@@ -74,7 +23,7 @@ def add_to_db(*, create_types: bool = True, create_category: bool = True, **kwar
     """
 
     if not kwargs:
-        return False
+        raise DBArgumentsError
 
     type_in = Types.query.filter_by(name=kwargs['types']).first()
     category_in = Category.query.filter_by(name=kwargs['category']).first()
@@ -84,7 +33,7 @@ def add_to_db(*, create_types: bool = True, create_category: bool = True, **kwar
             db_lib.session.add(type_in)
             db_lib.session.commit()
         else:
-            return False
+            raise DBNoTableOrValue(kwargs['types'])
 
     if not category_in:
         if create_category:
@@ -92,7 +41,7 @@ def add_to_db(*, create_types: bool = True, create_category: bool = True, **kwar
             db_lib.session.add(category_in)
             db_lib.session.commit()
         else:
-            return False
+            raise DBNoTableOrValue(kwargs['category'])
 
     content = Content(name=kwargs['name'],
                       url=kwargs['url'],
@@ -104,56 +53,121 @@ def add_to_db(*, create_types: bool = True, create_category: bool = True, **kwar
 
     db_lib.session.add(content)
     db_lib.session.commit()
-    return True
 
 
 class DBWork:
+    """
+Класс агрегирует данные таблиц Types и Category,
+чтобы минимизировать обращение к БД за данными,
+которые обладают статичностью и часто востребованы.
+"""
 
     category = None
     types = None
-    category_list = None
-    types_list = None
-    lang_list = None
 
-    def __init__(self, *, reload=False):
-        if self.category is None or self.types is None or reload:
-            self.category = Category.query.all()
-            self.types = Types.query.all()
-            self.category_list = self.get_category_name()
-            self.types_list = self.get_types_name()
-            self.lang_list = self.get_lang_list()
+    def __init__(self):
+        pass
 
-    def get_category_name(self) -> dict:
-        if self.category_list:
-            return self.category_list
-        return {ids.name: ids.id for ids in self.category}
+    @classmethod
+    def get_all_key_category(cls, *, reverse=False) -> dict:
+        """
+        Возвращает словарь со всеми категориями в БД.
+        :param reverse: Разворачивает словарь (меняет ключи и значения местами).
+        """
+        if cls.category is None:
+            cls.category = Category.query.all()
+        if reverse:
+            return {ids.id: ids.name for ids in cls.category}
 
-    def get_types_name(self, *, category=None) -> dict:
-        if category is not None:
-            types = []
-            temp = {val: key for key, val in self.types_list.items()}
-            query = db_lib.session.query(Content.types_id).filter(Content.category_id==category).all()
-            for ty in query:
-                if temp[ty.types_id] not in types:
-                    types.append(temp[ty.types_id])
-            types.sort()
-            return types
+        return {ids.name: ids.id for ids in cls.category}
 
-        if self.types_list:
-            return self.types_list
-        return {ids.fname: ids.id for ids in self.types}
+    @property
+    def get_list_category(self) -> dict:
+        """
+        Возвращает словарь категорий в режиме свойства.
+        """
+        return self.get_all_key_category()
 
-    def get_lang_list(self) -> list:
-        if self.lang_list:
-            return self.lang_list
-        # lang = Content.query.distinct(Content.lang).order_by(Content.lang).all()
-        lang = db_lib.session.query(Content.lang).distinct()
+    @property
+    def get_list_category_reverse(self) -> dict:
+        """
+        Возвращает словарь категорий в режиме свойства.
+        Представлен в режиме reverse.
+        """
+        return self.get_all_key_category(reverse=True)
 
-        return [lg.lang for lg in lang]
+    @classmethod
+    def get_all_key_types(cls, *, reverse=False) -> dict:
+        """
+        Возвращает словарь со всеми типами в БД.
+        :param reverse: Разворачивает словарь (меняет местами ключи и значения).
+        """
+        if cls.types is None:
+            cls.types = Types.query.all()
+        if reverse:
+            return {ids.id: ids.fname for ids in cls.types}
+
+        return {ids.fname: ids.id for ids in cls.types}
+
+    @property
+    def get_list_types(self) -> dict:
+        """
+        Возвращает словарь типов в режиме свойства.
+        """
+        return self.get_all_key_types()
+
+    @property
+    def get_list_types_reverse(self) -> dict:
+        """
+        Возвращает словарь типов в режиме свойства.
+        Представлен реверсионно.
+        """
+        return self.get_all_key_types(reverse=True)
+
+    @property
+    def get_list_language(self) -> list:
+        """
+        Возвращает список языков из базы данных.
+        """
+        return db_lib.session.query(Content.lang).distinct()
+
+    @classmethod
+    def get_all_content(cls) -> list:
+        """
+        Возвращает содержимое всей таблицы Content.
+        """
+        return Content.query.all()
+
+    @classmethod
+    def get_choices_types(cls, *, category: str) -> list:
+        """
+        Возвращает типы, соответствующие указанной категории.
+        :param category: Категория для которой следует подобрать типы (Types).
+        Если пусто, возвращает все типы (Types)
+        """
+        choices_types = list()
+        base_types = cls.get_all_key_types(reverse=True)
+        query = db_lib.session.query(Content.types_id)
+        if category:
+            # FIXME: найти способ оптимизировать SQL-запрос.
+            category = Category.query.filter_by(name=category).first()
+            query = query.filter(Content.category_id == category.id)
+
+        query = query.distinct()
+        for typ in query:
+            choices_types.append(base_types[typ.types_id])
+        choices_types.sort()
+
+        return choices_types
 
 
-def get_content(**key_dict):
-    # key_dict = {'tag': [], 'lang': [], 'type'}
+def get_content(**key_dict) -> list:
+    """
+    Производит выборку по пользовательскому запросу из базы данных и возвращает в виде словаря.
+    :param {dict} key_dict: Словарь в котором сформулирован запрос.
+    key_dict = {'tag': [], 'lang': [], 'type'}
+    :return: Список с выборкой по запросу. Если результатов нет, возвращается пустой словарь.
+    """
 
     content = Content.query
 
@@ -167,24 +181,44 @@ def get_content(**key_dict):
     return content.order_by(Content.types_id).all()
 
 
-def read_tables_from_db(**kwargs) -> dict:
-    pass
-
-
-def read_from_db(userquery: dict) -> dict:
+def tech_bd_services(*, command: str) -> bool:
     """
-    Производит выборку по пользовательскому запросу из базы данных и возвращает в виде словаря.
-    :param userquery: Словарь в котором сформулирован запрос.
-    :return: Словарь с выборкой по запросу. Если результатов нет, возвращается пустой словарь.
-    """
-    data_from_bd = {}
+    Внутренняя техническая функциия для обслуживания системных запросов к БД.
 
-    return data_from_bd
+    Важно! Проверки и подтверждения не осуществляются. Команды исполняются по вызову.
+    Неосторожное использование может привести к потере всей базы данных.
 
+    :param command:'create.all' - создание таблиц в БД по моделям.
+    'delete.all' - удаление всех таблиц в БД.
+    :return: True - если задача успешно исполнена, False в обратном случае.
+    """
 
-def remove_from_db(**kwargs):
-    """
-    Удаление данных из базы данных. Производит удаление без дополнительного подтверждения.
-    Предполагается, что подтверждение было произведено до запроса функции.
-    """
-    pass
+    try:
+        if command == 'create.all':
+            db_lib.create_all()
+            return True
+
+        if command == 'delete.all':
+            db_lib.drop_all()
+            return True
+
+        if command == 'save.urlbase':
+            from app.dblib import urlbasesource
+            if not urlbasesource:
+                return False
+            for string in urlbasesource.values():
+                query_new = dict(name=string[0],
+                                 url=string[1],
+                                 lang=string[2],
+                                 types=string[3],
+                                 category=string[4]
+                                 )
+                if not add_to_db(**query_new):
+                    return False
+
+            return True
+
+    except SQLAlchemyError:
+        return False
+
+    return False
