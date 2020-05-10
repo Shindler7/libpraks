@@ -4,6 +4,7 @@ from flask import Flask
 from config import Config
 from flask_sslify import SSLify
 from flask_sqlalchemy import SQLAlchemy as SQLA
+from flask_migrate import Migrate
 
 # *** временно выключено ***
 # import logging
@@ -18,6 +19,7 @@ sslify = SSLify(application)
 
 # SQLAlchemy + Migrate
 db_lib = SQLA(application)
+migrate = Migrate(application, db_lib)
 
 
 from app import routes

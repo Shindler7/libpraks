@@ -62,6 +62,7 @@ class Content(db_lib.Model):
     url = db_lib.Column(db_lib.String(300), nullable=False, unique=True)
     date = db_lib.Column(db_lib.DateTime, nullable=False, default=datetime.now)
     lang = db_lib.Column(db_lib.String(10), nullable=False)
+    img_url = db_lib.Column(db_lib.String(200), nullable=True)
 
     category_id = db_lib.Column(db_lib.Integer(), db_lib.ForeignKey('Category.id'))
     types_id = db_lib.Column(db_lib.Integer(), db_lib.ForeignKey('Types.id'))
