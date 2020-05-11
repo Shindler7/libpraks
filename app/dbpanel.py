@@ -178,7 +178,7 @@ def get_content(**key_dict) -> list:
     if key_dict['lang']:
         content = content.filter(Content.lang.in_([key_dict['lang']]))
 
-    return content.order_by(Content.types_id).all()
+    return content.order_by(Content.types_id, Content.name).all()
 
 
 def tech_bd_services(*, command: str) -> bool:
