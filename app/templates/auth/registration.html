@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Регистрация</h1>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <form method="POST" novalidate>
+        {{ form_reg.hidden_tag() }}
+
+        <p>
+            {{ form_reg.nickname.label }}<br>
+            {{ form_reg.nickname(size=32) }}<br>
+            {% for error in form_reg.nickname.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form_reg.password1.label }}<br>
+            {{ form_reg.password1(size=32) }}<br>
+            {% for error in form_reg.password1.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form_reg.password2.label }}<br>
+            {{ form_reg.password2(size=32) }}<br>
+            {% for error in form_reg.password2.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p>{{ form_reg.submit() }}</p>
+
+    </form>
+
+{% endblock %}

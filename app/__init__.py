@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 from flask import Flask
-from config import Config
-from flask_sslify import SSLify
-from flask_sqlalchemy import SQLAlchemy as SQLA
+from flask_login import LoginManager
 from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy as SQLA
+from flask_sslify import SSLify
+
+from config import Config
 
 # *** временно выключено ***
 # import logging
@@ -20,6 +22,10 @@ sslify = SSLify(application)
 # SQLAlchemy + Migrate
 db_lib = SQLA(application)
 migrate = Migrate(application, db_lib)
+
+# Login
+login_manager = LoginManager(application)
+login_manager.login_view = 'login'
 
 
 from app import routes

@@ -7,7 +7,7 @@
         {{ temp }}
         {% if tag_links %}
             {% for tag_link in tag_links %}
-                <a href= {{ url_for('index', tagstring=tag_link.lower()) }}>
+                <a href= {{ url_for('index', chatstring=exoutput, tagstring=tag_link.lower()) }}>
                     {% if tag_link.lower() in request.url %}
                         <button type="button" class="btn btn-outline-primary btn-sm mr-1 btn-round active">{{ tag_link }}</button>
                     {% else %}

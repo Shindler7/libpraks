@@ -3,8 +3,10 @@
 Принимает через функцию start_module запрос пользователя (user_req).
 Возвращает подготовленный для публикации текст.
 """
+from __future__ import annotations
 
 import re
+
 from app.dbpanel import DBWork, get_content
 
 
@@ -40,7 +42,7 @@ def get_key_from_request(user_req: str) -> dict:
     point_in_phrase = len(user_phrase) - 1
 
     # Кроличья нора: вывести всё сразу.
-    if user_phrase[0] in ['всё', 'все', 'all'] or not user_phrase:
+    if not user_phrase or user_phrase[0] in ['всё', 'все', 'all']:
         return key_dict
 
     dbw = DBWork()

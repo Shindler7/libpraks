@@ -5,10 +5,11 @@
 
 # https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_orm_filter_operators.htm
 
-from app import db_lib
-from app.models import Content, Types, Category
 from sqlalchemy.exc import SQLAlchemyError
+
+from app import db_lib
 from app.exc import *
+from app.models import Category, Content, Types
 
 
 def add_to_db(*, create_types: bool = True, create_category: bool = True, **kwargs):

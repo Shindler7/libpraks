@@ -5,6 +5,14 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
+          {% if not exoutput %}
+             {% set exoutput = '' %}
+          {% endif %}
+
+          {% if not category_links %}
+             {% set category_links = list_category %}
+          {% endif %}
+
         {% for category_link in category_links %}
         <li class="nav-item mr-1">
           {% if category_link.lower() == exoutput.lower() %}
@@ -17,4 +25,36 @@
         {% endfor %}
     </ul>
   </div>
+    <div>
+        {% if form_login %}
+            {% if current_user.is_authenticated %}
+                {{ current_user.nickname }}
+            {% else %}
+                <form method="POST" novalidate>
+                    {{ form_login.hidden_tag() }}
+                    <div class="row">
+                        <div class="col">
+                            {{ form_login.nickname(size=30, class="form-control form-control-sm", placeholder="Никнейм") }}
+                                {% for error in form_login.nickname.errors %}
+                                    <span style="color: #ff0000;">{{ error }}</span>
+                                {% endfor %}
+                        </div>
+                        <div class="col">
+                            {{ form_login.password(size=30, class="form-control form-control-sm", placeholder="Пароль") }}
+                                {% for error in form_login.nickname.errors %}
+                                    <span style="color: #ff0000;">{{ error }}</span>
+                                {% endfor %}
+                        </div>
+                        <div class="col">
+                            {{ form_login.submit(class="btn btn-primary btn-sm") }}
+                        </div>
+                        <div class="col">
+                            <a href="{{ url_for('singin') }}">Регистрация</a>
+                        </div>
+                    </div>
+                </form>
+
+            {% endif %}
+        {% endif %}
+    </div>
 </nav>
