@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+    <form method="post" novalidate>
+
+        {{ form.hidden_tag() }}
+        {{ form.csrf_token }}
+
+        {{ form.name.label }}{% if form.name.flags.required %}*{% endif %}<br>
+        {{ form.name(size=100) }}<br>
+                {% for error in form.name.errors %}
+                    <span style="color: #ff0000;">{{ error }}</span>
+                {% endfor %}<br>
+
+        {{ form.url.label }}{% if form.url.flags.required %}*{% endif %}<br>
+        {{ form.url(size=100) }}<br>
+                {% for error in form.url.errors %}
+                    <span style="color: #ff0000;">{{ error }}</span>
+                {% endfor %}<br>
+
+        {{ form.lang.label }}<br>
+        {{ form.lang() }}<br><br>
+
+        {{ form.category.label }}<br>
+        {{ form.category() }}<br><br>
+
+        {{ form.types.label }}<br>
+        {{ form.types() }}<br><br>
+
+        {{ form.submit() }}
+
+    </form>
+
+{% endblock %}

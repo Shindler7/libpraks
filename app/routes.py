@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 
 from flask import flash, redirect, render_template, request, url_for
-from flask_login import current_user, login_required, login_user
+from flask_login import current_user, login_required, login_user, logout_user
 from werkzeug.urls import url_parse
 
 from app import application
-from app.dbpanel import DBWork
-from app.forms import LoginForm, RegForm
+from app import db_lib
+from app.dbpanel import DBWork, add_to_db
+from app.forms import LoginForm, NewDataForm, RegForm
 from app.generator import start_module
 from app.models import User
-
-from app import db_lib
+from app.exc import LibBaseError
 
 # Дополнительные настройки
 application.add_template_global(DBWork().get_list_category, 'list_category')
+
 
 @application.route('/', methods=['GET', 'POST'])
 @application.route('/index', methods=['GET', 'POST'])
@@ -22,7 +23,7 @@ def index():
     Вывод главной страницы проекта.
     """
     dbw = DBWork()
-    form_login = LoginForm()
+    form_login = LoginForm(request.form)
     data_render = dict(
         title='online',
         output='',
@@ -57,7 +58,7 @@ def index():
     return render_template('index.html', **data_render)
 
 
-@application.route('/db')
+@application.route('/db', methods=['GET', 'POST'])
 @login_required
 def db_view():
     """
@@ -65,11 +66,41 @@ def db_view():
 
     :return: HttpResponse, форма.
     """
+    db = DBWork()
 
     if not current_user.isadmin:
         return f'Техническая страница недоступна для вашей учётной записи. <a href={url_for("index")}>На главную</a>.'
 
-    return 'В стадии разработки.'
+    form_new_data = NewDataForm(request.form or None)
+
+    form_new_data.lang.choices = [(str(ids), lng[0]) for ids, lng in enumerate(db.get_list_language)]
+    form_new_data.category.choices = [
+        (str(key), cat) for key, cat in db.get_list_category_reverse.items()
+    ]
+    form_new_data.types.choices = [
+        (str(key), typ) for key, typ in db.get_list_types_reverse.items()
+    ]
+
+    if request.method == 'POST':
+        if form_new_data.validate_on_submit() and form_new_data.submit.data:
+            data_to_db = {
+                'name': form_new_data.name.data,
+                'url': form_new_data.url.data,
+                'lang': form_new_data.lang.choices[int(form_new_data.lang.data)][1],
+                'types': db.get_list_types_reverse[int(form_new_data.types.data)],
+                'category': db.get_list_category_reverse[int(form_new_data.category.data)]
+            }
+
+            try:
+                add_to_db(create_types=False, create_category=False, **data_to_db)
+            except LibBaseError as err:
+                flash(f'Возникла ошибка базы данных: {err}', category='error')
+
+            else:
+                flash(f'Запись успешно сохранена!', category='success')
+                return redirect(url_for('db_view'))
+
+    return render_template('db_panel.html', form=form_new_data)
 
 
 @application.route('/login', methods=['GET', 'POST'])
@@ -125,3 +156,15 @@ def singin():
 
     return render_template('auth/registration.html', title='Регистрация',
                            form_reg=form_reg)
+
+
+@application.route('/logoun', methods=['GET', 'POST'])
+def logout():
+
+    if current_user.is_authenticated:
+        logout_user()
+
+    next_page = request.args.get('next')
+    if not next_page or url_parse(next_page).netloc != '':
+        next_page = url_for('index')
+    return redirect(next_page)

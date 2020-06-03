@@ -26,35 +26,42 @@
     </ul>
   </div>
     <div>
-        {% if form_login %}
             {% if current_user.is_authenticated %}
-                {{ current_user.nickname }}
-            {% else %}
-                <form method="POST" novalidate>
-                    {{ form_login.hidden_tag() }}
-                    <div class="row">
-                        <div class="col">
-                            {{ form_login.nickname(size=30, class="form-control form-control-sm", placeholder="Никнейм") }}
-                                {% for error in form_login.nickname.errors %}
-                                    <span style="color: #ff0000;">{{ error }}</span>
-                                {% endfor %}
-                        </div>
-                        <div class="col">
-                            {{ form_login.password(size=30, class="form-control form-control-sm", placeholder="Пароль") }}
-                                {% for error in form_login.nickname.errors %}
-                                    <span style="color: #ff0000;">{{ error }}</span>
-                                {% endfor %}
-                        </div>
-                        <div class="col">
-                            {{ form_login.submit(class="btn btn-primary btn-sm") }}
-                        </div>
-                        <div class="col">
-                            <a href="{{ url_for('singin') }}">Регистрация</a>
-                        </div>
-                    </div>
-                </form>
 
-            {% endif %}
+                {{ current_user.nickname }}:
+                {% if current_user.isadmin %}<a href="{{ url_for('db_view') }}">панель управления</a>{% endif %}
+                (<a href="{{ url_for('logout') }}" role="button">выход</a>)
+
+            {% else %}
+
+                {% if form_login %}
+
+                    <form method="POST" novalidate>
+                        {{ form_login.csrf_token }}
+                        <div class="row">
+                            <div class="col">
+                                {{ form_login.nickname(size=30, class="form-control form-control-sm", placeholder="Никнейм") }}
+                                    {% for error in form_login.nickname.errors %}
+                                        <span style="color: #ff0000;">{{ error }}</span>
+                                    {% endfor %}
+                            </div>
+                            <div class="col">
+                                {{ form_login.password(size=30, class="form-control form-control-sm", placeholder="Пароль") }}
+                                    {% for error in form_login.nickname.errors %}
+                                        <span style="color: #ff0000;">{{ error }}</span>
+                                    {% endfor %}
+                            </div>
+                            <div class="col">
+                                {{ form_login.submit(class="btn btn-primary btn-sm") }}
+                            </div>
+                            <div class="col">
+                                <a href="{{ url_for('singin') }}">Регистрация</a>
+                            </div>
+                        </div>
+                    </form>
+
+                {% endif %}
+
         {% endif %}
     </div>
 </nav>

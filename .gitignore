@@ -2,6 +2,7 @@
 # git rm --cached file1.txt - тоже самое в отношении файла.
 .vscode/
 /venv*
+venv_note/
 app/__pycache__/*
 passenger_wsgi.py
 libprak.fsgi

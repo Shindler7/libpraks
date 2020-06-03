@@ -14,13 +14,13 @@
     {% endwith %}
 
     <form method="POST" novalidate>
-        {{ form_reg.hidden_tag() }}
+        {{ form_reg.csrf_token }}
 
         <p>
             {{ form_reg.nickname.label }}<br>
             {{ form_reg.nickname(size=32) }}<br>
             {% for error in form_reg.nickname.errors %}
-            <span style="color: red;">[{{ error }}]</span>
+            <span style="color: red;">{{ error }}</span>
             {% endfor %}
         </p>
 

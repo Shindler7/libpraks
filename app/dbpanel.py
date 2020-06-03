@@ -12,50 +12,6 @@ from app.exc import *
 from app.models import Category, Content, Types
 
 
-def add_to_db(*, create_types: bool = True, create_category: bool = True, **kwargs):
-    """
-    Добавляет записи из переданного словаря в базу данных.
-    :param create_types: Если переданный тип отсутствует, создать и связать с ним запись.
-    False - не выполнять запрос.
-    :param create_category: Если переданная категория отсутствует, создать и связать с ним запись.
-    False - не выполнять запрос.
-    :param kwargs: Словарь, содержащий сведения, которые необходимо внести в БД.
-    :return: True - при успешном завершении и False при ошибке.
-    """
-
-    if not kwargs:
-        raise DBArgumentsError
-
-    type_in = Types.query.filter_by(name=kwargs['types']).first()
-    category_in = Category.query.filter_by(name=kwargs['category']).first()
-    if not type_in:
-        if create_types:
-            type_in = Types(name=kwargs['types'])
-            db_lib.session.add(type_in)
-            db_lib.session.commit()
-        else:
-            raise DBNoTableOrValue(kwargs['types'])
-
-    if not category_in:
-        if create_category:
-            category_in = Category(name=kwargs['category'])
-            db_lib.session.add(category_in)
-            db_lib.session.commit()
-        else:
-            raise DBNoTableOrValue(kwargs['category'])
-
-    content = Content(name=kwargs['name'],
-                      url=kwargs['url'],
-                      lang=kwargs['lang'],
-                      # date - TODO: обработка переданной даты.
-                      types_id=type_in.id,
-                      category_id=category_in.id
-                      )
-
-    db_lib.session.add(content)
-    db_lib.session.commit()
-
-
 class DBWork:
     """
 Класс агрегирует данные таблиц Types и Category,
@@ -130,7 +86,8 @@ class DBWork:
         """
         Возвращает список языков из базы данных.
         """
-        return db_lib.session.query(Content.lang).distinct()
+        # FIXME: возвращается не список для итерации [(...,), (...,)]
+        return db_lib.session.query(Content.lang).distinct().all()
 
     @classmethod
     def get_all_content(cls) -> list:
@@ -180,6 +137,54 @@ def get_content(**key_dict) -> list:
         content = content.filter(Content.lang.in_([key_dict['lang']]))
 
     return content.order_by(Content.types_id, Content.name).all()
+
+
+def add_to_db(*, create_types: bool = True, create_category: bool = True, **kwargs):
+    """
+    Добавляет записи из переданного словаря в базу данных.
+    :param create_types: Если переданный тип отсутствует, создать и связать с ним запись.
+    False - не выполнять запрос.
+    :param create_category: Если переданная категория отсутствует, создать и связать с ним запись.
+    False - не выполнять запрос.
+    :param kwargs: Словарь, содержащий сведения, которые необходимо внести в БД.
+    :return: True - при успешном завершении и False при ошибке.
+    """
+
+    if not kwargs:
+        raise DBArgumentsError
+
+    type_in = Types.query.filter_by(fname=kwargs['types']).first()
+    category_in = Category.query.filter_by(name=kwargs['category']).first()
+
+    # type_exists = db_lib.session.query(db_lib.exists().where(Types.name == kwargs['types'])).scalar()
+    # category_exists = db_lib.session.query(db_lib.exists().where(Category.name == kwargs['category'])).scalar()
+
+    if not type_in:
+        if create_types:
+            type_in = Types(fname=kwargs['types'])
+            db_lib.session.add(type_in)
+            db_lib.session.commit()
+        else:
+            raise DBNoTableOrValue(kwargs['types'])
+
+    if not category_in:
+        if create_category:
+            category_in = Category(name=kwargs['category'])
+            db_lib.session.add(category_in)
+            db_lib.session.commit()
+        else:
+            raise DBNoTableOrValue(kwargs['category'])
+
+    content = Content(name=kwargs['name'],
+                      url=kwargs['url'],
+                      lang=kwargs['lang'],
+                      # date - TODO: обработка переданной даты.
+                      types_id=type_in.id,
+                      category_id=category_in.id
+                      )
+
+    db_lib.session.add(content)
+    db_lib.session.commit()
 
 
 def tech_bd_services(*, command: str) -> bool:

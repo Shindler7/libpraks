@@ -14,20 +14,20 @@
         {% endwith %}
 
     <form method="POST" novalidate>
-        {{ form.hidden_tag() }}
+        {{ form.csrf_token }}
 
         <p>
             {{ form.nickname.label }}*<br>
             {{ form.nickname(size=32) }}<br>
                 {% for error in form.nickname.errors %}
-                    <span style="color: #ff0000;">[{{ error }}]</span>
+                    <span style="color: #ff0000;">{{ error }}</span>
                 {% endfor %}
         </p>
         <p>
             {{ form.password.label }}*<br>
             {{ form.password(size=32) }}<br>
                 {% for error in form.password.errors %}
-                <span style="color: red;">[{{ error }}]</span>
+                <span style="color: red;">{{ error }}</span>
                 {% endfor %}
         </p>
         <p>

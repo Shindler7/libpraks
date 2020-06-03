@@ -5,6 +5,7 @@ from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy as SQLA
 from flask_sslify import SSLify
+from flask_wtf.csrf import CSRFProtect
 
 from config import Config
 
@@ -27,6 +28,8 @@ migrate = Migrate(application, db_lib)
 login_manager = LoginManager(application)
 login_manager.login_view = 'login'
 
+# CSRF
+csrf = CSRFProtect(application)
 
 from app import routes
 
