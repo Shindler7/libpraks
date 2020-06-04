@@ -18,3 +18,4 @@ _bav/
 # временное отключение
 app/datebase.py
 migrations/*
+.idea
