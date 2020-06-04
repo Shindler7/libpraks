@@ -29,19 +29,22 @@ class LoginForm(FlaskForm):
     class Meta:
         csrf = True
 
+
 class RegForm(FlaskForm):
     """
     Форма регистрации пользователя.
     """
-    nickname = StringField('Никнейм', validators=[InputRequired()])
+    nickname = StringField(
+        'Никнейм',
+        validators=[InputRequired(message='Заполните поле!')]
+    )
     password1 = PasswordField('Пароль', [
-        validators.InputRequired(),
+        validators.InputRequired(message='Заполните поле!'),
         validators.EqualTo('password2', message='Пароли должны совпадать!')
     ])
     password2 = PasswordField('Пароль повторно', [
-        validators.InputRequired()
+        validators.InputRequired(message='Заполните поле!')
     ])
-    submit = SubmitField('Зарегистрировать')
 
     def validate_nickname(self, nickname):
         user = User.query.filter_by(nickname=nickname.data).first()
