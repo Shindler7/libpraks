@@ -1,45 +1,47 @@
 {% extends 'base.html' %}
+{% from "auth/_formshelper.html" import render_field %}
 
 {% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-9">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
 
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-        {% endwith %}
+        <form class="needs-validation" method="post" novalidate>
 
-    <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            {{ form.csrf_token }}
 
-        {{ form.hidden_tag() }}
-        {{ form.csrf_token }}
+            <div class="form-group row">
+                {{ render_field(form.name, class='form-control') }}
+            </div>
 
-        {{ form.name.label }}{% if form.name.flags.required %}*{% endif %}<br>
-        {{ form.name(size=100) }}<br>
-                {% for error in form.name.errors %}
-                    <span style="color: #ff0000;">{{ error }}</span>
-                {% endfor %}<br>
+            <div class="form-group row">
+                {{ render_field(form.url, class='form-control') }}
+            </div>
 
-        {{ form.url.label }}{% if form.url.flags.required %}*{% endif %}<br>
-        {{ form.url(size=100) }}<br>
-                {% for error in form.url.errors %}
-                    <span style="color: #ff0000;">{{ error }}</span>
-                {% endfor %}<br>
+            <div class="form-group row">
+                {{ render_field(form.lang, class='form-control') }}
+            </div>
 
-        {{ form.lang.label }}<br>
-        {{ form.lang() }}<br><br>
+            <div class="form-group row">
+                {{ render_field(form.category, class='form-control') }}
+            </div>
 
-        {{ form.category.label }}<br>
-        {{ form.category() }}<br><br>
-
-        {{ form.types.label }}<br>
-        {{ form.types() }}<br><br>
-
-        {{ form.submit() }}
-
-    </form>
-
+            <div class="form-group row">
+                {{ render_field(form.types, class='form-control') }}
+            </div>
+            <div class="float-right">
+                <button type=submit class="btn btn-outline-success">Создать</button>
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock %}

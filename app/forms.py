@@ -68,7 +68,6 @@ class NewDataForm(FlaskForm):
     lang = SelectField('Язык')
     category = SelectField('Категория')
     types = SelectField('Тип')
-    submit = SubmitField('Создать')
 
     def validate_url(self, urls):
         exists = db_lib.session.query(db_lib.exists().where(Content.url == urls.data)).scalar()
