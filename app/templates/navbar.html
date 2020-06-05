@@ -1,13 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-2">
-  <a class="navbar-brand" href="/">ЯП:4 Library</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-          {% if not exoutput %}
+{% from "auth/_formshelper.html" import render_field %}
+
+<!-- example 1 - using absolute position for center -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand abs" href="/">ЯП:4 Library</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="collapsingNavbar">
+        <ul class="navbar-nav">
+            {% if not exoutput %}
              {% set exoutput = '' %}
-          {% endif %}
+            {% endif %}
 
           {% if not category_links %}
              {% set category_links = list_category %}
@@ -23,45 +26,58 @@
           {% endif %}
         </li>
         {% endfor %}
-    </ul>
-  </div>
-    <div>
-            {% if current_user.is_authenticated %}
+        </ul>
 
-                {{ current_user.nickname }}:
-                {% if current_user.isadmin %}<a href="{{ url_for('db_view') }}">панель управления</a>{% endif %}
-                (<a href="{{ url_for('logout') }}" role="button">выход</a>)
 
-            {% else %}
-
-                {% if form_login %}
-
-                    <form method="POST" novalidate>
-                        {{ form_login.csrf_token }}
-                        <div class="row">
-                            <div class="col">
-                                {{ form_login.nickname(size=30, class="form-control form-control-sm", placeholder="Никнейм") }}
-                                    {% for error in form_login.nickname.errors %}
-                                        <span style="color: #ff0000;">{{ error }}</span>
-                                    {% endfor %}
-                            </div>
-                            <div class="col">
-                                {{ form_login.password(size=30, class="form-control form-control-sm", placeholder="Пароль") }}
-                                    {% for error in form_login.nickname.errors %}
-                                        <span style="color: #ff0000;">{{ error }}</span>
-                                    {% endfor %}
-                            </div>
-                            <div class="col">
-                                {{ form_login.submit(class="btn btn-primary btn-sm") }}
-                            </div>
-                            <div class="col">
-                                <a href="{{ url_for('singin') }}">Регистрация</a>
-                            </div>
-                        </div>
-                    </form>
-
+        <ul class="navbar-nav ml-auto">
+        {% if current_user.is_authenticated %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ current_user.nickname }}
+                </a>
+                {% if current_user.isadmin %}
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                         <a class="dropdown-item" href="{{ url_for('db_view') }}">Панель управления</a>
+                    </div>
                 {% endif %}
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('logout') }}" role="button">Выход</a>
+            </li>
+            <li class="nav-item"></li>
 
+        {% else %}
+        {% if form_login %}
+            <li class="nav-item">
+                 <a class="nav-link d-none d-lg-block"  href="#" onclick="openForm()">Войти</a>
+                 <a class="nav-link d-lg-none"  href="{{ url_for('login') }}" >Войти</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="{{ url_for('singin') }}">Регистрация</a>
+            </li>
+            <div class="form-popup" id="myForm">
+                <form class="needs-validation form-container" method="POST" novalidate>
+                    {{ form_login.csrf_token }}
+                    <div class="form-group row">
+                        {{ render_field(form_login.nickname, class='form-control') }}
+                    </div>
+                    <div class="form-group row">
+                        {{ render_field(form_login.password, class='form-control') }}
+                    </div>
+                    <div>
+                        {{ form_login.submit(class="btn btn-outline-success btn-block") }}
+                        <button class="btn cancel" onclick="closeForm()">Закрыть</button>
+                    </div>
+                </form>
+            </div>
         {% endif %}
+        {% endif %}
+        </ul>
     </div>
 </nav>
+
+
+
+
+
+

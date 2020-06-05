@@ -1,15 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* html, body {
-	background-color: white;
-	font-family: 'Inter', sans-serif;
-    font-size: 110%;
-    font-weight: normal;
-    text-align: center;
-	color:black;
-	padding: 0 5%;
-} */
 
 html {
   position: relative;
@@ -41,3 +32,52 @@ body {
     border-color: yellowgreen;
 }
 
+/* Всплывающая форма-скрыта по умолчанию */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 50px;
+  border: 3px solid #f1f1f1;
+  z-index: 11;
+}
+
+/* Добавить стили для контейнера формы */
+.form-container {
+  max-width: 420px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Поля ввода полной ширины */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  background: #f1f1f1;
+}
+
+/* Когда входы получают фокус, сделайте что-нибудь */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Установите стиль для кнопки отправить/войти */
+.form-container .btn {
+  padding: 16px 20px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+}
+
+/* Добавить красный цвет фона для кнопки "Отмена" */
+.form-container .cancel {
+  color: orangered;
+  border-color: orangered;
+}
+
+/* Добавить некоторые эффекты наведения на кнопки */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}

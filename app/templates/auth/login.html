@@ -1,7 +1,11 @@
 {% extends "base.html" %}
-{% block content %}
+{% from "auth/_formshelper.html" import render_field %}
 
-    <h1>Портал в закулисье</h1>
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+<div class="col-6">
+    <h2 class="text-center mb-3">Портал в закулисье</h2>
 
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -13,26 +17,19 @@
         {% endif %}
         {% endwith %}
 
-    <form method="POST" novalidate>
+    <form class="needs-validation" method="POST" novalidate>
         {{ form.csrf_token }}
 
-        <p>
-            {{ form.nickname.label }}*<br>
-            {{ form.nickname(size=32) }}<br>
-                {% for error in form.nickname.errors %}
-                    <span style="color: #ff0000;">{{ error }}</span>
-                {% endfor %}
-        </p>
-        <p>
-            {{ form.password.label }}*<br>
-            {{ form.password(size=32) }}<br>
-                {% for error in form.password.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-        </p>
-        <p>
-            {{ form.submit() }}
-        </p>
+        <div class="form-group row">
+            {{ render_field(form.nickname, class='form-control') }}
+        </div>
+        <div class="form-group row">
+            {{ render_field(form.password, class='form-control') }}
+        </div>
+        <div class="float-right">
+            <input type=submit value=Войти class="btn btn-outline-success btn-block">
+        </div>
     </form>
-
+</div>
+</div>
 {% endblock %}

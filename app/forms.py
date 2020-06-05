@@ -16,7 +16,10 @@ class LoginForm(FlaskForm):
     """
     Форма авторизации.
     """
-    nickname = StringField('Никнейм', validators=[InputRequired()])
+    nickname = StringField(
+        'Никнейм',
+        validators=[InputRequired(message='Заполните поле!')]
+    )
     password = PasswordField('Пароль', validators=[InputRequired()])
     remember_me = BooleanField('Запомнить меня')
     submit = SubmitField('Войти')
