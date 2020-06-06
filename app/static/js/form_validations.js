@@ -1,4 +1,10 @@
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
 
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   'use strict';
@@ -17,3 +23,5 @@
     });
   }, false);
 })();
+
+
