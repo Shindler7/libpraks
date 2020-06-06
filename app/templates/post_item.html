@@ -7,7 +7,7 @@
     {% else %}
         {% set image_default = ['output\default_dog.jpg', 'output\default-cat-2.jpg', 'output\default-dog-2.jpg', 'output\default-dog-3.jpg']|random() %}
 
-        <img class="card-img-top" src="{{resized_img_src(image_default, width=300)}}" alt="{{ link.name }}">
+        <img class="card-img-top" src="{{ url_for('images', filename=image_default) }}" alt="{{ link.name }}">
     {% endif %}
 
     <div class="card-body">
