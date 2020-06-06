@@ -1,0 +1,36 @@
+{# Вывод базы данных #}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-9">
+        <h2 class="text-center mb-3">База данных</h2>
+
+        <table class="table">
+
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Название</th>
+                <th scope="col">Ссылка</th>
+                <th scope="col">Язык</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            {% for string in db %}
+
+                <tr>
+                    <th scope="row">{{ string.id }}</th>
+                    <td>{{ string.name }}</td>
+                    <td>{{ string.url }}</td>
+                    <td>{{ string.lang }}</td>
+                </tr>
+
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+</div>

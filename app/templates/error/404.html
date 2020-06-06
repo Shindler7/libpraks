@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p></p>
+    <h1 class="display-4">Такой страницы у нас нет.</h1>
+    <p></p>
+    <img src="{{resized_img_src('output\default-cat-2.jpg', width=500)}}">
+    <p></p>
+    <p>Попробуйте начать с <a href="{{ url_for('index') }}">главной страницы</a>.</p>
+
+{% endblock %}

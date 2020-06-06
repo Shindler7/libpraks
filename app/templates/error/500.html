@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p></p>
+    <h1 class="display-4">Всё же нормально было...</h1>
+    <p></p>
+    <img src="{{resized_img_src('output\default-dog-4-1.jpg', width=500)}}">
+    <p></p>
+    <p>Попробуйте повторить с <a href="{{ url_for('index') }}">главной страницы</a>.</p>
+
+{% endblock %}

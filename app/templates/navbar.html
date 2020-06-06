@@ -9,78 +9,78 @@
     <div class="navbar-collapse collapse" id="collapsingNavbar">
         <ul class="navbar-nav">
             {% if not exoutput %}
-             {% set exoutput = '' %}
+                {% set exoutput = '' %}
             {% endif %}
 
-          {% if not category_links %}
-             {% set category_links = list_category %}
-          {% endif %}
+            {% if not category_links %}
+                {% set category_links = list_category %}
+            {% endif %}
 
-        {% for category_link in category_links %}
-        <li class="nav-item mr-1">
-          {% if category_link.lower() == exoutput.lower() %}
-            <a class="nav-link disabled" href={{ url_for('index', chatstring=category_link.lower()) }}>
-                <span class="green_color">{{ category_link.upper() }}</span></a>
-          {% else %}
-            <a class="nav-link" href={{ url_for('index', chatstring=category_link.lower()) }}>{{ category_link }}</a>
-          {% endif %}
-        </li>
-        {% endfor %}
+            {% for category_link in category_links %}
+                <li class="nav-item mr-1">
+                    {% if category_link.lower() == exoutput.lower() %}
+                        <a class="nav-link disabled" href={{ url_for('index', chatstring=category_link.lower()) }}>
+                            <span class="green_color">{{ category_link.upper() }}</span></a>
+                    {% else %}
+                        <a class="nav-link" href={{ url_for('index', chatstring=category_link.lower()) }}>{{ category_link }}</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
         </ul>
 
 
         <ul class="navbar-nav ml-auto">
-        {% if current_user.is_authenticated %}
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{ current_user.nickname }}
-                </a>
-                {% if current_user.isadmin %}
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                         <a class="dropdown-item" href="{{ url_for('db_view') }}">Панель управления</a>
-                    </div>
+            {% if current_user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ current_user.nickname }}
+                    </a>
+                    {% if current_user.isadmin %}
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url_for('db_view') }}">Панель управления</a>
+                        </div>
+                    {% endif %}
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('logout') }}" role="button">Выход</a>
+                </li>
+                <li class="nav-item"></li>
+
+            {% else %}
+                {% if form_login %}
+                    <li class="nav-item">
+                        <a class="nav-link d-none d-lg-block"  href="#" onclick="openForm()">Войти</a>
+                        <a class="nav-link d-lg-none"  href="{{ url_for('login') }}" >Войти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="{{ url_for('singin') }}">Регистрация</a>
+                    </li>
+
                 {% endif %}
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('logout') }}" role="button">Выход</a>
-            </li>
-            <li class="nav-item"></li>
-
-        {% else %}
-        {% if form_login %}
-            <li class="nav-item">
-                 <a class="nav-link d-none d-lg-block"  href="#" onclick="openForm()">Войти</a>
-                 <a class="nav-link d-lg-none"  href="{{ url_for('login') }}" >Войти</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link"  href="{{ url_for('singin') }}">Регистрация</a>
-            </li>
-
-        {% endif %}
-        {% endif %}
+            {% endif %}
         </ul>
     </div>
 </nav>
 {% if form_login %}
-<div class="form-wrapper">
-<div id="form-container">
-    <div class="form-popup" id="myForm">
-        <form class="needs-validation form-container" method="POST" novalidate>
-            {{ form_login.csrf_token }}
-            <div class="form-group row">
-                {{ render_field(form_login.nickname, class='form-control') }}
+    <div class="form-wrapper">
+        <div id="form-container">
+            <div class="form-popup" id="myForm">
+                <form class="needs-validation form-container" method="POST" novalidate>
+                    {{ form_login.csrf_token }}
+                    <div class="form-group row">
+                        {{ render_field(form_login.nickname, class='form-control') }}
+                    </div>
+                    <div class="form-group row">
+                        {{ render_field(form_login.password, class='form-control') }}
+                    </div>
+                    <div>
+                        {{ form_login.submit(class="btn btn-outline-success btn-block") }}
+                        <button class="btn cancel" onclick="closeForm()">Закрыть</button>
+                    </div>
+                </form>
             </div>
-            <div class="form-group row">
-                {{ render_field(form_login.password, class='form-control') }}
-            </div>
-            <div>
-                {{ form_login.submit(class="btn btn-outline-success btn-block") }}
-                <button class="btn cancel" onclick="closeForm()">Закрыть</button>
-            </div>
-        </form>
+        </div>
     </div>
-</div>
-</div>
 {% endif %}
 
 

@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from flask import flash, redirect, render_template, request, url_for
 from flask_login import current_user, login_required, login_user, logout_user
 from werkzeug.urls import url_parse
@@ -30,7 +28,7 @@ def index():
         category_links=dbw.get_list_category,  # chat_string
         tag_links=list(),  # tag_string
         exoutput='',
-        types = dbw.get_list_types_reverse,
+        types=dbw.get_list_types_reverse,
         form_login=form_login
     )
 
@@ -42,12 +40,14 @@ def index():
     data_render['exoutput'] = request.args.get(key='chatstring', default='')
 
     tag_links = dbw.get_choices_types(category=data_render['exoutput'])
-    data_render['tag_links'] = tag_links # if len(tag_links) > 1 else list()
+    data_render['tag_links'] = tag_links
 
     if request.method == 'POST':
         if form_login.validate_on_submit() and form_login.submit.data:
-            user = User.query.filter_by(nickname=form_login.nickname.data).first()
-            if user is None or not user.check_password(form_login.password.data):
+            user = User.query.filter_by(
+                nickname=form_login.nickname.data).first()
+            if user is None or not user.check_password(
+                    form_login.password.data):
                 flash('Неверные данные.', category='error')
                 return render_template('index.html', **data_render)
 
@@ -70,11 +70,13 @@ def db_view():
     db = DBWork()
 
     if not current_user.isadmin:
-        return f'Техническая страница недоступна для вашей учётной записи. <a href={url_for("index")}>На главную</a>.'
+        return f'Техническая страница недоступна для вашей учётной записи. ' \
+               f'<a href={url_for("index")}>На главную</a>.'
 
     form_new_data = NewDataForm(request.form or None)
 
-    form_new_data.lang.choices = [(str(ids), lng[0]) for ids, lng in enumerate(db.get_list_language)]
+    form_new_data.lang.choices = [(str(ids), lng[0]) for ids, lng in
+                                  enumerate(db.get_list_language)]
     form_new_data.category.choices = [
         (str(key), cat) for key, cat in db.get_list_category_reverse.items()
     ]
@@ -87,21 +89,28 @@ def db_view():
             data_to_db = {
                 'name': form_new_data.name.data,
                 'url': form_new_data.url.data,
-                'lang': form_new_data.lang.choices[int(form_new_data.lang.data)][1],
-                'types': db.get_list_types_reverse[int(form_new_data.types.data)],
-                'category': db.get_list_category_reverse[int(form_new_data.category.data)]
+                'lang': form_new_data.lang.choices[
+                    int(form_new_data.lang.data)][1],
+                'types': db.get_list_types_reverse[
+                    int(form_new_data.types.data)],
+                'category': db.get_list_category_reverse[
+                    int(form_new_data.category.data)]
             }
 
             try:
-                add_to_db(create_types=False, create_category=False, **data_to_db)
+                add_to_db(create_types=False, create_category=False,
+                          **data_to_db)
             except LibBaseError as err:
                 flash(f'Возникла ошибка базы данных: {err}', category='error')
 
             else:
-                flash(f'Запись успешно сохранена!', category='success')
+                flash('Запись успешно сохранена!', category='success')
                 return redirect(url_for('db_view'))
 
-    return render_template('db_panel.html', form=form_new_data)
+    db_output = start_module('', in_print=False)
+
+    return render_template('dbpanel/db_panel.html',
+                           form=form_new_data, db=db_output)
 
 
 @application.route('/login', methods=['GET', 'POST'])
@@ -133,6 +142,7 @@ def login():
 
     return render_template('auth/login.html', title='Авторизация',
                            form=form_login)
+
 
 @application.route('/singin', methods=['GET', 'POST'])
 @application.template_global()
@@ -169,3 +179,13 @@ def logout():
     if not next_page or url_parse(next_page).netloc != '':
         next_page = url_for('index')
     return redirect(next_page)
+
+
+@application.errorhandler(404)
+def page_not_found(error):
+    return render_template('error/404.html'), 404
+
+
+@application.errorhandler(500)
+def server_error(error):
+    return render_template('error/500.html'), 500

@@ -7,9 +7,9 @@
             </small>
         {% endif %}
         {% if field.errors %}
-        {% for error in field.errors %}
-          <div class="invalid-feedback">{{ error }}</div>
-        {% endfor %}
-    {% endif %}
-  </div>
+            {% for error in field.errors %}
+                <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
 {% endmacro %}
