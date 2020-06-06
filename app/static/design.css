@@ -33,18 +33,27 @@ body {
 }
 
 /* Всплывающая форма-скрыта по умолчанию */
+.form-wrapper {
+    width: 370px;
+}
+
+#form-container {
+ width: inherit;
+
+}
 .form-popup {
+  right: 15px;
   display: none;
-  position: fixed;
-  top: 60px;
-  right: 50px;
+  position: absolute;
   border: 3px solid #f1f1f1;
   z-index: 11;
+  width: inherit;
+
 }
 
 /* Добавить стили для контейнера формы */
 .form-container {
-  max-width: 420px;
+  max-width: 370px;
   padding: 10px;
   background-color: white;
 }
