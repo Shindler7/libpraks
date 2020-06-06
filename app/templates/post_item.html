@@ -1,0 +1,21 @@
+{# Отдельная запаись #}
+
+<div class="col mb-4 text-center">
+
+    {% if link.img_src %}
+         <img class="card-img-top" src="{{resized_img_src(link.img_src, width=220)}}" alt="{{ link.name }}">
+    {% else %}
+        {% set image_default = ['output\default_dog.jpg', 'output\default_girl.jpg', 'output\default_modern.jpg', 'output\default-dog-2.png', 'output\default-money.jpg']|random() %}
+
+        <img class="card-img-top" src="{{resized_img_src(image_default, width=300)}}" alt="{{ link.name }}">
+    {% endif %}
+
+    <div class="card-body">
+        <p class="card-text"><a href="{{ link.url }}">{{ link.name }}</a></p>
+        {% if link.lang == 'en' %}({{ link.lang }}){% endif %}
+        <!-- <p class="card-text text-right"><small class="text-muted">{{ link.date.strftime('%d.%m.%Y') }}</small></p> -->
+    </div>
+
+</div>
+
+

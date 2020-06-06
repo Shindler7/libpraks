@@ -10,11 +10,12 @@ import re
 from app.dbpanel import DBWork, get_content
 
 
-def start_module(user_req) -> str:
+def start_module(user_req: str, *, in_print=True) -> str or list:
     """
   Возвращает данные по запросу пользователя или сообщение об ошибке.
 
   :param user_req: Текст запроса пользователя.
+  :param in_print: Формат обработки запроса из базы данных.
   :return: Подготовленный к публикации ответ по запросу пользователя.
 
   """
@@ -23,7 +24,10 @@ def start_module(user_req) -> str:
     if not answer:
         return 'Нет подходящих данных или неверный запрос.'
 
-    return get_print_text(answer_bd=get_content(**answer))
+    if in_print:
+        return get_print_text(answer_bd=get_content(**answer))
+
+    return get_content(**answer)
 
 
 def get_key_from_request(user_req: str) -> dict:

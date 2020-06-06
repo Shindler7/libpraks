@@ -1,10 +1,10 @@
+{# Основная страница #}
 {% extends "base.html" %}
-
 
 {% block content %}
 
     <div class="d-flex justify-content-center mt-3">
-        {% if tag_links %}
+        {% if tag_links|length > 1 %}
             {% for tag_link in tag_links %}
                 <a href= {{ url_for('index', chatstring=exoutput, tagstring=tag_link.lower()) }}>
                     {% if tag_link.lower() in request.url %}
@@ -19,28 +19,23 @@
 
     <div class="row mt-3">
         <div class="col-12">
-            {% if output %}
-                {{ output|safe }}
-            {% endif %}
+
+            {% set cnt = namespace(card = False) %}
+
+            {% for link in output %}
+
+                {% if loop.changed(link.types_id) %}
+                    {% if cnt.card %}</div>{% endif %}
+                    <h3><span class="green_color">{{ types[link.types_id]|title }}</span></h3><br>
+                    <div class="row row-cols-1 row-cols-md-4">
+                    {% set cnt.card = True %}
+                {% endif %}
+
+            {% include 'post_item.html' %}
+
+            {% endfor %}
+            </div> {# Закрытие последней группы карточек #}
+
         </div>
     </div>
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	

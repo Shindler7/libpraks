@@ -6,6 +6,7 @@ from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy as SQLA
 from flask_sslify import SSLify
 from flask_wtf.csrf import CSRFProtect
+from flask_images import Images
 
 from config import Config
 
@@ -30,6 +31,9 @@ login_manager.login_view = 'login'
 
 # CSRF
 csrf = CSRFProtect(application)
+
+# Flask image
+images = Images(application)
 
 from app import routes
 

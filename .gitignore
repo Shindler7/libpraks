@@ -8,7 +8,7 @@ passenger_wsgi.py
 libprak.fsgi
 lib_prak.code-workspace
 config.py
-#.gitignore
+
 __pycache__/*
 _sources/
 tmp/
@@ -17,5 +17,6 @@ _bav/
 
 # временное отключение
 app/datebase.py
+app/static/
 migrations/*
-.idea/
+.idea/*

@@ -23,25 +23,26 @@ def index():
     Вывод главной страницы проекта.
     """
     dbw = DBWork()
-    form_login = LoginForm(request.form)
+    form_login = LoginForm(request.form or None)
     data_render = dict(
         title='online',
         output='',
         category_links=dbw.get_list_category,  # chat_string
         tag_links=list(),  # tag_string
         exoutput='',
+        types = dbw.get_list_types_reverse,
         form_login=form_login
     )
 
     chatstring = request.args.get(key="chatstring", default="")
     tagstring = request.args.get(key="tagstring", default="")
     question_to_base = f'{chatstring} {tagstring}'
-    data_render['output'] = start_module(question_to_base)
+    data_render['output'] = start_module(question_to_base, in_print=False)
 
     data_render['exoutput'] = request.args.get(key='chatstring', default='')
 
     tag_links = dbw.get_choices_types(category=data_render['exoutput'])
-    data_render['tag_links'] = tag_links if len(tag_links) > 1 else list()
+    data_render['tag_links'] = tag_links # if len(tag_links) > 1 else list()
 
     if request.method == 'POST':
         if form_login.validate_on_submit() and form_login.submit.data:
