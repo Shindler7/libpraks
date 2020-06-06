@@ -55,29 +55,33 @@
             <li class="nav-item">
                 <a class="nav-link"  href="{{ url_for('singin') }}">Регистрация</a>
             </li>
-            <div class="form-popup" id="myForm">
-                <form class="needs-validation form-container" method="POST" novalidate>
-                    {{ form_login.csrf_token }}
-                    <div class="form-group row">
-                        {{ render_field(form_login.nickname, class='form-control') }}
-                    </div>
-                    <div class="form-group row">
-                        {{ render_field(form_login.password, class='form-control') }}
-                    </div>
-                    <div>
-                        {{ form_login.submit(class="btn btn-outline-success btn-block") }}
-                        <button class="btn cancel" onclick="closeForm()">Закрыть</button>
-                    </div>
-                </form>
-            </div>
+
         {% endif %}
         {% endif %}
         </ul>
     </div>
 </nav>
-
-
-
+{% if form_login %}
+<div class="form-wrapper">
+<div id="form-container">
+    <div class="form-popup" id="myForm">
+        <form class="needs-validation form-container" method="POST" novalidate>
+            {{ form_login.csrf_token }}
+            <div class="form-group row">
+                {{ render_field(form_login.nickname, class='form-control') }}
+            </div>
+            <div class="form-group row">
+                {{ render_field(form_login.password, class='form-control') }}
+            </div>
+            <div>
+                {{ form_login.submit(class="btn btn-outline-success btn-block") }}
+                <button class="btn cancel" onclick="closeForm()">Закрыть</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+{% endif %}
 
 
 
