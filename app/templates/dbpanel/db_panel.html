@@ -1,20 +1,18 @@
 {% extends 'base.html' %}
-{% from "auth/_formshelper.html" import render_field %}
+{% from 'auth/_formshelper.html' import render_field %}
 
 {% block content %}
 
+    <div class="container">
+        {% set dbpanel=True %}
+        {% include 'dbpanel/menu.html' %}
+    </div>
+
+    {% include 'dbpanel/db_alert_messages.html' %}
+
     <div class="row justify-content-center mt-5">
         <div class="col-9">
-        <h2 class="text-center mb-3">Добавление записи...</h2>
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    <ul>
-                        {% for message in messages %}
-                            <li>{{ message }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            {% endwith %}
+            <h2 class="text-center mb-3">Добавление записи...</h2>
 
             {% include 'dbpanel/db_add_edit.html' %}
 

@@ -1,0 +1,112 @@
+{# Вывод таблиц с категориями и типами #}
+
+{% if category %}
+
+    <div class="card">
+        <div class="card-header">
+            Категории
+        </div>
+        <div class="card-body">
+            <p class="card-text">Название является основным полем. Slug для развития.</p>
+
+            <table class="table">
+
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Название</th>
+                    <th scope="col">Slug</th>
+                    <th scope="col">Связи</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+                {% for cat in category %}
+
+                    <tr>
+                        <th scope="row">{{ cat.id }}</th>
+                        <td>{{ cat.name }}</td>
+                        <td>{{ cat.fname }}</td>
+                        <td>{{ cat.content|length() }}</td>
+                        <td>
+                            <a href="{{ url_for('db_edit_category', data_id=cat.id) }}"><img
+                                    src="{{ url_for('static', filename='icons/pencil_min.png') }}"></a>
+                        </td>
+                        {% if not cat.content|length() %}
+                            <td>
+                                <a class="btn btn-danger"
+                                   href="{{ url_for('db_category_active', delete_category = cat.id) }}"
+                                   role="button">Удалить</a>
+                            </td>
+                        {% endif %}
+                    </tr>
+
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+
+{% endif %}
+
+{% if types %}
+
+    <div class="card">
+        <div class="card-header">
+            Типы
+        </div>
+        <div class="card-body">
+            <p class="card-text">Название является основным полем. Slug для развития.</p>
+
+            <table class="table">
+
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Название</th>
+                    <th scope="col">Slug</th>
+                    <th scope="col">Связи</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+                {% for trype in types %}
+
+                    <tr>
+                        <th scope="row">{{ trype.id }}</th>
+                        <td>{{ trype.name }}</td>
+                        <td>{{ trype.fname }}</td>
+                        <td>{{ trype.content|length() }}</td>
+                        <td>
+                            <a href="{{ url_for('db_edit_types', data_id=trype.id) }}"><img
+                                    src="{{ url_for('static', filename='icons/pencil_min.png') }}"></a>
+                        </td>
+                        {% if not trype.content|length() %}
+                            <td>
+                                <a class="btn btn-danger"
+                                   href="{{ url_for('db_category_active', delete_types = trype.id) }}"
+                                   role="button">Удалить</a>
+                            </td>
+                        {% endif %}
+                    </tr>
+
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+
+
+{% endif %}

@@ -1,0 +1,32 @@
+{# Панель управления: пользователи #}
+
+{# Панель управления: категории и типы #}
+{% extends 'base.html' %}
+{% from "auth/_formshelper.html" import render_field %}
+
+{% block content %}
+
+    <div class="container">
+        {% set dbuser=True %}
+        {% include 'dbpanel/menu.html' %}
+    </div>
+
+    {% include 'dbpanel/db_alert_messages.html' %}
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-9">
+            <h2 class="text-center mb-3">Пользователи</h2>
+
+            {% include 'dbpanel/db_user_feed.html' %}
+
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-9">
+            Для изменения статуса пользователя, кликните на иконку возле нужного аргумента.
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,15 +1,18 @@
 {% macro render_field(field) %}
-    {{ field.label(class_="col-sm-3 col-form-label")}}
+    {{ field.label(class_="col-sm-3 col-form-label") }}
     <div class="col-sm-9">{{ field(**kwargs)|safe }}
+
         {% if field.flags.required %}
             <small class="form-text text-muted">
                 Поле обязательно для заполнения.
             </small>
         {% endif %}
+
         {% if field.errors %}
             {% for error in field.errors %}
-                <div class="invalid-feedback">{{ error }}</div>
+                <div class="text-danger">{{ error }}</div>
             {% endfor %}
         {% endif %}
+
     </div>
 {% endmacro %}

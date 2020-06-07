@@ -1,0 +1,33 @@
+{# Панель управления: категории и типы #}
+{% extends 'base.html' %}
+{% from 'auth/_formshelper.html' import render_field %}
+
+{% block content %}
+
+    <div class="container">
+        {% set dbcategory=True %}
+        {% include 'dbpanel/menu.html' %}
+    </div>
+
+    {% include 'dbpanel/db_alert_messages.html' %}
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-9">
+            <h2 class="text-center mb-3">{% if form %}Редактировать...{% else %}Создать...{% endif %}</h2>
+
+            {% include 'dbpanel/db_category_edit.html' %}
+
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-9">
+            {% if category and types %}<h2 class="text-center mb-3">Категории и типы</h2>{% endif %}
+
+            {% include 'dbpanel/db_category_feed.html' %}
+
+        </div>
+    </div>
+
+{% endblock %}

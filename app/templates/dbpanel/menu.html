@@ -1,0 +1,16 @@
+{# Меню панели управления #}
+
+<div class="row">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link{% if dbpanel %} active{% endif %}" href="{{ url_for('db_view') }}">Записи</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link{% if dbcategory %} active{% endif %}" href="{{ url_for('db_category') }}">Разделы</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link{% if dbuser %} active{% endif %}" href="{{ url_for('db_user') }}">Пользователи</a>
+        </li>
+    </ul>
+</div>
+

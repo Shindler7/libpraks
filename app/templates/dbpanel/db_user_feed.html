@@ -1,0 +1,37 @@
+{# Вывод всех пользователей #}
+
+
+<p>Пользователей: {{ users|length() }}</p>
+
+<table class="table">
+
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">id</th>
+        <th scope="col">Ник</th>
+        <th scope="col">Активен</th>
+        <th scope="col">Администратор</th>
+        <th scope="col"></th>   {# Кнопка удалить #}
+    </tr>
+    </thead>
+
+    <tbody>
+
+    {% for user in users %}
+
+        <tr>
+            <th scope="row">{{ user.id }}</th>
+            <td>{{ user.nickname }}</td>
+            <td>{% if user.active %}ДА{% else %}НЕТ{% endif %} <a href="{{ url_for('db_user_active', active = user.id) }}"><img src="{{ url_for('static', filename='icons/user_change.png') }}"></a></td>
+            <td>{% if user.isadmin %}ДА{% else %}НЕТ{% endif %} <a href="{{ url_for('db_user_active', isadmin = user.id) }}"><img src="{{ url_for('static', filename='icons/user_change.png') }}"></a></td>
+            <td>
+                <a class="btn btn-danger" href="{{ url_for('db_user_active', delete = user.id) }}"
+                   role="button">Удалить</a>
+            </td>
+        </tr>
+
+    {% endfor %}
+
+    </tbody>
+
+</table>
