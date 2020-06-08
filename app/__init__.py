@@ -35,7 +35,7 @@ csrf = CSRFProtect(application)
 # Flask image
 images = Images(application)
 
-from app import routes
+from app import views
 
 if __name__ == "__main__":
     application.run(host='0.0.0.0', port=5000)
