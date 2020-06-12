@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 from flask import Flask
+from flask_images import Images
 from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy as SQLA
 from flask_sslify import SSLify
 from flask_wtf.csrf import CSRFProtect
-from flask_images import Images
 
 from config import Config
 
@@ -19,7 +19,7 @@ application = Flask(__name__)
 application.config.from_object(Config)
 
 # Подключение (обслуживание) SSL
-sslify = SSLify(application)  
+sslify = SSLify(application)
 
 # SQLAlchemy + Migrate
 db_lib = SQLA(application)
@@ -35,7 +35,10 @@ csrf = CSRFProtect(application)
 # Flask image
 images = Images(application)
 
-from app import views
+
+from app import views  # noqa
+from app import admin  # noqa
+
 
 if __name__ == "__main__":
     application.run(host='0.0.0.0', port=5000)

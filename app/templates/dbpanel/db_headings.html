@@ -5,7 +5,7 @@
 {% block content %}
 
     <div class="container">
-        {% set dbcategory=True %}
+        {% set dbheadings=True %}
         {% include 'dbpanel/menu.html' %}
     </div>
 
@@ -15,7 +15,7 @@
         <div class="col-9">
             <h2 class="text-center mb-3">{% if form %}Редактировать...{% else %}Создать...{% endif %}</h2>
 
-            {% include 'dbpanel/db_category_edit.html' %}
+            {% include 'dbpanel/db_headings_edit.html' %}
 
         </div>
     </div>
@@ -25,7 +25,7 @@
         <div class="col-9">
             {% if category and types %}<h2 class="text-center mb-3">Категории и типы</h2>{% endif %}
 
-            {% include 'dbpanel/db_category_feed.html' %}
+            {% include 'dbpanel/db_headings_feed.html' %}
 
         </div>
     </div>

@@ -4,12 +4,240 @@
 
 from datetime import datetime
 
+from flask_login import UserMixin
 from sqlalchemy.orm import relationship
 from werkzeug.security import check_password_hash, generate_password_hash
-from flask_login import UserMixin
-from app import login_manager
 
 from app import db_lib
+from app import login_manager
+
+
+class UserManager:
+
+    def create(self, *, nick: str, passd: str):
+        """
+        Создаёт нового пользователя. Возвращает объект пользователя.
+        """
+
+        user = User(nickname=nick)
+        user.set_password(passd)
+        db_lib.session.add(user)
+        db_lib.session.commit()
+
+        return user
+
+    def get(self, *, nick: str, passd: str):
+        """
+        Возвращает объект пользователя (user) после проведения проверок.
+        В случае любого нарушения возвращает None.
+        """
+
+        user = User.query.filter_by(nickname=nick).first()
+        if user is None:
+            return None
+        if not user.check_password(passd):
+            return None
+        if not user.active:
+            return None
+
+        return user
+
+    def invert_arg(self, id_num: int, *args):
+        """
+        Оборачивает аргументы пользователя isadmin и active.
+        Автоматически меняет для указанного аргумента True на False и наоборот.
+        """
+        user = User.query.get(id_num)
+
+        if 'isadmin' in args:
+            user.isadmin = not user.isadmin
+
+        if 'active' in args:
+            user.active = not user.active
+
+        db_lib.session.commit()
+
+    def remove(self, id_num: int):
+        """
+        Удаление пользователя по ID.
+        """
+
+        User.query.filter(User.id == id_num).delete()
+        db_lib.session.commit()
+
+
+class CategoryManager:
+
+    def add(self, *, name: str, f_name: str = None):
+        """
+        Добавляет категорию.
+        """
+        name = name.strip().lower()
+        if f_name:
+            f_name = f_name.strip().lower()
+
+        category = Category()
+        category.name = name
+        category.fname = f_name
+
+        db_lib.session.add(category)
+        db_lib.session.commit()
+
+    def edit(self, id_num: int, *, name: str, f_name: str):
+        """
+        Редактирование существующей записи категории.
+        """
+
+        category = Category.query.get(id_num)
+        category.name = name.strip().lower()
+        if f_name:
+            category.fname = f_name.strip().lower()
+        db_lib.session.add(category)
+        db_lib.session.commit()
+
+    def get_all(self, *, sort: bool = True):
+        """
+        Возвращает все категории.
+        """
+
+        query = Category.query
+        if sort:
+            query = query.order_by(Category.name)
+        return query.all()
+
+    def remove(self, id_num: int):
+        """
+        Удаляет выбранный элемент по ID.
+        """
+
+        Category.query.filter(Category.id == id_num).delete()
+        db_lib.session.commit()
+
+
+class TypesManager:
+
+    def add(self, *, name: str, f_name: str = None):
+        """
+        Добавляет новый тип данных.
+        """
+        name = name.strip().lower()
+        if f_name:
+            f_name = f_name.strip().lower()
+
+        types = Types()
+        types.name = name
+        types.fname = f_name
+
+        db_lib.session.add(types)
+        db_lib.session.commit()
+
+    def edit(self, id_num: int, name: str, f_name: str):
+        """
+        Редактирование существующей записи типа материалов.
+        """
+
+        types = Types.query.get(id_num)
+        types.name = name.strip().lower()
+        if f_name:
+            types.fname = f_name.strip().lower()
+
+        db_lib.session.add(types)
+        db_lib.session.commit()
+
+    def get_all(self, *, sort: bool = True):
+        """
+        Возвращает все типы.
+        """
+
+        query = Types.query
+        if sort:
+            query = query.order_by(Types.name)
+        return query.all()
+
+    def get_by(self, *, category: str, sort: bool = True):
+        """
+        Формирует выборку типов, связанных с переданной категорией.
+        """
+
+        if not category:
+            return self.get_all()
+
+        cats = Category.query.filter(Category.name == category).first()
+        type_ids = db_lib.session.query(Content.types_id).filter(
+            Content.category_id == cats.id).distinct()
+
+        query = Types.query.filter(Types.id.in_(type_ids))
+        if sort:
+            query = query.order_by(Types.name)
+
+        return query.all()
+
+    def remove(self, id_num: int):
+        """
+        Удаляет выбранный элемент по ID.
+        """
+
+        Types.query.filter(Types.id == id_num).delete()
+        db_lib.session.commit()
+
+
+class ContentManager:
+
+    def add(self, **data):
+        """
+        Добавляет новую запись в таблицу Content.
+        Необходимые параметры:
+        name, url, lang, types_id, category_id
+        """
+
+        content = Content(**data)
+        db_lib.session.add(content)
+        db_lib.session.commit()
+
+    def get_all(self, *, sort: bool = True):
+        """
+        Возвращает всю таблицу Content.
+        """
+
+        query = Content.query
+        if sort:
+            query = query.order_by(Content.types_id, Content.name)
+        return query.all()
+
+    def get_by(self, *, category: str, types: str, sort: bool = True):
+        """
+        Формирует выборку на основании переданной категории и (или) типа.
+        """
+
+        if category:
+            query = Category.query.filter(Category.name == category).first()
+            query = query.content
+        else:
+            query = Content.query
+
+        if types:
+            ts = Types.query.filter(Types.name == types).first()
+            query = query.filter(Content.types_id == ts.id)
+
+        if sort:
+            query = query.order_by(Content.types_id, Content.name)
+
+        return query.all()
+
+    def get_all_lang(self):
+        """
+        Возвращает список уникальных значений lang в таблице Content.
+        """
+
+        return db_lib.session.query(Content.lang).distinct().all()
+
+    def remove(self, id_num: int):
+        """
+        Удаление записи по ID.
+        """
+
+        Content.query.filter(Content.id == id_num).delete()
+        db_lib.session.commit()
 
 
 class User(UserMixin, db_lib.Model):
@@ -25,6 +253,8 @@ class User(UserMixin, db_lib.Model):
     password_hash = db_lib.Column(db_lib.String(128))
     isadmin = db_lib.Column(db_lib.Boolean, default=False)
     active = db_lib.Column(db_lib.Boolean, default=True)
+
+    manager = UserManager()
 
     def set_password(self, password: str) -> None:
         """
@@ -52,7 +282,7 @@ def load_user(id):
 
 class Category(db_lib.Model):
     """
-    Таблица Category - содержательная характеристика (Python, sql, django и т.п.).
+    Таблица Category - содержательная характеристика (python, sql и т.п.).
     Один ко многим.
     """
 
@@ -60,9 +290,11 @@ class Category(db_lib.Model):
 
     id = db_lib.Column(db_lib.Integer, primary_key=True)
     name = db_lib.Column(db_lib.String(100), nullable=False, unique=True)
-    fname = db_lib.Column(db_lib.String(100))
+    fname = db_lib.Column(db_lib.String(100), nullable=True, unique=True)
 
-    content = relationship('Content', backref='Category')
+    content = relationship('Content', backref='Category', lazy='dynamic')
+
+    manager = CategoryManager()
 
     def __repr__(self):
         return f'<Types(id="{self.id}", name="{self.name}")>'
@@ -81,9 +313,11 @@ class Types(db_lib.Model):
 
     id = db_lib.Column(db_lib.Integer, primary_key=True)
     name = db_lib.Column(db_lib.String(200), nullable=False, unique=True)
-    fname = db_lib.Column(db_lib.String(100))
+    fname = db_lib.Column(db_lib.String(100), nullable=True, unique=True)
 
-    content = relationship('Content', backref='Types')
+    content = relationship('Content', backref='Types', lazy='dynamic')
+
+    manager = TypesManager()
 
     def __repr__(self):
         return f'<Types(id="{self.id}", name="{self.name}")>'
@@ -106,13 +340,15 @@ class Content(db_lib.Model):
     lang = db_lib.Column(db_lib.String(10), nullable=False)
     img_url = db_lib.Column(db_lib.String(200), nullable=True)
 
-    category_id = db_lib.Column(db_lib.Integer(), db_lib.ForeignKey('Category.id'))
+    category_id = db_lib.Column(db_lib.Integer(),
+                                db_lib.ForeignKey('Category.id'))
     types_id = db_lib.Column(db_lib.Integer(), db_lib.ForeignKey('Types.id'))
 
+    manager = ContentManager()
+
     def __repr__(self):
-        return f'<Content(name="{self.name}", url="{self.url}", date="{self.date}", lang="{self.lang}")>'
+        return f'<Content(name="{self.name}", url="{self.url}",' \
+               f' date="{self.date}", lang="{self.lang}")>'
 
     def __str__(self):
         return self.name
-
-

@@ -3,20 +3,19 @@
 <div class="col mb-4 text-center">
 
     {% if link.img_src %}
+
         <img class="card-img-top" src="{{ url_for('static', filename=link.img_src) }}" alt="{{ link.name }}">
 
     {% else %}
 
-        {% set image_default = ['output\default_dog.jpg', 'output\default-cat-2.jpg', 'output\default-dog-2.jpg', 'output\default-dog-3.jpg']|random() %}
-        <img class="card-img-top" src="{{ url_for('images', filename=image_default) }}" alt="{{ link.name }}">
+        {% set image_default = ['img/output/default_dog.jpg', 'img/output/default-cat-2.jpg', 'img/output/default-dog-2.jpg', 'img/output/default-dog-3.jpg']|random() %}
+        <img class="card-img-top" src="{{ url_for('static', filename=image_default) }}" alt="{{ link.name }}">
 
     {% endif %}
 
     <div class="card-body">
-        <p class="card-text">{% if link.lang != 'ru' %}<em>{{ link.lang }} </em>{% endif %}<a href="{{ link.url }}">{{ link.name }}</a></p>
-        <!-- <p class="card-text text-right"><small class="text-muted">{{ link.date.strftime('%d.%m.%Y') }}</small></p> -->
+        <h5 class="card-title text-right">{% if link.lang != 'ru' %}<small class="text-muted">{{ link.lang }}</small>{% endif %}</h5>
+        <p class="card-text"><a href="{{ link.url }}">{{ link.name }}</a></p>
     </div>
 
 </div>
-
-

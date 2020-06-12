@@ -4,11 +4,12 @@
 
 import urllib3
 from flask_wtf import FlaskForm, RecaptchaField
-from wtforms import BooleanField, PasswordField, SelectField, StringField, SubmitField, validators
+from wtforms import BooleanField, PasswordField, SelectField
+from wtforms import StringField, SubmitField, validators
 from wtforms.validators import InputRequired, URL, ValidationError
 
 from app import db_lib
-from app.models import Content, Category, Types
+from app.models import Category, Content, Types
 from app.models import User
 
 
@@ -72,11 +73,18 @@ class NewDataForm(FlaskForm):
         URL(require_tld=False, message='Неверно указан URL'),
         InputRequired(message='Поле обязательно для заполнения')
     ])
-    lang = SelectField('Язык')
-    category = SelectField('Категория')
-    types = SelectField('Тип')
+
+    lang = SelectField('Язык',
+                       choices=[])
+    category = SelectField('Категория',
+                           choices=[],
+                           coerce=int)
+    types = SelectField('Тип',
+                        choices=[],
+                        coerce=int)
 
     def validate_url(self, urls):
+
         exists = db_lib.session.query(db_lib.exists().where(
             Content.url == urls.data)).scalar()
         if exists:
@@ -85,22 +93,13 @@ class NewDataForm(FlaskForm):
         try:
             http = urllib3.PoolManager()
             response = http.request('GET', urls.data)
-        except:
+        except Exception:
             raise ValidationError('Ссылка недоступна или '
                                   'работает неправильно.')
         else:
-            if response.status not in (200, 301, 302):
+            if response.status != 200:
                 raise ValidationError('Проверьте, что ссылка работает '
                                       'и ведёт на открытый ресурс.')
-
-    def validate_lang(self, choice):
-        pass
-
-    def validate_category(self, choice):
-        pass
-
-    def validate_types(self, choice):
-        pass
 
     class Meta:
         csrf = True
@@ -108,7 +107,7 @@ class NewDataForm(FlaskForm):
 
 class CategoryForm(FlaskForm):
 
-    name = StringField('Название (описание)',
+    name = StringField('Имя',
                        validators=[InputRequired(
                            message='Поле должно содержать текст')])
     fname = StringField('Slug')
@@ -178,6 +177,17 @@ class TypesForm(CategoryForm):
             return False
 
         return True
+
+    class Meta:
+        csrf = True
+
+
+class EditHeadingsForm(FlaskForm):
+
+    name = StringField('Имя',
+                       validators=[InputRequired(
+                           message='Поле должно содержать текст')])
+    fname = StringField('Slug')
 
     class Meta:
         csrf = True

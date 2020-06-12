@@ -2,26 +2,30 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand abs" href="/">ЯП:4 Library</a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="navbar-collapse collapse" id="collapsingNavbar">
         <ul class="navbar-nav">
-            {% if not exoutput %}
-                {% set exoutput = '' %}
+
+            {% if not content %}
+                {% set content = '' %}
             {% endif %}
 
-            {% for category_link in category_links %}
+            {% for category in categories %}
                 <li class="nav-item mr-1">
-                    {% if category_link.name.lower() == exoutput.lower() %}
-                        <a class="nav-link disabled" href={{ url_for('index', chatstring=category_link.name.lower()) }}>
-                            <span class="green_color">{{ category_link.name.upper() }}</span></a>
+                    {% if excat and category.name.lower() == excat.lower() %}
+                        <a class="nav-link disabled" href={{ url_for('index', cy=category.name.lower()) }}>
+                            <span class="green_color">{{ category.name.upper() }}</span></a>
                     {% else %}
                         <a class="nav-link"
-                           href={{ url_for('index', chatstring=category_link.name.lower()) }}>{{ category_link.name }}</a>
+                           href={{ url_for('index', cy=category.name.lower()) }}>{{ category.name }}</a>
                     {% endif %}
                 </li>
             {% endfor %}
+
         </ul>
 
 
@@ -44,6 +48,7 @@
                 <li class="nav-item"></li>
 
             {% else %}
+
                 {% if form_login %}
                     <li class="nav-item">
                         <a class="nav-link d-none d-lg-block" href="#" onclick="openForm()">Войти</a>
@@ -52,14 +57,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('signup') }}">Регистрация</a>
                     </li>
-
                 {% endif %}
+
             {% endif %}
         </ul>
     </div>
 </nav>
 
 {% if form_login %}
+
     <div class="form-wrapper">
         <div id="form-container">
             <div class="form-popup" id="myForm">
@@ -79,6 +85,7 @@
             </div>
         </div>
     </div>
+
 {% endif %}
 
 
