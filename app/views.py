@@ -3,9 +3,8 @@ from flask_login import current_user, login_user, logout_user
 from werkzeug.urls import url_parse
 
 from app import application
-from app.dbpanel import QA
 from app.forms import LoginForm, RegForm
-from app.models import Category, Content, User
+from app.models import Category, Content, Types, User
 
 
 @application.route('/', methods=['GET', 'POST'])
@@ -24,7 +23,7 @@ def index():
     )
 
     categories = Category.manager.get_all()
-    types_content = QA.get_types_by(category=category)
+    types_content = Types.manager.get_by(category, dictionary=True)
 
     form_login = LoginForm(request.form or None)
 

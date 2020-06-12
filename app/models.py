@@ -154,13 +154,18 @@ class TypesManager:
             query = query.order_by(Types.name)
         return query.all()
 
-    def get_by(self, *, category: str, sort: bool = True):
+    def get_by(self, category: str, *,
+               dictionary: bool = False,
+               sort: bool = True):
         """
         Формирует выборку типов, связанных с переданной категорией.
         """
 
         if not category:
-            return self.get_all()
+            query = self.get_all(sort=sort)
+            if dictionary:
+                return {type_.id: type_.name for type_ in query}
+            return query
 
         cats = Category.query.filter(Category.name == category).first()
         type_ids = db_lib.session.query(Content.types_id).filter(
@@ -170,7 +175,12 @@ class TypesManager:
         if sort:
             query = query.order_by(Types.name)
 
-        return query.all()
+        query = query.all()
+
+        if dictionary:
+            return {type_.id: type_.name for type_ in query}
+
+        return query
 
     def remove(self, id_num: int):
         """
