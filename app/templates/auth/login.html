@@ -16,6 +16,11 @@
                 {% endif %}
             {% endwith %}
 
+            <div class="bg-info clearfix">
+                <a href="{{ url_for('login') }}"><img class="btn btn-secondary float-right" src="{{ url_for('static', filename='/icons/yandex.png') }}"></a>
+            </div>
+            <br><br>
+
             <form class="needs-validation" method="POST" novalidate>
                 {{ form.csrf_token }}
 
@@ -26,7 +31,7 @@
                     {{ render_field(form.password, class='form-control') }}
                 </div>
                 <div class="form-group row">
-                    {{ form.recaptcha }}
+                    {{ render_field(form.recaptcha, class='form-control') }}
                 </div>
                 <div class="float-right">
                     <input type=submit value=Войти class="btn btn-outline-success btn-block">

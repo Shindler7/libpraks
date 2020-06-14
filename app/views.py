@@ -115,6 +115,11 @@ def logout():
     return redirect(next_page)
 
 
+@application.route('/login/oauth', methods=['GET', 'POST'])
+def login_oauth():
+    return redirect(url_for('login'))
+
+
 @application.errorhandler(404)
 def page_not_found(error):
     return render_template('error/404.html'), 404
