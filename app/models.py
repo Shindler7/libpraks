@@ -1,10 +1,13 @@
 """
 Конфигурационные модели для SQL.
 """
+import os
+import subprocess
 
 from datetime import datetime
 
 from flask_login import UserMixin
+from sqlalchemy import event
 from sqlalchemy.orm import relationship
 from werkzeug.security import check_password_hash, generate_password_hash
 
@@ -362,3 +365,13 @@ class Content(db_lib.Model):
 
     def __str__(self):
         return self.name
+
+
+@event.listens_for(Content, 'after_insert')
+def receive_after_insert(mapper, connection, target):
+    dirname = os.path.dirname(os.path.abspath(__file__))
+    script_path = os.path.join(dirname, 'client.py')
+    subprocess.run(
+        [f'python {script_path} {target.id} {target.url} &'],
+        shell=True
+    )
