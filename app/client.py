@@ -28,10 +28,8 @@ def get_url_path(url):
     return img_path
 
 
-def get_image(obj):
+def get_image(id=None, url=None):
     server = application.config['SCREEN_SERVER']
-    id = obj['id']
-    url = obj['url']
     params = {'url': url}
     path = get_url_path(url)
     dirname = os.path.dirname(os.path.abspath(__file__))
@@ -52,8 +50,4 @@ def get_image(obj):
 
 if __name__ == '__main__':
     args = sys.argv
-    data = {
-        'id': args[1],
-        'url': args[2]
-    }
-    get_image(data)
+    get_image(id=args[1], url=args[2])
