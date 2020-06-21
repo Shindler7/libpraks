@@ -17,7 +17,7 @@ def random_string(string_length=8) -> str:
 
 
 def get_url_path(url):
-    static_path = application.config['IMAGES_PATH'][0]
+    static_path = 'img/screenshot'
     url_parse = urlparse(url)
     img_name_suffix = random_string()
     img_name = url_parse.netloc + '_' + img_name_suffix + '.png'
@@ -31,9 +31,10 @@ def get_url_path(url):
 def get_image(id=None, url=None):
     server = application.config['SCREEN_SERVER']
     params = {'url': url}
-    path = get_url_path(url)
+    img_db_path = get_url_path(url)
+    img_static_path = os.path.join('static', img_db_path)
     dirname = os.path.dirname(os.path.abspath(__file__))
-    full_path = os.path.join(dirname, path)
+    full_path = os.path.join(dirname, img_static_path)
 
     r = requests.get(server, params=params, stream=True)
     if r.status_code == 200:
@@ -43,7 +44,7 @@ def get_image(id=None, url=None):
 
     last_obj = Content.query.filter(Content.id == id).first()
     if last_obj:
-        last_obj.img_url = path
+        last_obj.img_url = img_db_path
         db_lib.session.add(last_obj)
         db_lib.session.commit()
 
