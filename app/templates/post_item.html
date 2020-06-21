@@ -2,9 +2,9 @@
 
 <div class="col mb-4 text-center">
 
-    {% if link.img_src %}
+    {% if link.img_url %}
 
-        <img class="card-img-top" src="{{ url_for('static', filename=link.img_src) }}" alt="{{ link.name }}">
+        <img class="card-img-top" src="{{ link.img_url }}" alt="{{ link.name }}">
 
     {% else %}
 
