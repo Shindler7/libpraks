@@ -17,7 +17,7 @@ def random_string(string_length=8) -> str:
 
 
 def get_url_path(url):
-    static_path = 'img/screenshot'
+    static_path = os.path.join('img', 'screenshot')
     url_parse = urlparse(url)
     img_name_suffix = random_string()
     img_name = url_parse.netloc + '_' + img_name_suffix + '.png'
