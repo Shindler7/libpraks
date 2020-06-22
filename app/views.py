@@ -1,10 +1,15 @@
-from flask import redirect, render_template, request, url_for
+import os
+
+from flask import redirect, render_template, request, url_for, Response, send_from_directory
 from flask_login import current_user, login_user, logout_user
 from werkzeug.urls import url_parse
+from werkzeug.utils import secure_filename
 
-from app import application
+from app import application, csrf, db_lib
 from app.forms import LoginForm, RegForm
 from app.models import Category, Content, Types, User
+
+from app.utils import get_screen_name
 
 
 @application.route('/', methods=['GET', 'POST'])
@@ -128,3 +133,34 @@ def page_not_found(error):
 @application.errorhandler(500)
 def server_error(error):
     return render_template('error/500.html'), 500
+
+
+@application.route('/save/screenshot', methods=['GET', 'POST'])
+@csrf.exempt
+def save_screenshot():
+    secret_key = request.form.get(key="token", default="")
+    if secret_key != application.config['SCREEN_SERVER_SECRET_KEY']:
+        return Response('Access denied! Wrong token!', status=403)
+
+    if request.method == 'POST':
+        id = request.form.get(key="id", default=None)
+        screen = request.files.get(key="screen", default=None)
+
+        if id is None or screen is None:
+            return Response('Bad request!', status=400)
+
+        screen_name = secure_filename(get_screen_name(id))
+
+        upload_folder = os.path.join(
+            application.config['UPLOAD_FOLDER'],
+            secure_filename(screen_name)
+        )
+        screen.save(upload_folder)
+
+        storage_path = application.config['STORAGE_PATH'] + screen_name
+        item = Content.query.filter_by(id=id).first()
+        item.img_url = storage_path
+        db_lib.session.add(item)
+        db_lib.session.commit()
+
+        return Response('Image saved', status=200)
