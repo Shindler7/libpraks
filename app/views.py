@@ -157,10 +157,14 @@ def save_screenshot():
         )
         screen.save(upload_folder)
 
-        storage_path = application.config['STORAGE_PATH'] + screen_name
         item = Content.query.filter_by(id=id).first()
-        item.img_url = storage_path
+        item.img_url = screen_name
         db_lib.session.add(item)
         db_lib.session.commit()
 
         return Response('Image saved', status=200)
+
+
+@application.route('/load-screen/<filename>')
+def load_screen(filename):
+    return send_from_directory(application.config['STORAGE_PATH'], filename=filename)

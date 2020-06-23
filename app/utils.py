@@ -1,4 +1,3 @@
-# import os
 import random
 import string
 
@@ -20,10 +19,7 @@ def get_screen_name(id):
     url_parse = url_parse.netloc
     screen_suffix = random_string()
     screen_name = url_parse.replace('.', '_') + '_' + screen_suffix + '.png'
+    all_screen_names = Content.query.with_entities(Content.img_url)
+    if screen_name in all_screen_names:
+        get_screen_name(id)
     return screen_name
-
-#
-# def get_full_path(name):
-#     img_static_path = os.path.join('static', 'img', 'screenshot', name)
-#     dirname = os.path.dirname(os.path.abspath(__file__))
-#     return os.path.join(dirname, img_static_path)

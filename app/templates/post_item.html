@@ -4,7 +4,7 @@
 
     {% if link.img_url %}
 
-        <img class="card-img-top" src="{{ url_for('static', filename=link.img_url) }}" alt="{{ link.name }}">
+        <img class="card-img-top" src="{{ url_for('load_screen', filename=link.img_url) }}" alt="{{ link.name }}">
 
     {% else %}
 
