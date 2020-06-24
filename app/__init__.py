@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
+import logging
+
 from flask import Flask
 from flask_images import Images
 from flask_login import LoginManager
@@ -10,9 +12,11 @@ from flask_wtf.csrf import CSRFProtect
 
 from config import Config
 
-# *** временно выключено ***
-# import logging
-# logging.basicConfig(filename='libprakt.log', level=logging.INFO)
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename='app/logs/get_screen.log',
+    filemode='a'
+)
 
 # Flask
 application = Flask(__name__)

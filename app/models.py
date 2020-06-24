@@ -4,9 +4,8 @@
 import logging
 from datetime import datetime
 
-from requests import get
-
 from flask_login import UserMixin
+from requests import get
 from sqlalchemy import event
 from sqlalchemy.orm import relationship
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -14,12 +13,6 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from app import application, db_lib
 from app import login_manager
 
-
-logging.basicConfig(
-    level=logging.DEBUG,
-    filename='app/logs/get_screen.log',
-    filemode='a'
-)
 
 class UserManager:
 
@@ -375,6 +368,10 @@ class Content(db_lib.Model):
 
 @event.listens_for(Content, 'after_insert')
 def receive_after_insert(mapper, connection, target):
+    """
+    Обработка новой записи в Content после внесения в БД.
+    Вызов "в тени" метода создания скриншота ссылки.
+    """
     params = {
         'id': target.id,
         'url': target.url,
@@ -383,5 +380,3 @@ def receive_after_insert(mapper, connection, target):
     url = application.config['SCREEN_SERVER']
     r = get(url, params=params)
     logging.info(f'Запрос отправлен. Статус ответа: {r.status_code}')
-
-

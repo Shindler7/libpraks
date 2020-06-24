@@ -13,6 +13,7 @@ __pycache__/*
 _sources/
 tmp/
 libprakt.log
+*.log
 _bav/
 logs/
 

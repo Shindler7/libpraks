@@ -1,6 +1,7 @@
 import os
 
-from flask import redirect, render_template, request, url_for, Response, send_from_directory
+from flask import Response, redirect, render_template, request
+from flask import send_from_directory, url_for
 from flask_login import current_user, login_user, logout_user
 from werkzeug.urls import url_parse
 from werkzeug.utils import secure_filename
@@ -8,7 +9,6 @@ from werkzeug.utils import secure_filename
 from app import application, csrf, db_lib
 from app.forms import LoginForm, RegForm
 from app.models import Category, Content, Types, User
-
 from app.utils import get_screen_name
 
 
