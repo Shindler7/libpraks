@@ -1,19 +1,25 @@
 """
 Конфигурационные модели для SQL.
 """
-import os
-import subprocess
-
+import logging
 from datetime import datetime
+
+from requests import get
 
 from flask_login import UserMixin
 from sqlalchemy import event
 from sqlalchemy.orm import relationship
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from app import db_lib
+from app import application, db_lib
 from app import login_manager
 
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename='app/logs/get_screen.log',
+    filemode='a'
+)
 
 class UserManager:
 
@@ -369,9 +375,13 @@ class Content(db_lib.Model):
 
 @event.listens_for(Content, 'after_insert')
 def receive_after_insert(mapper, connection, target):
-    dirname = os.path.dirname(os.path.abspath(__file__))
-    script_path = os.path.join(dirname, 'client.py')
-    subprocess.run(
-        [f'python {script_path} {target.id} {target.url} &'],
-        shell=True
-    )
+    params = {
+        'id': target.id,
+        'url': target.url,
+        'token': application.config['SCREEN_SERVER_SECRET_KEY']
+    }
+    url = application.config['SCREEN_SERVER']
+    r = get(url, params=params)
+    logging.info(f'Запрос отправлен. Статус ответа: {r.status_code}')
+
+
