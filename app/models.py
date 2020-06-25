@@ -375,7 +375,8 @@ def receive_after_insert(mapper, connection, target):
     params = {
         'id': target.id,
         'url': target.url,
-        'token': application.config['SCREEN_SERVER_SECRET_KEY']
+        'token': application.config['SCREEN_SERVER_SECRET_KEY'],
+        'host': application.config['PROJECT_HOST']
     }
     url = application.config['SCREEN_SERVER']
     r = get(url, params=params)
