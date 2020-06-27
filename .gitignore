@@ -7,7 +7,7 @@ app/__pycache__/*
 passenger_wsgi.py
 libprak.fsgi
 lib_prak.code-workspace
-config.py
+.env
 
 __pycache__/*
 _sources/

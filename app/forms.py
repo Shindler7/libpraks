@@ -22,7 +22,7 @@ class LoginForm(FlaskForm):
         validators=[InputRequired(message='Заполните поле!')]
     )
     password = PasswordField('Пароль', validators=[InputRequired()])
-    remember_me = BooleanField('Запомнить меня')
+    # remember_me = BooleanField('Запомнить меня')
     recaptcha = RecaptchaField()
     submit = SubmitField('Войти')
 

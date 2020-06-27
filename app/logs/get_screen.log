@@ -1,1 +1,1150 @@
 INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\__init__.py', reloading
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:31:44] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:31:45] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:31:45] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:31:45] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:31:45] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:31:45] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:31:45] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:33] "[37mGET /index?cy=django HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:33] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:33] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:33] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:33] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:33] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:34] "[37mGET /index?cy=flask HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:34] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:34] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:34] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:34] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:35] "[37mGET /index?cy=python HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:35] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:35] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:36] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:36] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:36] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:36] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:50] "[37mPOST /index?cy=python HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:50] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:50] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:51] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:51] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:51] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:35:51] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:00] "[37mPOST /index?cy=python HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:00] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:00] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:00] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:00] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:00] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:00] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:24] "[37mPOST /index?cy=python HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:24] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:24] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:25] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:25] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:25] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:36:25] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:42:55] "[37mPOST /index?cy=python HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:42:55] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:42:55] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:42:56] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:42:56] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:42:56] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:42:56] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:43:04] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:43:04] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:43:04] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:43:04] "[32mGET /static//icons/yandex.png HTTP/1.1[0m" 308 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:43:05] "[37mGET /static/icons/yandex.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:43:15] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:43:15] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:43:15] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:43:15] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:43:29] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:43:29] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:43:29] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:43:29] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:10] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:10] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:10] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:10] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:10] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:20] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:20] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:21] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:21] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:34] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:34] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:34] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:34] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:51] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:51] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:51] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:52] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:44:52] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:08] "[37mGET /index HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:08] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:08] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:08] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:08] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:08] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:08] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:23] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:23] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:23] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:27] "[37mGET /db/headings HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:27] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:27] "[36mGET /static/icons/pencil_min.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:27] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:28] "[37mGET /db/user HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:29] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:29] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:29] "[36mGET /static/icons/user_change.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:36] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:36] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:36] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:40] "[37mGET /db/headings HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:40] "[36mGET /static/icons/pencil_min.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:40] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:41] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:43] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:43] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:44] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:44] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:44] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:44] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:45:44] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:05] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:05] "[37mGET /index HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:05] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:05] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:05] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:05] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:05] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:05] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:11] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:11] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:12] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:12] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:17] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:17] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:17] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:17] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:41] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:41] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:41] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:41] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:58] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:58] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:58] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:52:58] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:05] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:05] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:05] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:05] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:16] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:16] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:16] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:16] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:16] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:21] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:21] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:21] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:21] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:31] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:31] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:31] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:53:31] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:55:44] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:55:44] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:55:44] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:55:44] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 12:55:44] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:04:51] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:04:51] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:04:51] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:04:51] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:04:51] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:05:09] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:05:09] "[37mGET /static/design.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:05:09] "[37mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:05:09] "[37mGET /static/js/form_validations.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:05:09] "[37mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:05:09] "[37mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:05:09] "[37mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:00] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:00] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:00] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:01] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:01] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:01] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:01] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:06] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:06] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:07] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:07] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:25] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:25] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:25] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:25] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:42] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:42] "[37mGET /index HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:42] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:42] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:42] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:42] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:42] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:42] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:44] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:44] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:44] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:45] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:45] "[37mGET /index HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:45] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:46] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:46] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:46] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:46] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:46] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:48] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:48] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:48] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:48] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:49] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:49] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:49] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:56] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:56] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:56] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:07:57] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:08:13] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:08:13] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:08:13] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:08:13] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:26:53] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:26:53] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:26:53] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:26:53] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:26:53] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:26:53] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:26:53] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:27:52] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:27:52] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:27:52] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:27:53] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:27:53] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\forms.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:31:45] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:31:45] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:31:45] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:31:45] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:31:45] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:31:54] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:31:54] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:31:54] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:31:54] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:24] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:24] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:24] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:24] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:25] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:28] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:28] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:28] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:28] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:28] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:29] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:29] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:33] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:33] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:33] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:34] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:34] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:33:34] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:34:11] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:34:11] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:34:11] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:34:11] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:34:11] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:34:30] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:34:30] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:34:30] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:34:30] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:34:31] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:36:10] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:36:10] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:36:10] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:36:10] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:36:11] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:36:20] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:36:20] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:36:20] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:36:20] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:36:21] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:44:48] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:44:48] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:44:48] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:44:49] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:31] "[37mPOST /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:31] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:31] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:31] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:39] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:39] "[37mGET /index HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:40] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:40] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:40] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:40] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:40] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:40] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:43] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:43] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:45:43] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:8000
+DEBUG:urllib3.util.retry:Incremented Retry for (url='/'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+WARNING:urllib3.connectionpool:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0582C208>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): localhost:8000
+DEBUG:urllib3.util.retry:Incremented Retry for (url='/'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+WARNING:urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0582C280>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): localhost:8000
+DEBUG:urllib3.util.retry:Incremented Retry for (url='/'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+WARNING:urllib3.connectionpool:Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x05825028>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): localhost:8000
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:46:20] "[37mPOST /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:46:20] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:46:20] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): pypi.org:443
+DEBUG:urllib3.connectionpool:https://pypi.org:443 "GET /project/python-dotenv/ HTTP/1.1" 200 103914
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): djap.fun:80
+DEBUG:urllib3.connectionpool:http://djap.fun:80 "GET /?id=53&url=https%3A%2F%2Fpypi.org%2Fproject%2Fpython-dotenv%2F&token=5SRg7rwfZ3sSGsQz4EUBLU0XkQwJv1Yl&host=https%3A%2F%2Fb84ab112b11b.ngrok.io HTTP/1.1" 200 32
+INFO:root:Запрос отправлен. Статус ответа: 200
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:46:29] "[32mPOST /db/base HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:46:29] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:46:29] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:46:29] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:46:35] "[32mGET /db/delete/53 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:46:35] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:46:36] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:46:36] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:47:44] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:47:44] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:47:44] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:47:45] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:47:45] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:47:45] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:47:45] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:47:47] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:47:47] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:47:47] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:48:03] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:48:03] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:48:03] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:31] "[37mGET /db/headings HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:31] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:31] "[36mGET /static/icons/pencil_min.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:31] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:32] "[37mGET /db/user HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:32] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:32] "[36mGET /static/icons/user_change.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:32] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:37] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:37] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:37] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:37] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:37] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:37] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 13:50:37] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\__init__.py', reloading
+INFO:root:DEBUG: development
+INFO:root:DEBUG: development
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:root:DEBUG: development
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:03:28] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:03:29] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:03:29] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:03:29] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:03:29] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:03:29] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:03:29] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:04:00] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:04:01] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:04:01] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\__init__.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:06:21] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:06:21] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:06:21] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:06:21] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:06:21] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:06:21] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:06:21] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:07:52] "[35m[1mGET /user/barmichev HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:07:52] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:07:53] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:07:53] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:07:53] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:07:53] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:07:53] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:16] "[35m[1mGET /user/barmichev HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:16] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:16] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:17] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:17] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:17] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:17] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:36] "[35m[1mGET /user/barmichev HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:36] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:36] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:36] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:36] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:36] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:37] "[37mGET /user/barmichev?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:47] "[37mGET /user/barmichev HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:09:47] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:10:44] "[37mGET /user/barmichev HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:10:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\__init__.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:12:39] "[37mGET /user/barmichev HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:18:00] "[37mGET /user/barmichev HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:18:07] "[37mGET /user/boomber HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:18:25] "[37mGET /user/boomber HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:18:26] "[37mGET /user/boomber HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:18:53] "[32mGET /user/boomber HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:18:53] "[37mGET /index HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:18:53] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:18:53] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:18:53] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:18:53] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:18:53] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:18:53] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:01] "[32mGET /user/boob HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:01] "[37mGET /index HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:02] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:02] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:02] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:02] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:02] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:02] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:13] "[32mGET /user/barmichev HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:26] "[37mGET /index HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:26] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:26] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:26] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:26] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:26] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:19:26] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:20:09] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:20:09] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:20:09] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:20:45] "[37mGET /db/headings HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:20:45] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:20:45] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:20:45] "[36mGET /static/icons/pencil_min.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:20:47] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:20:47] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:20:47] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:20:59] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:20:59] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:21:00] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:21:00] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:21:00] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:21:00] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:21:00] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:41:23] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:41:29] "[37mGET /static/design.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:41:29] "[37mGET /static/js/form_validations.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:41:30] "[37mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:41:31] "[37mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:41:31] "[37mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:41:31] "[37mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:41:39] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:41:43] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:41:45] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:41:45] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:41:45] "[32mGET /static//icons/yandex.png HTTP/1.1[0m" 308 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:41:48] "[37mGET /static/icons/yandex.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:42:07] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:43:19] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:43:21] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:43:21] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:43:22] "[36mGET /static/icons/yandex.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:43:48] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:43:50] "[37mGET /static/design.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:43:50] "[37mGET /static/js/form_validations.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:43:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:43:50] "[32mGET /static//icons/yandex.png HTTP/1.1[0m" 308 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:43:52] "[37mGET /static/icons/yandex.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:44:02] "[37mGET /index HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:44:04] "[37mGET /static/design.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:44:04] "[37mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:44:04] "[37mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:44:04] "[37mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:44:04] "[37mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:44:04] "[37mGET /static/js/form_validations.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:44:08] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:44:27] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:44:33] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:44:34] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:45:00] "[37mGET /db/user HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:45:01] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:45:01] "[37mGET /static/icons/user_change.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:45:01] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:45:21] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:45:22] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:45:22] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.ru:443
+DEBUG:urllib3.connectionpool:https://www.google.ru:443 "GET / HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): djap.fun:80
+DEBUG:urllib3.connectionpool:http://djap.fun:80 "GET /?id=54&url=https%3A%2F%2Fwww.google.ru%2F&token=5SRg7rwfZ3sSGsQz4EUBLU0XkQwJv1Yl&host=https%3A%2F%2F7cf41d427274.ngrok.io HTTP/1.1" 200 32
+INFO:root:Запрос отправлен. Статус ответа: 200
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:03] "[32mPOST /db/base HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:04] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:05] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:05] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:14] "[35m[1mPOST /save/screenshot HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:15] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:16] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:16] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:16] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:16] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:16] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:17] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:18] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:18] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:19] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:19] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:54:19] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:55:04] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:55:05] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:55:05] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:55:05] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:55:06] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:55:13] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:55:14] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:55:14] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:55:14] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:55:14] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:55:15] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:56:34] "[32mGET /db/delete/54 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:56:34] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:56:35] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:56:35] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.ru:443
+DEBUG:urllib3.connectionpool:https://www.google.ru:443 "GET / HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): djap.fun:80
+DEBUG:urllib3.connectionpool:http://djap.fun:80 "GET /?id=55&url=https%3A%2F%2Fwww.google.ru%2F&token=5SRg7rwfZ3sSGsQz4EUBLU0XkQwJv1Yl&host=https%3A%2F%2F7cf41d427274.ngrok.io HTTP/1.1" 200 32
+INFO:root:Запрос отправлен. Статус ответа: 200
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:56:51] "[32mPOST /db/base HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:56:52] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:56:52] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:56:53] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 14:57:02] "[35m[1mPOST /save/screenshot HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): yandex.ru:443
+DEBUG:urllib3.connectionpool:https://yandex.ru:443 "GET / HTTP/1.1" 200 183684
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): djap.fun:80
+DEBUG:urllib3.connectionpool:http://djap.fun:80 "GET /?id=56&url=https%3A%2F%2Fyandex.ru%2F&token=5SRg7rwfZ3sSGsQz4EUBLU0XkQwJv1Yl&host=https%3A%2F%2F7cf41d427274.ngrok.io HTTP/1.1" 200 32
+INFO:root:Запрос отправлен. Статус ответа: 200
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:05:33] "[32mPOST /db/base HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:05:34] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:05:35] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:05:35] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:root:<Request 'http://7cf41d427274.ngrok.io/save/screenshot' [POST]>
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:05:51] "[35m[1mPOST /save/screenshot HTTP/1.1[0m" 500 -
+INFO:root:<Request 'http://7cf41d427274.ngrok.io/save/screenshot' [GET]>
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:07:08] "[31m[1mGET /save/screenshot HTTP/1.1[0m" 403 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:10:23] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:10:24] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:10:24] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:10:24] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:10:24] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:10:24] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:10:24] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:24:40] "[32mGET /db/delete/55 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:24:49] "[37mGET /index?cy=django HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:24:49] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:24:49] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:24:49] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:24:49] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:24:49] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:24:49] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:24:51] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:24:53] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:24:53] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:24:53] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:24:54] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:00] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:01] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:01] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:02] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:14] "[32mGET /db/delete/56 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:26] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:28] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:28] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:29] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:29] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:31] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:32] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:32] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:25:34] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): yandex.ru:443
+DEBUG:urllib3.connectionpool:https://yandex.ru:443 "GET / HTTP/1.1" 200 183620
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): djap.fun:80
+DEBUG:urllib3.connectionpool:http://djap.fun:80 "GET /?id=57&url=https%3A%2F%2Fyandex.ru%2F&token=5SRg7rwfZ3sSGsQz4EUBLU0XkQwJv1Yl&host=https%3A%2F%2F7cf41d427274.ngrok.io HTTP/1.1" 200 32
+INFO:root:Запрос отправлен. Статус ответа: 200
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:26:21] "[32mPOST /db/base HTTP/1.1[0m" 302 -
+INFO:root:<Request 'http://7cf41d427274.ngrok.io/save/screenshot' [POST]>
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:26:36] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:26:37] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:26:37] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:root:app\static\img\screenshot\yandex_ru_ivvjzi.png
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:26:44] "[37mPOST /save/screenshot HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:27:26] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:27:33] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:27:34] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:27:34] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:27:34] "[35m[1mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:27:37] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:32:47] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:32:48] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:32:48] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:32:48] "[37mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:32:48] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:32:48] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:33:38] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:33:38] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:33:39] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:33:39] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:33:39] "[33mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:33:39] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:34:00] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:34:01] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:34:01] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:34:01] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:34:01] "[35m[1mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:34:02] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:38:32] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:38:37] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:38:37] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:38:37] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:38:39] "[35m[1mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:38:40] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:38:44] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:38:45] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:38:45] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:38:45] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:38:45] "[35m[1mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:40:09] "[35m[1mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:40:10] "[35m[1mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:41:29] "[35m[1mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:41:30] "[37mGET /load-screen/yandex_ru_ivvjzi.png?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:41:31] "[37mGET /load-screen/yandex_ru_ivvjzi.png?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:41:31] "[37mGET /load-screen/yandex_ru_ivvjzi.png?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:41:33] "[37mGET /load-screen/yandex_ru_ivvjzi.png?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:41:33] "[37mGET /load-screen/yandex_ru_ivvjzi.png?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:41:34] "[37mGET /load-screen/yandex_ru_ivvjzi.png?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:42:29] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:42:33] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:root:app\static\img\screenshot\yandex_ru_ivvjzi.png
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:42:38] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:42:38] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:42:41] "[33mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:42:43] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:11] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:11] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:11] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:root:app\static\img\screenshot
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:11] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:11] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:14] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:14] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:14] "[33mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:14] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:15] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:root:app\static\img\screenshot
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:21] "[33mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:22] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:root:app\static\img\screenshot
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:26] "[33mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:26] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:26] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:44:26] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:root:app\static\img\screenshot
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:46:26] "[33mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:46:27] "[37mGET /static/design.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:46:27] "[37mGET /static/js/form_validations.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:46:27] "[37mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:46:29] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:50:39] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:50:40] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:50:40] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:50:40] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:root:Folder: D:\Codingrep\static\img\screenshot
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:50:40] "[33mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:50:41] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:51:31] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:51:32] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:51:32] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:51:32] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:root:Folder: app\static\img\screenshot
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:51:32] "[33mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:51:32] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:root:Folder: app\static\img\screenshot
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:52:18] "[33mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:52:20] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:52:21] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:52:21] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:53:16] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:53:17] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:53:17] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:root:Folder: app\static\img\screenshot
+INFO:root:Х
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:53:17] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:53:17] "[33mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:53:18] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:59:34] "[35m[1mGET /index?cy=разное HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:59:36] "[37mGET /index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:59:36] "[37mGET /index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:59:36] "[37mGET /index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:59:45] "[37mGET /index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 15:59:46] "[37mGET /index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:00:25] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:00:25] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:00:25] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:00:25] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:00:25] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:root:Folder: static\img\screenshot
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:00:25] "[37mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:00:26] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:00:26] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:00:26] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:00:26] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:root:Folder: static\img\screenshot
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:00:27] "[37mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:00:31] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:31] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:36] "[37mGET /index?cy=информатика HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:36] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:37] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:37] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:37] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:37] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:37] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:37] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:37] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:38] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:38] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:38] "[36mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:09:39] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:12:55] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:12:56] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:12:56] "[36mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:12:56] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:12:56] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:13:12] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:13:12] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:13:12] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:13:12] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:13:12] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:13:12] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:13:12] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:13:12] "[36mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:13:28] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:13:29] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:13:29] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.com:443
+DEBUG:urllib3.connectionpool:https://www.google.com:443 "GET /recaptcha/intro/v3.html HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): djap.fun:80
+DEBUG:urllib3.connectionpool:http://djap.fun:80 "GET /?id=58&url=https%3A%2F%2Fwww.google.com%2Frecaptcha%2Fintro%2Fv3.html&token=5SRg7rwfZ3sSGsQz4EUBLU0XkQwJv1Yl&host=https%3A%2F%2F7cf41d427274.ngrok.io HTTP/1.1" 200 32
+INFO:root:Запрос отправлен. Статус ответа: 200
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:05] "[32mPOST /db/base HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:06] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:07] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:07] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:19] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:20] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:20] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:20] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:20] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:20] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:20] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:21] "[36mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:22] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:23] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:23] "[36mGET /load-screen/yandex_ru_ivvjzi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:23] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:23] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:23] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:root:<Request 'http://7cf41d427274.ngrok.io/save/screenshot' [POST]>
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:14:31] "[35m[1mPOST /save/screenshot HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:15:45] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:15:46] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:15:46] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:15:48] "[32mGET /db/delete/57 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:15:49] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:15:50] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:15:50] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:15:53] "[32mGET /db/delete/58 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:15:53] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:15:54] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:15:54] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.com:443
+DEBUG:urllib3.connectionpool:https://www.google.com:443 "GET /recaptcha/intro/v3.html HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): djap.fun:80
+DEBUG:urllib3.connectionpool:http://djap.fun:80 "GET /?id=59&url=https%3A%2F%2Fwww.google.com%2Frecaptcha%2Fintro%2Fv3.html&token=5SRg7rwfZ3sSGsQz4EUBLU0XkQwJv1Yl&host=https%3A%2F%2F7cf41d427274.ngrok.io HTTP/1.1" 200 32
+INFO:root:Запрос отправлен. Статус ответа: 200
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:16:10] "[32mPOST /db/base HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:16:11] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:16:11] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:16:11] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:16:17] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:16:17] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:16:17] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:16:17] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:18:27] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:18:31] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:18:31] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:18:32] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:19:34] "[32mGET /db/delete/59 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:19:35] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:19:36] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:19:36] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.com:443
+DEBUG:urllib3.connectionpool:https://www.google.com:443 "GET /recaptcha/intro/v3.html HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): djap.fun:80
+DEBUG:urllib3.connectionpool:http://djap.fun:80 "GET /?id=60&url=https%3A%2F%2Fwww.google.com%2Frecaptcha%2Fintro%2Fv3.html&token=5SRg7rwfZ3sSGsQz4EUBLU0XkQwJv1Yl&host=https%3A%2F%2F7cf41d427274.ngrok.io HTTP/1.1" 200 32
+INFO:root:Запрос отправлен. Статус ответа: 200
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:20:04] "[32mPOST /db/base HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:20:05] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:20:05] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:20:06] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.ru:443
+DEBUG:urllib3.connectionpool:https://www.google.ru:443 "GET / HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): djap.fun:80
+DEBUG:urllib3.connectionpool:http://djap.fun:80 "GET /?id=61&url=https%3A%2F%2Fwww.google.ru%2F&token=5SRg7rwfZ3sSGsQz4EUBLU0XkQwJv1Yl&host=https%3A%2F%2F7cf41d427274.ngrok.io HTTP/1.1" 200 32
+INFO:root:Запрос отправлен. Статус ответа: 200
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:26:57] "[32mPOST /db/base HTTP/1.1[0m" 302 -
+INFO:root:<Request 'http://7cf41d427274.ngrok.io/save/screenshot' [POST]>
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:27:19] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:27:21] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:27:22] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:27:26] "[37mPOST /save/screenshot HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:28:27] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:28:28] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:28:28] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:28:29] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:28:29] "[37mGET /load-screen/www_google_ru_psskav.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:28:29] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:28:31] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:28:57] "[32mGET /db/delete/61 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:29:14] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:29:16] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:29:17] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:29:28] "[32mGET /db/delete/60 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:29:45] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:29:47] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:29:48] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:30:34] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.com:443
+DEBUG:urllib3.connectionpool:https://www.google.com:443 "GET /recaptcha/intro/v3.html HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): djap.fun:80
+DEBUG:urllib3.connectionpool:http://djap.fun:80 "GET /?id=53&url=https%3A%2F%2Fwww.google.com%2Frecaptcha%2Fintro%2Fv3.html&token=5SRg7rwfZ3sSGsQz4EUBLU0XkQwJv1Yl&host=https%3A%2F%2F7cf41d427274.ngrok.io HTTP/1.1" 200 32
+INFO:root:Запрос отправлен. Статус ответа: 200
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:31:22] "[32mPOST /db/base HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:31:36] "[37mGET /db/base HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:31:41] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:31:42] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:32:12] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:32:13] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:32:13] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:32:13] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:32:13] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:32:16] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:18] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:18] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:19] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:19] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:19] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:19] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:19] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:29] "[37mGET /index?cy=разное HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:29] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:29] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:29] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:29] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:33] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:33] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:33] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:33] "[36mGET /static/img/output/default-dog-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:33] "[36mGET /static/img/output/default_dog.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:33] "[36mGET /static/img/output/default-cat-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jun/2020 16:40:33] "[36mGET /static/img/output/default-dog-2.jpg HTTP/1.1[0m" 304 -

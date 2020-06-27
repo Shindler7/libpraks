@@ -380,4 +380,4 @@ def receive_after_insert(mapper, connection, target):
     }
     url = application.config['SCREEN_SERVER']
     r = get(url, params=params)
-    logging.info(f'Запрос отправлен. Статус ответа: {r.status_code}')
+    logging.info(msg=f'Запрос отправлен. Статус ответа: {r.status_code}')

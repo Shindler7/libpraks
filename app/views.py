@@ -1,8 +1,9 @@
 import os
+import logging
 
 from flask import Response, redirect, render_template, request
-from flask import send_from_directory, url_for
-from flask_login import current_user, login_user, logout_user
+from flask import flash, send_from_directory, url_for
+from flask_login import current_user, login_required, login_user, logout_user
 from werkzeug.urls import url_parse
 from werkzeug.utils import secure_filename
 
@@ -99,6 +100,8 @@ def login():
                 next_page = url_for('index')
             return redirect(next_page)
 
+        flash('Неверное имя пользователя или пароль!', category='danger')
+
     return render_template('auth/login.html',
                            title='Авторизация',
                            form=form)
@@ -120,6 +123,19 @@ def logout():
     return redirect(next_page)
 
 
+@login_required
+@application.route('/user/<username>', methods=['GET', 'POST'])
+def profile(username: str):
+    """
+    Профиль пользователя. Возможность изменить логин, пароль.
+    В перспективе сохранить свои любимые ссылки.
+    """
+    if username != current_user:
+        return redirect(url_for('index'))
+
+    return f'В разработке {username}, {current_user}'
+
+
 @application.route('/login/oauth', methods=['GET', 'POST'])
 def login_oauth():
     return redirect(url_for('login'))
@@ -138,6 +154,12 @@ def server_error(error):
 @application.route('/save/screenshot', methods=['GET', 'POST'])
 @csrf.exempt
 def save_screenshot():
+    """
+    Получение и сохранение скриншота.
+    """
+
+    logging.info(msg=f'Монитор вернулся: {request.data}')
+
     secret_key = request.form.get(key="token", default="")
     if secret_key != application.config['SCREEN_SERVER_SECRET_KEY']:
         return Response('Access denied! Wrong token!', status=403)
@@ -152,9 +174,13 @@ def save_screenshot():
         screen_name = secure_filename(get_screen_name(id))
 
         upload_folder = os.path.join(
-            application.config['UPLOAD_FOLDER'],
+            'app',
+            'static',
+            application.config['SCREEN_URL_ROOT'],
+            application.config['SCREEN_URL_FOLDER'],
             secure_filename(screen_name)
         )
+
         screen.save(upload_folder)
 
         item = Content.query.filter_by(id=id).first()
@@ -167,4 +193,11 @@ def save_screenshot():
 
 @application.route('/load-screen/<filename>')
 def load_screen(filename):
-    return send_from_directory(application.config['STORAGE_PATH'], filename=filename)
+
+    url_to_img = os.path.join(
+        'static',
+        application.config['SCREEN_URL_ROOT'],
+        application.config['SCREEN_URL_FOLDER']
+    )
+
+    return send_from_directory(url_to_img, filename=filename)
