@@ -7,7 +7,7 @@ load_dotenv()
 
 class Config(object):
     # Основные настройки
-    DEBUG = True if os.environ.get('FLASK_ENV') == 'development' else False
+    DEBUG = True # if os.environ.get('FLASK_ENV') == 'development' else False
     TESTING = False
     SECRET_KEY = os.getenv('SECRET_KEY')
     SEND_FILE_MAX_AGE_DEFAULT = 0

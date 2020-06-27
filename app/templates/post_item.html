@@ -14,8 +14,22 @@
     {% endif %}
 
     <div class="card-body">
-        <h5 class="card-title text-right">{% if link.lang != 'ru' %}<small class="text-muted">{{ link.lang }}</small>{% endif %}</h5>
+        <h5 class="card-title text-right">{% if link.lang != 'ru' %}
+            <small class="text-muted">{{ link.lang }}</small>{% endif %}</h5>
         <p class="card-text"><a href="{{ link.url }}">{{ link.name }}</a></p>
     </div>
+
+    {% if current_user.is_authenticated %}
+        <div class="card-footer bg-transparent text-right">
+            {% if link in current_user.content_id %}
+                {% set button_img = 'icons/minus.png' %}
+            {% else %}
+                {% set button_img = 'icons/plus.png' %}
+            {% endif %}
+
+            <a href="{{ url_for('profile_action', user_id = current_user.id, content_id = link.id, profile=profile) }}" role="button"><img src="{{ url_for('static', filename=button_img) }}"></a>
+
+        </div>
+    {% endif %}
 
 </div>

@@ -125,15 +125,49 @@ def logout():
 
 @login_required
 @application.route('/user/<username>', methods=['GET', 'POST'])
-def profile(username: str):
+def profile(username):
     """
     Профиль пользователя. Возможность изменить логин, пароль.
     В перспективе сохранить свои любимые ссылки.
     """
-    if username != current_user:
+    if username != current_user.nickname:
         return redirect(url_for('index'))
 
-    return f'В разработке {username}, {current_user}'
+    types = Types.manager.get_by('', dictionary=True)
+
+    return render_template('auth/profile.html', types=types)
+
+
+@login_required
+@application.route('/user/subscribes/<int:user_id>/<int:content_id>',
+                   methods=['GET'])
+def profile_action(user_id, content_id):
+    """
+    Оформление подписок для личной коллекции ссылок.
+    """
+
+    if current_user.id != user_id:
+        return redirect(url_for('index'))
+
+    try:
+        user = User.query.get(user_id)
+        content = Content.query.get(content_id)
+        if content and content in user.content_id:
+            user.content_id.remove(content)
+        else:
+            user.content_id.append(content)
+
+        db_lib.session.add(user)
+        db_lib.session.commit()
+    except Exception as err:
+        flash(f'Возникла ошибка подписки: {err}', category='danger')
+
+    if request.args.get('profile'):
+        reverse_page = url_for('profile', username=current_user.nickname)
+    else:
+        reverse_page = url_for('index')
+
+    return redirect(reverse_page)
 
 
 @application.route('/login/oauth', methods=['GET', 'POST'])

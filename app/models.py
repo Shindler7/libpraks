@@ -6,12 +6,24 @@ from datetime import datetime
 
 from flask_login import UserMixin
 from requests import get
-from sqlalchemy import event
+from sqlalchemy import event, UniqueConstraint
 from sqlalchemy.orm import relationship
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from app import application, db_lib
 from app import login_manager
+
+
+subscribes_table = db_lib.Table(
+    'Subscribes', db_lib.metadata,
+    db_lib.Column('user_id', db_lib.Integer,
+                  db_lib.ForeignKey('User.id')
+                  ),
+    db_lib.Column('content_id', db_lib.Integer,
+                  db_lib.ForeignKey('Content.id')
+                  ),
+    UniqueConstraint('user_id', 'content_id')
+)
 
 
 class UserManager:
@@ -266,6 +278,9 @@ class User(UserMixin, db_lib.Model):
     isadmin = db_lib.Column(db_lib.Boolean, default=False)
     active = db_lib.Column(db_lib.Boolean, default=True)
 
+    content_id = relationship('Content', secondary=subscribes_table,
+                              lazy='dynamic', backref='users')
+
     manager = UserManager()
 
     def set_password(self, password: str) -> None:
@@ -355,6 +370,9 @@ class Content(db_lib.Model):
     category_id = db_lib.Column(db_lib.Integer(),
                                 db_lib.ForeignKey('Category.id'))
     types_id = db_lib.Column(db_lib.Integer(), db_lib.ForeignKey('Types.id'))
+
+    user_id = relationship('User', secondary=subscribes_table,
+                           lazy='dynamic', backref='contents')
 
     manager = ContentManager()
 
