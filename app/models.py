@@ -56,6 +56,22 @@ class UserManager:
 
         return user
 
+
+    def get_or_create(self, *, nickname: str, social_id: str):
+        """
+        Создает объект пользователя (user) или возвращает его, если он уже
+        существует.
+        """
+
+        user = User.query.filter_by(nickname=nickname, social_id=social_id).first()
+        if user is None:
+            user = User(nickname=nickname, social_id=social_id)
+            db_lib.session.add(user)
+            db_lib.session.commit()
+
+        return user
+
+
     def invert_arg(self, id_num: int, *args):
         """
         Оборачивает аргументы пользователя isadmin и active.
@@ -274,7 +290,7 @@ class User(UserMixin, db_lib.Model):
     id = db_lib.Column(db_lib.Integer, primary_key=True)
     social_id = db_lib.Column(db_lib.String(64), nullable=True, unique=True)
     nickname = db_lib.Column(db_lib.String(64), nullable=False, unique=True)
-    password_hash = db_lib.Column(db_lib.String(128))
+    password_hash = db_lib.Column(db_lib.String(128), nullable=True)
     isadmin = db_lib.Column(db_lib.Boolean, default=False)
     active = db_lib.Column(db_lib.Boolean, default=True)
 

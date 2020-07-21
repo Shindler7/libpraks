@@ -1,7 +1,7 @@
 import os
 import logging
 
-from flask import Response, redirect, render_template, request
+from flask import Response, redirect, render_template, request, jsonify
 from flask import flash, send_from_directory, url_for
 from flask_login import current_user, login_required, login_user, logout_user
 from werkzeug.urls import url_parse
@@ -11,6 +11,7 @@ from app import application, csrf, db_lib
 from app.forms import LoginForm, RegForm
 from app.models import Category, Content, Types, User
 from app.utils import get_screen_name
+from app.auth_services import get_yandex_oauth_code, yandex_oauth, get_yandex_user_profile
 
 
 @application.route('/', methods=['GET', 'POST'])
@@ -77,34 +78,30 @@ def signup():
                            form_reg=form)
 
 
-@application.route('/login', methods=['GET', 'POST'])
+@application.route('/login')
 def login():
     """
-    Авторизация пользователя.
+    Переадресация на страницу 'https://oauth.yandex.ru/' для прохождения
+    авторизации. Ответ возвращается на адрес '/authorize'.
     """
-
     if current_user.is_authenticated:
         return redirect(url_for('index'))
 
-    form = LoginForm()
+    redirect_uri = url_for('authorize', _external=True)
+    return get_yandex_oauth_code(redirect_uri)
 
-    if form.validate_on_submit():
-        user = User.manager.get(
-            nick=form.nickname.data,
-            passd=form.password.data)
-        if user:
-            login_user(user, remember=True)
 
-            next_page = request.args.get('next')
-            if not next_page or url_parse(next_page).netloc != '':
-                next_page = url_for('index')
-            return redirect(next_page)
+@application.route('/authorize')
+def authorize():
+    code = request.args.get('code')
+    nickname, social_id = yandex_oauth(code)
 
-        flash('Неверное имя пользователя или пароль!', category='danger')
-
-    return render_template('auth/login.html',
-                           title='Авторизация',
-                           form=form)
+    user = User.manager.get_or_create(
+        nickname=nickname,
+        social_id=social_id
+    )
+    login_user(user, remember=True)
+    return redirect('/')
 
 
 @application.route('/logout', methods=['GET', 'POST'])
@@ -168,11 +165,6 @@ def profile_action(user_id, content_id):
         reverse_page = url_for('index')
 
     return redirect(reverse_page)
-
-
-@application.route('/login/oauth', methods=['GET', 'POST'])
-def login_oauth():
-    return redirect(url_for('login'))
 
 
 @application.errorhandler(404)

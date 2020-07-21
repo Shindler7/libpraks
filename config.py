@@ -24,6 +24,8 @@ class Config(object):
     # Авторизация OAuth
     YANDEX_CLIENT = os.getenv('YANDEX_CLIENT')
     YANDEX_TOKEN = os.getenv('YANDEX_TOKEN')
+    YANDEX_AUTHORIZE_URL = 'https://oauth.yandex.ru/'
+    YANDEX_LOGIN_URL = 'https://login.yandex.ru/info'
 
     # Авторизационные ключи ReCaptcha2
     RECAPTCHA_PUBLIC_KEY = os.getenv('RECAPTCHA_PUBLIC_KEY')
