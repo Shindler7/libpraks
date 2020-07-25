@@ -12,6 +12,7 @@ class Config(object):
     SECRET_KEY = os.getenv('SECRET_KEY')
     SEND_FILE_MAX_AGE_DEFAULT = 0
     IMAGES_PATH = ['static']
+    IMAGE_OUTPUT = 'output'
 
     # База данных
     SQLALCHEMY_TRACK_MODIFICATIONS = False

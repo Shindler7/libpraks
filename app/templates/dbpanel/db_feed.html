@@ -14,6 +14,7 @@
                 <th scope="col">Название</th>
                 <th scope="col">Ссылка</th>
                 <th scope="col">Язык</th>
+                <th scope="col">Подписки</th>
                 <th></th>
             </tr>
             </thead>
@@ -27,6 +28,7 @@
                     <td>{{ string.name }}</td>
                     <td><a href="{{ string.url }}">{{ string.url }}</a></td>
                     <td>{{ string.lang }}</td>
+                    <td>{% if string.user_id.count() > 0 %}{{ string.user_id.count() }}{% endif %}</td>
                     <td>
                         <a class="btn btn-danger" href="{{ url_for('delete_from_bd', idn = string.id) }}" role="button">Удалить</a>
                     </td>

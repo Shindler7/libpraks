@@ -91,8 +91,11 @@ class UserManager:
         """
         Удаление пользователя по ID.
         """
+        user = User.query.get(id_num)
+        user.content_id = []
+        db_lib.session.commit()
 
-        User.query.filter(User.id == id_num).delete()
+        db_lib.session.delete(user)
         db_lib.session.commit()
 
 
@@ -140,7 +143,14 @@ class CategoryManager:
         Удаляет выбранный элемент по ID.
         """
 
-        Category.query.filter(Category.id == id_num).delete()
+        # Category.query.filter(Category.id == id_num).delete()
+        # db_lib.session.commit()
+
+        content = Content.query.get(id_num)
+        content.user_id = []
+        db_lib.session.commit()
+
+        db_lib.session.delete(content)
         db_lib.session.commit()
 
 
@@ -295,7 +305,9 @@ class User(UserMixin, db_lib.Model):
     active = db_lib.Column(db_lib.Boolean, default=True)
 
     content_id = relationship('Content', secondary=subscribes_table,
-                              lazy='dynamic', backref='users')
+                              cascade="all, delete",
+                              lazy='dynamic',
+                              backref='users')
 
     manager = UserManager()
 
@@ -388,7 +400,9 @@ class Content(db_lib.Model):
     types_id = db_lib.Column(db_lib.Integer(), db_lib.ForeignKey('Types.id'))
 
     user_id = relationship('User', secondary=subscribes_table,
-                           lazy='dynamic', backref='contents')
+                           lazy='dynamic',
+                           cascade="all, delete",
+                           backref='contents')
 
     manager = ContentManager()
 

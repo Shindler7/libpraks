@@ -1,8 +1,7 @@
 import base64
 
-from requests import get, post
-
 from flask import redirect
+from requests import get, post
 
 from app import application
 

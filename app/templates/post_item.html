@@ -44,16 +44,8 @@
         </div>
     {% endif %}
 
-    {% if link.img_url %}
-
-        <img class="card-img-top" src="{{ url_for('load_screen', filename=link.img_url) }}" alt="{{ link.name }}">
-
-    {% else %}
-
-        {% set image_default = ['img/output/default_dog.jpg', 'img/output/default-cat-2.jpg', 'img/output/default-dog-2.jpg', 'img/output/default-dog-3.jpg']|random() %}
-        <img class="card-img-top" src="{{ url_for('static', filename=image_default) }}" alt="{{ link.name }}">
-
-    {% endif %}
+    {% if link.img_url %}{% set filename = link.img_url %}{% else %}{% set filename = '0' %}{% endif %}
+    <img class="card-img-top" src="{{ url_for('load_screen', filename=filename) }}" alt="{{ link.name }}">
 
     <div class="card-body">
         <h5 class="card-title text-right">{% if link.lang != 'ru' %}

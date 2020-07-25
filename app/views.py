@@ -1,17 +1,18 @@
-import os
 import logging
+import os
+from random import choice
 
-from flask import Response, redirect, render_template, request, jsonify
+from flask import Response, redirect, render_template, request
 from flask import flash, send_from_directory, url_for
 from flask_login import current_user, login_required, login_user, logout_user
 from werkzeug.urls import url_parse
 from werkzeug.utils import secure_filename
 
 from app import application, csrf, db_lib
+from app.auth_services import get_yandex_oauth_code, yandex_oauth
 from app.forms import LoginForm, RegForm
 from app.models import Category, Content, Types, User
 from app.utils import get_screen_name
-from app.auth_services import get_yandex_oauth_code, yandex_oauth, get_yandex_user_profile
 
 
 @application.route('/', methods=['GET', 'POST'])
@@ -93,6 +94,9 @@ def login():
 
 @application.route('/authorize')
 def authorize():
+    """
+    Логин пользователя по ответу от Yandex.
+    """
     code = request.args.get('code')
     nickname, social_id = yandex_oauth(code)
 
@@ -167,16 +171,6 @@ def profile_action(user_id, content_id):
     return redirect(reverse_page)
 
 
-@application.errorhandler(404)
-def page_not_found(error):
-    return render_template('error/404.html'), 404
-
-
-@application.errorhandler(500)
-def server_error(error):
-    return render_template('error/500.html'), 500
-
-
 @application.route('/save/screenshot', methods=['GET', 'POST'])
 @csrf.exempt
 def save_screenshot():
@@ -218,12 +212,43 @@ def save_screenshot():
 
 
 @application.route('/load-screen/<filename>')
-def load_screen(filename):
+def load_screen(filename=''):
+    """
+    Обеспечивает извлечение изображений, при отсутствии возвращает заглушку.
+    """
+    if filename != '0':
+        url_to_img = os.path.join(
+            'static',
+            application.config['SCREEN_URL_ROOT'],
+            application.config['SCREEN_URL_FOLDER']
+        )
+
+        check_img = os.path.join(
+            os.getcwd(),
+            url_to_img,
+            filename
+        )
+
+        if os.path.exists(check_img):
+            return send_from_directory(url_to_img, filename=filename)
+
+    filename = choice(('default_dog.jpg', 'default-cat-2.jpg',
+                       'default-dog-2.jpg', 'default-dog-3.jpg'))
 
     url_to_img = os.path.join(
         'static',
         application.config['SCREEN_URL_ROOT'],
-        application.config['SCREEN_URL_FOLDER']
+        application.config['IMAGE_OUTPUT']
     )
 
     return send_from_directory(url_to_img, filename=filename)
+
+
+@application.errorhandler(404)
+def page_not_found(error):
+    return render_template('error/404.html'), 404
+
+
+@application.errorhandler(500)
+def server_error(error):
+    return render_template('error/500.html'), 500
