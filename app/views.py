@@ -225,6 +225,7 @@ def load_screen(filename=''):
 
         check_img = os.path.join(
             os.getcwd(),
+            'app',
             url_to_img,
             filename
         )

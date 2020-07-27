@@ -15839,3 +15839,824 @@ INFO:werkzeug:127.0.0.1 - - [25/Jul/2020 22:37:34] "[36mGET /load-screen/www_co
 INFO:werkzeug:127.0.0.1 - - [25/Jul/2020 22:37:34] "[36mGET /load-screen/www_codingame_com_rmbvlp.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [25/Jul/2020 22:37:34] "[36mGET /load-screen/empireofcode_com_tsjbzb.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [25/Jul/2020 22:37:34] "[36mGET /load-screen/learngitbranching_js_org_iujaec.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:05] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:05] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:05] "[36mGET /load-screen/habr_com_vbxxji.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:05] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:05] "[36mGET /load-screen/github_com_pklmuo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:05] "[36mGET /load-screen/www_learnbyexample_org_oszqog.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:05] "[36mGET /load-screen/pythonru_com_jsojcl.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:05] "[36mGET /load-screen/pyneng_readthedocs_io_nysvdg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:05] "[36mGET /load-screen/proglib_io_kkqbve.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/github_com_rgcvtt.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/pythonist_ru_sxyznk.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/cheat_sh_kuqons.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[37mGET /load-screen/www_google_com_wytgwp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/schegel_net_ghskyl.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/realpython_com_xwqcey.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/developer_mozilla_org_ehnhqv.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/habr_com_nkrmpd.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/flask-russian-docs_readthedocs_io_asccxt.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/netology-university_bitbucket_io_jvhriq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/groosha_gitbook_io_fqvvyf.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[37mGET /load-screen/github_com_rtjmon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/habr_com_jqhidu.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/www_sqlstyle_guide_iiunvx.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[37mGET /load-screen/tutorial_djangogirls_org_qcaxbj.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/habr_com_obhork.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:06] "[36mGET /load-screen/wombat_org_ua_lojwuo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/t_me_neldrp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/coderlessons_com_kenmzm.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/pythonru_com_gymncv.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/wombat_org_ua_ogvkhb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/www_ozon_ru_guqtxy.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/git-scm_com_jxyxlg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/www_youtube_com_kcpyba.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/www_jetbrains_com_jcqqnp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/www_youtube_com_dzdfdr.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/m_habr_com_anqcth.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/www_codecademy_com_ypkykw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[37mGET /load-screen/stepik_org_vhfztv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/stepik_org_dxhapi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/stepik_org_sgynmw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/stepik_org_scegjy.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[37mGET /load-screen/stepik_org_uvydgm.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/stepik_org_zbhuri.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:07] "[36mGET /load-screen/habr_com_tnjnce.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:08] "[36mGET /load-screen/stepik_org_wlyszi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:08] "[36mGET /load-screen/learn_javascript_ru_gufaog.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:08] "[36mGET /load-screen/learndb_ru_ctnpof.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:08] "[36mGET /load-screen/stepik_org_rjkhvq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:08] "[36mGET /load-screen/stepik_org_wybsnn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:08] "[36mGET /load-screen/www_w3schools_com_asmjna.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:08] "[36mGET /load-screen/checkio_org_xcmijg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:08] "[36mGET /load-screen/www_codewars_com_hsgfuw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:08] "[36mGET /load-screen/empireofcode_com_tsjbzb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:08] "[36mGET /load-screen/www_codingame_com_rmbvlp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:08] "[36mGET /load-screen/learngitbranching_js_org_iujaec.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:19] "[37mGET /index?cy=&ts=игры HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:20] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:20] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:20] "[36mGET /load-screen/www_codewars_com_hsgfuw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:20] "[37mGET /load-screen/learngitbranching_js_org_iujaec.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:20] "[37mGET /load-screen/www_codingame_com_rmbvlp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:20] "[37mGET /load-screen/checkio_org_xcmijg.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:20] "[37mGET /load-screen/empireofcode_com_tsjbzb.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:23] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:23] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:23] "[37mGET /load-screen/habr_com_vbxxji.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:23] "[37mGET /load-screen/github_com_pklmuo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:23] "[37mGET /load-screen/www_learnbyexample_org_oszqog.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:23] "[37mGET /load-screen/developer_mozilla_org_ehnhqv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:23] "[36mGET /load-screen/netology-university_bitbucket_io_jvhriq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:23] "[37mGET /load-screen/pyneng_readthedocs_io_nysvdg.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:23] "[37mGET /load-screen/flask-russian-docs_readthedocs_io_asccxt.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/pythonru_com_jsojcl.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/habr_com_nkrmpd.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/proglib_io_kkqbve.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/github_com_rgcvtt.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[36mGET /load-screen/pythonist_ru_sxyznk.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/www_google_com_wytgwp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/schegel_net_ghskyl.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/cheat_sh_kuqons.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/realpython_com_xwqcey.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/groosha_gitbook_io_fqvvyf.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/github_com_rtjmon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/habr_com_jqhidu.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[36mGET /load-screen/tutorial_djangogirls_org_qcaxbj.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/www_sqlstyle_guide_iiunvx.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/habr_com_obhork.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/0 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:24] "[37mGET /load-screen/wombat_org_ua_lojwuo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/t_me_neldrp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/coderlessons_com_kenmzm.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/pythonru_com_gymncv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/wombat_org_ua_ogvkhb.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/www_ozon_ru_guqtxy.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[36mGET /load-screen/git-scm_com_jxyxlg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/www_youtube_com_dzdfdr.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/m_habr_com_anqcth.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/www_youtube_com_kcpyba.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/www_jetbrains_com_jcqqnp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/www_codecademy_com_ypkykw.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/stepik_org_vhfztv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[36mGET /load-screen/stepik_org_sgynmw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/stepik_org_dxhapi.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/stepik_org_scegjy.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/stepik_org_uvydgm.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[36mGET /load-screen/stepik_org_zbhuri.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:25] "[37mGET /load-screen/habr_com_tnjnce.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:26] "[36mGET /load-screen/learndb_ru_ctnpof.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:26] "[36mGET /load-screen/learn_javascript_ru_gufaog.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:26] "[37mGET /load-screen/stepik_org_rjkhvq.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:26] "[36mGET /load-screen/stepik_org_wlyszi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:26] "[37mGET /load-screen/stepik_org_wybsnn.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:26] "[37mGET /load-screen/www_w3schools_com_asmjna.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:26] "[37mGET /load-screen/checkio_org_xcmijg.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:26] "[37mGET /load-screen/www_codewars_com_hsgfuw.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:26] "[37mGET /load-screen/www_codingame_com_rmbvlp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:26] "[37mGET /load-screen/empireofcode_com_tsjbzb.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:28:26] "[36mGET /load-screen/learngitbranching_js_org_iujaec.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:40:29] "[37mGET /index?cy=&ts=игры HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:40:29] "[37mGET /load-screen/checkio_org_xcmijg.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:40:29] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:40:30] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:40:30] "[37mGET /load-screen/empireofcode_com_tsjbzb.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:40:30] "[36mGET /load-screen/www_codingame_com_rmbvlp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:40:30] "[36mGET /load-screen/www_codewars_com_hsgfuw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:40:30] "[37mGET /load-screen/learngitbranching_js_org_iujaec.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:28] "[37mGET /index?cy=&ts=игры HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:28] "[37mGET /static/design.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:29] "[37mGET /load-screen/www_codewars_com_hsgfuw.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:29] "[37mGET /load-screen/www_codingame_com_rmbvlp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:29] "[37mGET /load-screen/checkio_org_xcmijg.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:29] "[37mGET /load-screen/empireofcode_com_tsjbzb.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:29] "[37mGET /load-screen/learngitbranching_js_org_iujaec.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:29] "[37mGET /static/js/form_validations.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:29] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:32] "[37mGET /index?cy=&ts=видео HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:32] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:32] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:32] "[37mGET /load-screen/www_youtube_com_dzdfdr.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:32] "[37mGET /load-screen/m_habr_com_anqcth.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:32] "[37mGET /load-screen/www_youtube_com_kcpyba.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:35] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:35] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:35] "[36mGET /load-screen/habr_com_vbxxji.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:35] "[37mGET /load-screen/github_com_pklmuo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:35] "[37mGET /load-screen/www_learnbyexample_org_oszqog.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:35] "[37mGET /load-screen/developer_mozilla_org_ehnhqv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:35] "[37mGET /load-screen/flask-russian-docs_readthedocs_io_asccxt.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:35] "[37mGET /load-screen/pyneng_readthedocs_io_nysvdg.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:35] "[36mGET /load-screen/netology-university_bitbucket_io_jvhriq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[37mGET /load-screen/habr_com_nkrmpd.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[37mGET /load-screen/pythonru_com_jsojcl.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[37mGET /load-screen/proglib_io_kkqbve.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[37mGET /load-screen/github_com_rgcvtt.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[36mGET /load-screen/pythonist_ru_sxyznk.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[37mGET /load-screen/cheat_sh_kuqons.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[37mGET /load-screen/www_google_com_wytgwp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[36mGET /load-screen/schegel_net_ghskyl.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[37mGET /load-screen/realpython_com_xwqcey.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[36mGET /load-screen/groosha_gitbook_io_fqvvyf.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[37mGET /load-screen/github_com_rtjmon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[37mGET /load-screen/habr_com_jqhidu.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[37mGET /load-screen/tutorial_djangogirls_org_qcaxbj.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[37mGET /load-screen/www_sqlstyle_guide_iiunvx.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[37mGET /load-screen/habr_com_obhork.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[37mGET /load-screen/0 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:36] "[36mGET /load-screen/wombat_org_ua_lojwuo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[36mGET /load-screen/pythonru_com_gymncv.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[36mGET /load-screen/coderlessons_com_kenmzm.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[37mGET /load-screen/t_me_neldrp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[37mGET /load-screen/wombat_org_ua_ogvkhb.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[36mGET /load-screen/www_ozon_ru_guqtxy.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[36mGET /load-screen/git-scm_com_jxyxlg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[37mGET /load-screen/www_youtube_com_kcpyba.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[37mGET /load-screen/www_youtube_com_dzdfdr.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[37mGET /load-screen/m_habr_com_anqcth.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[37mGET /load-screen/www_jetbrains_com_jcqqnp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[36mGET /load-screen/www_codecademy_com_ypkykw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[36mGET /load-screen/stepik_org_vhfztv.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[37mGET /load-screen/stepik_org_sgynmw.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[37mGET /load-screen/stepik_org_dxhapi.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[37mGET /load-screen/stepik_org_uvydgm.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[37mGET /load-screen/stepik_org_scegjy.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[37mGET /load-screen/stepik_org_zbhuri.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:37] "[37mGET /load-screen/habr_com_tnjnce.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:38] "[37mGET /load-screen/learndb_ru_ctnpof.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:38] "[37mGET /load-screen/stepik_org_wlyszi.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:38] "[36mGET /load-screen/stepik_org_rjkhvq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:38] "[36mGET /load-screen/stepik_org_wybsnn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:38] "[37mGET /load-screen/learn_javascript_ru_gufaog.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:38] "[37mGET /load-screen/www_w3schools_com_asmjna.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:38] "[37mGET /load-screen/checkio_org_xcmijg.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:38] "[37mGET /load-screen/www_codewars_com_hsgfuw.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:38] "[37mGET /load-screen/empireofcode_com_tsjbzb.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:38] "[36mGET /load-screen/www_codingame_com_rmbvlp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:38] "[36mGET /load-screen/learngitbranching_js_org_iujaec.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:41] "[32mGET /user/subscribes/4/44?profile= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[37mGET /index HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[37mGET /load-screen/github_com_pklmuo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[37mGET /load-screen/developer_mozilla_org_ehnhqv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[37mGET /load-screen/netology-university_bitbucket_io_jvhriq.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[37mGET /load-screen/flask-russian-docs_readthedocs_io_asccxt.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[37mGET /load-screen/www_learnbyexample_org_oszqog.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[37mGET /load-screen/pyneng_readthedocs_io_nysvdg.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[37mGET /load-screen/pythonru_com_jsojcl.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[37mGET /load-screen/proglib_io_kkqbve.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[37mGET /load-screen/realpython_com_xwqcey.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[37mGET /load-screen/habr_com_nkrmpd.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:42] "[37mGET /load-screen/habr_com_vbxxji.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/github_com_rgcvtt.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/pythonist_ru_sxyznk.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/cheat_sh_kuqons.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/www_google_com_wytgwp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/schegel_net_ghskyl.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/groosha_gitbook_io_fqvvyf.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/github_com_rtjmon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/habr_com_jqhidu.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/tutorial_djangogirls_org_qcaxbj.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[36mGET /load-screen/www_sqlstyle_guide_iiunvx.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/habr_com_obhork.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/0 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/wombat_org_ua_lojwuo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/coderlessons_com_kenmzm.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/t_me_neldrp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/pythonru_com_gymncv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[37mGET /load-screen/wombat_org_ua_ogvkhb.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:43] "[32mGET /user/subscribes/4/44?profile= HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[36mGET /load-screen/www_youtube_com_kcpyba.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[36mGET /load-screen/www_ozon_ru_guqtxy.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[37mGET /load-screen/git-scm_com_jxyxlg.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[37mGET /load-screen/www_youtube_com_dzdfdr.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[37mGET /load-screen/m_habr_com_anqcth.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[37mGET /load-screen/www_jetbrains_com_jcqqnp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[37mGET /load-screen/stepik_org_vhfztv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[37mGET /load-screen/www_codecademy_com_ypkykw.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[37mGET /load-screen/stepik_org_sgynmw.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[37mGET /load-screen/stepik_org_dxhapi.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[36mGET /load-screen/stepik_org_scegjy.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[36mGET /load-screen/stepik_org_uvydgm.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[37mGET /load-screen/stepik_org_zbhuri.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[36mGET /load-screen/habr_com_tnjnce.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:44] "[37mGET /load-screen/learndb_ru_ctnpof.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[37mGET /load-screen/learn_javascript_ru_gufaog.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[37mGET /load-screen/stepik_org_wlyszi.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[36mGET /load-screen/stepik_org_rjkhvq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[36mGET /load-screen/stepik_org_wybsnn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[37mGET /load-screen/www_w3schools_com_asmjna.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[37mGET /index HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[37mGET /load-screen/habr_com_vbxxji.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[36mGET /load-screen/github_com_rgcvtt.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[36mGET /load-screen/pythonist_ru_sxyznk.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[37mGET /load-screen/github_com_pklmuo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[37mGET /load-screen/developer_mozilla_org_ehnhqv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[36mGET /load-screen/netology-university_bitbucket_io_jvhriq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[37mGET /load-screen/pythonru_com_jsojcl.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[37mGET /load-screen/flask-russian-docs_readthedocs_io_asccxt.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[37mGET /load-screen/habr_com_nkrmpd.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:45] "[37mGET /load-screen/proglib_io_kkqbve.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[37mGET /load-screen/www_google_com_wytgwp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[37mGET /load-screen/cheat_sh_kuqons.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[37mGET /load-screen/schegel_net_ghskyl.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[37mGET /load-screen/realpython_com_xwqcey.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[37mGET /load-screen/www_learnbyexample_org_oszqog.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[37mGET /load-screen/pyneng_readthedocs_io_nysvdg.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[37mGET /load-screen/groosha_gitbook_io_fqvvyf.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[36mGET /load-screen/github_com_rtjmon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[37mGET /load-screen/habr_com_jqhidu.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[37mGET /load-screen/www_sqlstyle_guide_iiunvx.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[36mGET /load-screen/tutorial_djangogirls_org_qcaxbj.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[37mGET /load-screen/habr_com_obhork.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[36mGET /load-screen/0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[36mGET /load-screen/wombat_org_ua_lojwuo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[37mGET /load-screen/pythonru_com_gymncv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[37mGET /load-screen/coderlessons_com_kenmzm.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[36mGET /load-screen/t_me_neldrp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:46] "[37mGET /load-screen/wombat_org_ua_ogvkhb.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[37mGET /load-screen/www_ozon_ru_guqtxy.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[36mGET /load-screen/git-scm_com_jxyxlg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[36mGET /load-screen/www_youtube_com_kcpyba.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[37mGET /load-screen/www_youtube_com_dzdfdr.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[37mGET /load-screen/m_habr_com_anqcth.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[36mGET /load-screen/www_jetbrains_com_jcqqnp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[37mGET /load-screen/www_codecademy_com_ypkykw.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[37mGET /load-screen/stepik_org_vhfztv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[36mGET /load-screen/stepik_org_sgynmw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[37mGET /load-screen/stepik_org_dxhapi.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[37mGET /load-screen/stepik_org_scegjy.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[36mGET /load-screen/stepik_org_uvydgm.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[37mGET /load-screen/stepik_org_zbhuri.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[37mGET /load-screen/habr_com_tnjnce.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[37mGET /load-screen/learndb_ru_ctnpof.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[36mGET /load-screen/stepik_org_wlyszi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[37mGET /load-screen/learn_javascript_ru_gufaog.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:47] "[37mGET /load-screen/stepik_org_rjkhvq.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:48] "[37mGET /load-screen/checkio_org_xcmijg.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:48] "[37mGET /load-screen/www_w3schools_com_asmjna.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:48] "[36mGET /load-screen/stepik_org_wybsnn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:48] "[37mGET /load-screen/www_codewars_com_hsgfuw.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:48] "[37mGET /load-screen/www_codingame_com_rmbvlp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:48] "[37mGET /load-screen/empireofcode_com_tsjbzb.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:41:48] "[37mGET /load-screen/learngitbranching_js_org_iujaec.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:43:23] "[37mGET /index?cy=django HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\pythonist_ru_sxyznk.png
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:43:24] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:43:24] "[37mGET /load-screen/pythonist_ru_sxyznk.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\schegel_net_ghskyl.png
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\developer_mozilla_org_ehnhqv.png
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\tutorial_djangogirls_org_qcaxbj.png
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:43:24] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:43:24] "[37mGET /load-screen/developer_mozilla_org_ehnhqv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:43:24] "[36mGET /load-screen/schegel_net_ghskyl.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:43:24] "[37mGET /load-screen/tutorial_djangogirls_org_qcaxbj.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\models.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:43] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\habr_com_vbxxji.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:43] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:43] "[36mGET /load-screen/habr_com_vbxxji.png HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\flask-russian-docs_readthedocs_io_asccxt.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\www_learnbyexample_org_oszqog.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\pyneng_readthedocs_io_nysvdg.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\developer_mozilla_org_ehnhqv.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\github_com_pklmuo.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[36mGET /load-screen/www_learnbyexample_org_oszqog.png HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\habr_com_nkrmpd.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[36mGET /load-screen/flask-russian-docs_readthedocs_io_asccxt.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[36mGET /load-screen/pyneng_readthedocs_io_nysvdg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[37mGET /load-screen/developer_mozilla_org_ehnhqv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[36mGET /load-screen/github_com_pklmuo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[36mGET /load-screen/habr_com_nkrmpd.png HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\pythonru_com_jsojcl.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\proglib_io_kkqbve.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\netology-university_bitbucket_io_jvhriq.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\github_com_rgcvtt.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\pythonist_ru_sxyznk.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[36mGET /load-screen/netology-university_bitbucket_io_jvhriq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[37mGET /load-screen/proglib_io_kkqbve.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[36mGET /load-screen/github_com_rgcvtt.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[36mGET /load-screen/pythonru_com_jsojcl.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[37mGET /load-screen/pythonist_ru_sxyznk.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\realpython_com_xwqcey.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\cheat_sh_kuqons.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\schegel_net_ghskyl.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\www_google_com_wytgwp.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\groosha_gitbook_io_fqvvyf.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\github_com_rtjmon.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[36mGET /load-screen/www_google_com_wytgwp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[36mGET /load-screen/realpython_com_xwqcey.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[37mGET /load-screen/cheat_sh_kuqons.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[37mGET /load-screen/schegel_net_ghskyl.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[36mGET /load-screen/github_com_rtjmon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:44] "[37mGET /load-screen/groosha_gitbook_io_fqvvyf.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\habr_com_jqhidu.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\www_sqlstyle_guide_iiunvx.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\tutorial_djangogirls_org_qcaxbj.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\habr_com_obhork.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[36mGET /load-screen/www_sqlstyle_guide_iiunvx.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[37mGET /load-screen/tutorial_djangogirls_org_qcaxbj.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\wombat_org_ua_lojwuo.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[36mGET /load-screen/habr_com_obhork.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[36mGET /load-screen/habr_com_jqhidu.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[36mGET /load-screen/0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[36mGET /load-screen/wombat_org_ua_lojwuo.png HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\pythonru_com_gymncv.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[36mGET /load-screen/pythonru_com_gymncv.png HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\t_me_neldrp.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\www_ozon_ru_guqtxy.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\coderlessons_com_kenmzm.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\wombat_org_ua_ogvkhb.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\git-scm_com_jxyxlg.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[36mGET /load-screen/www_ozon_ru_guqtxy.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[37mGET /load-screen/coderlessons_com_kenmzm.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[36mGET /load-screen/t_me_neldrp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[36mGET /load-screen/wombat_org_ua_ogvkhb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[37mGET /load-screen/git-scm_com_jxyxlg.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\www_youtube_com_kcpyba.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[37mGET /load-screen/www_youtube_com_kcpyba.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\www_youtube_com_dzdfdr.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[36mGET /load-screen/www_youtube_com_dzdfdr.png HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\www_jetbrains_com_jcqqnp.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\m_habr_com_anqcth.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\www_codecademy_com_ypkykw.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[36mGET /load-screen/m_habr_com_anqcth.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[36mGET /load-screen/www_jetbrains_com_jcqqnp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[36mGET /load-screen/www_codecademy_com_ypkykw.png HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\stepik_org_vhfztv.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:45] "[37mGET /load-screen/stepik_org_vhfztv.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\stepik_org_sgynmw.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[37mGET /load-screen/stepik_org_sgynmw.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\stepik_org_dxhapi.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[37mGET /load-screen/stepik_org_dxhapi.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\stepik_org_scegjy.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\stepik_org_uvydgm.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\stepik_org_zbhuri.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[36mGET /load-screen/stepik_org_scegjy.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[36mGET /load-screen/stepik_org_uvydgm.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[36mGET /load-screen/stepik_org_zbhuri.png HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\habr_com_tnjnce.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[36mGET /load-screen/habr_com_tnjnce.png HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\learndb_ru_ctnpof.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[36mGET /load-screen/learndb_ru_ctnpof.png HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\stepik_org_wlyszi.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[37mGET /load-screen/stepik_org_wlyszi.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\learn_javascript_ru_gufaog.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[37mGET /load-screen/learn_javascript_ru_gufaog.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\stepik_org_rjkhvq.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\stepik_org_wybsnn.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[36mGET /load-screen/stepik_org_rjkhvq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[36mGET /load-screen/stepik_org_wybsnn.png HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\www_w3schools_com_asmjna.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[37mGET /load-screen/www_w3schools_com_asmjna.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\checkio_org_xcmijg.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[37mGET /load-screen/checkio_org_xcmijg.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\www_codewars_com_hsgfuw.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[36mGET /load-screen/www_codewars_com_hsgfuw.png HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\empireofcode_com_tsjbzb.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\www_codingame_com_rmbvlp.png, exists: False
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\static\img\screenshot\learngitbranching_js_org_iujaec.png, exists: False
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[36mGET /load-screen/www_codingame_com_rmbvlp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[36mGET /load-screen/empireofcode_com_tsjbzb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:46:46] "[36mGET /load-screen/learngitbranching_js_org_iujaec.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:03] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\habr_com_vbxxji.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:03] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:03] "[33mGET /load-screen/habr_com_vbxxji.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\flask-russian-docs_readthedocs_io_asccxt.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\developer_mozilla_org_ehnhqv.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_learnbyexample_org_oszqog.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\pyneng_readthedocs_io_nysvdg.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\github_com_pklmuo.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\habr_com_nkrmpd.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:04] "[33mGET /load-screen/www_learnbyexample_org_oszqog.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:04] "[33mGET /load-screen/github_com_pklmuo.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:04] "[33mGET /load-screen/pyneng_readthedocs_io_nysvdg.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:04] "[33mGET /load-screen/flask-russian-docs_readthedocs_io_asccxt.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:04] "[33mGET /load-screen/developer_mozilla_org_ehnhqv.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:04] "[33mGET /load-screen/habr_com_nkrmpd.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\pythonru_com_jsojcl.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:04] "[33mGET /load-screen/pythonru_com_jsojcl.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\netology-university_bitbucket_io_jvhriq.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\proglib_io_kkqbve.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\github_com_rgcvtt.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:04] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\pythonist_ru_sxyznk.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:04] "[33mGET /load-screen/netology-university_bitbucket_io_jvhriq.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:04] "[33mGET /load-screen/proglib_io_kkqbve.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:04] "[33mGET /load-screen/github_com_rgcvtt.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:04] "[33mGET /load-screen/pythonist_ru_sxyznk.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\cheat_sh_kuqons.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/cheat_sh_kuqons.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_google_com_wytgwp.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\schegel_net_ghskyl.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/www_google_com_wytgwp.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\realpython_com_xwqcey.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\groosha_gitbook_io_fqvvyf.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\github_com_rtjmon.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/schegel_net_ghskyl.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/realpython_com_xwqcey.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/groosha_gitbook_io_fqvvyf.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/github_com_rtjmon.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\habr_com_jqhidu.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/habr_com_jqhidu.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\tutorial_djangogirls_org_qcaxbj.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_sqlstyle_guide_iiunvx.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\habr_com_obhork.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/tutorial_djangogirls_org_qcaxbj.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\wombat_org_ua_lojwuo.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/www_sqlstyle_guide_iiunvx.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[37mGET /load-screen/0 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/habr_com_obhork.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/wombat_org_ua_lojwuo.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\pythonru_com_gymncv.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/pythonru_com_gymncv.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\coderlessons_com_kenmzm.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\t_me_neldrp.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\wombat_org_ua_ogvkhb.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/coderlessons_com_kenmzm.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_ozon_ru_guqtxy.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/t_me_neldrp.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\git-scm_com_jxyxlg.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/wombat_org_ua_ogvkhb.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/www_ozon_ru_guqtxy.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:05] "[33mGET /load-screen/git-scm_com_jxyxlg.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_youtube_com_kcpyba.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/www_youtube_com_kcpyba.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_youtube_com_dzdfdr.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\m_habr_com_anqcth.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_jetbrains_com_jcqqnp.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/www_youtube_com_dzdfdr.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_codecademy_com_ypkykw.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_vhfztv.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/m_habr_com_anqcth.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/www_jetbrains_com_jcqqnp.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/www_codecademy_com_ypkykw.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/stepik_org_vhfztv.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_sgynmw.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/stepik_org_sgynmw.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_dxhapi.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_scegjy.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_uvydgm.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_zbhuri.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\habr_com_tnjnce.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/stepik_org_scegjy.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/stepik_org_dxhapi.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/stepik_org_zbhuri.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/stepik_org_uvydgm.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/habr_com_tnjnce.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\learndb_ru_ctnpof.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/learndb_ru_ctnpof.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_wlyszi.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\learn_javascript_ru_gufaog.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/stepik_org_wlyszi.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/learn_javascript_ru_gufaog.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_rjkhvq.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_wybsnn.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_w3schools_com_asmjna.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/stepik_org_rjkhvq.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/stepik_org_wybsnn.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:06] "[33mGET /load-screen/www_w3schools_com_asmjna.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\checkio_org_xcmijg.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:07] "[33mGET /load-screen/checkio_org_xcmijg.png HTTP/1.1[0m" 404 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_codewars_com_hsgfuw.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_codingame_com_rmbvlp.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\empireofcode_com_tsjbzb.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\learngitbranching_js_org_iujaec.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:07] "[33mGET /load-screen/www_codewars_com_hsgfuw.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:07] "[33mGET /load-screen/www_codingame_com_rmbvlp.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:07] "[33mGET /load-screen/empireofcode_com_tsjbzb.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:49:07] "[33mGET /load-screen/learngitbranching_js_org_iujaec.png HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:31] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\habr_com_vbxxji.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:31] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:31] "[37mGET /load-screen/habr_com_vbxxji.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\pyneng_readthedocs_io_nysvdg.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\developer_mozilla_org_ehnhqv.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\flask-russian-docs_readthedocs_io_asccxt.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\netology-university_bitbucket_io_jvhriq.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\proglib_io_kkqbve.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\pythonru_com_jsojcl.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/developer_mozilla_org_ehnhqv.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/pyneng_readthedocs_io_nysvdg.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/flask-russian-docs_readthedocs_io_asccxt.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/netology-university_bitbucket_io_jvhriq.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/pythonru_com_jsojcl.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/proglib_io_kkqbve.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\github_com_pklmuo.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_learnbyexample_org_oszqog.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\habr_com_nkrmpd.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\pythonist_ru_sxyznk.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\github_com_rgcvtt.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/www_learnbyexample_org_oszqog.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/github_com_pklmuo.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/habr_com_nkrmpd.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/github_com_rgcvtt.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/pythonist_ru_sxyznk.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\cheat_sh_kuqons.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/cheat_sh_kuqons.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_google_com_wytgwp.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\realpython_com_xwqcey.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\schegel_net_ghskyl.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\groosha_gitbook_io_fqvvyf.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/www_google_com_wytgwp.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\github_com_rtjmon.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/schegel_net_ghskyl.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/realpython_com_xwqcey.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/groosha_gitbook_io_fqvvyf.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:32] "[37mGET /load-screen/github_com_rtjmon.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\habr_com_jqhidu.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:33] "[37mGET /load-screen/habr_com_jqhidu.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\tutorial_djangogirls_org_qcaxbj.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_sqlstyle_guide_iiunvx.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\habr_com_obhork.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:33] "[37mGET /load-screen/tutorial_djangogirls_org_qcaxbj.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:33] "[37mGET /load-screen/www_sqlstyle_guide_iiunvx.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:33] "[37mGET /load-screen/habr_com_obhork.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\wombat_org_ua_lojwuo.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:33] "[36mGET /load-screen/0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:33] "[37mGET /load-screen/wombat_org_ua_lojwuo.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\pythonru_com_gymncv.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:33] "[37mGET /load-screen/pythonru_com_gymncv.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\coderlessons_com_kenmzm.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\t_me_neldrp.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\wombat_org_ua_ogvkhb.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_ozon_ru_guqtxy.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\git-scm_com_jxyxlg.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:33] "[37mGET /load-screen/coderlessons_com_kenmzm.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:33] "[37mGET /load-screen/t_me_neldrp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:33] "[37mGET /load-screen/wombat_org_ua_ogvkhb.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:33] "[37mGET /load-screen/www_ozon_ru_guqtxy.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:33] "[37mGET /load-screen/git-scm_com_jxyxlg.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_youtube_com_kcpyba.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:33] "[37mGET /load-screen/www_youtube_com_kcpyba.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_youtube_com_dzdfdr.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\m_habr_com_anqcth.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_jetbrains_com_jcqqnp.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_codecademy_com_ypkykw.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_vhfztv.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/m_habr_com_anqcth.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/www_youtube_com_dzdfdr.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/www_jetbrains_com_jcqqnp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/www_codecademy_com_ypkykw.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/stepik_org_vhfztv.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_sgynmw.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/stepik_org_sgynmw.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_dxhapi.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_scegjy.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/stepik_org_dxhapi.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/stepik_org_scegjy.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_uvydgm.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_zbhuri.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/stepik_org_uvydgm.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/stepik_org_zbhuri.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\habr_com_tnjnce.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/habr_com_tnjnce.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\learndb_ru_ctnpof.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/learndb_ru_ctnpof.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_wlyszi.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\learn_javascript_ru_gufaog.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/stepik_org_wlyszi.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/learn_javascript_ru_gufaog.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_rjkhvq.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/stepik_org_rjkhvq.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\stepik_org_wybsnn.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_w3schools_com_asmjna.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/stepik_org_wybsnn.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/www_w3schools_com_asmjna.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\checkio_org_xcmijg.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/checkio_org_xcmijg.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_codewars_com_hsgfuw.png, exists: True
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\www_codingame_com_rmbvlp.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/www_codingame_com_rmbvlp.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:34] "[37mGET /load-screen/www_codewars_com_hsgfuw.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\empireofcode_com_tsjbzb.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:35] "[37mGET /load-screen/empireofcode_com_tsjbzb.png HTTP/1.1[0m" 200 -
+INFO:root:Изображение: D:\Codingrep\lib_praktikum\app\static\img\screenshot\learngitbranching_js_org_iujaec.png, exists: True
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:35] "[37mGET /load-screen/learngitbranching_js_org_iujaec.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:50:35] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\app\\views.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:18] "[37mGET /index?cy=&ts=курсы HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /load-screen/www_jetbrains_com_jcqqnp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /load-screen/stepik_org_rjkhvq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /load-screen/stepik_org_uvydgm.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /load-screen/stepik_org_wybsnn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /load-screen/stepik_org_wlyszi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /load-screen/www_w3schools_com_asmjna.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /load-screen/learndb_ru_ctnpof.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /load-screen/www_codecademy_com_ypkykw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /load-screen/stepik_org_zbhuri.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /load-screen/habr_com_tnjnce.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /load-screen/learn_javascript_ru_gufaog.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:19] "[36mGET /load-screen/stepik_org_vhfztv.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:20] "[36mGET /load-screen/stepik_org_sgynmw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:20] "[36mGET /load-screen/stepik_org_dxhapi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:20] "[36mGET /load-screen/stepik_org_scegjy.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:23] "[37mGET /user/barmichev HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:23] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:23] "[36mGET /load-screen/t_me_neldrp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:24] "[36mGET /load-screen/realpython_com_xwqcey.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:24] "[36mGET /load-screen/github_com_rtjmon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:24] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:24] "[36mGET /load-screen/m_habr_com_anqcth.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:24] "[36mGET /load-screen/schegel_net_ghskyl.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:24] "[36mGET /load-screen/pyneng_readthedocs_io_nysvdg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:29] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:29] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:29] "[36mGET /load-screen/habr_com_vbxxji.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:29] "[36mGET /load-screen/pyneng_readthedocs_io_nysvdg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:29] "[36mGET /load-screen/github_com_pklmuo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:29] "[36mGET /load-screen/developer_mozilla_org_ehnhqv.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:29] "[36mGET /load-screen/netology-university_bitbucket_io_jvhriq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:29] "[36mGET /load-screen/www_learnbyexample_org_oszqog.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:29] "[36mGET /load-screen/proglib_io_kkqbve.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/flask-russian-docs_readthedocs_io_asccxt.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/github_com_rgcvtt.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/pythonru_com_jsojcl.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/habr_com_nkrmpd.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/pythonist_ru_sxyznk.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/cheat_sh_kuqons.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/realpython_com_xwqcey.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/schegel_net_ghskyl.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/www_google_com_wytgwp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/groosha_gitbook_io_fqvvyf.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/github_com_rtjmon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/habr_com_jqhidu.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/tutorial_djangogirls_org_qcaxbj.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/habr_com_obhork.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/www_sqlstyle_guide_iiunvx.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:30] "[36mGET /load-screen/wombat_org_ua_lojwuo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/pythonru_com_gymncv.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/coderlessons_com_kenmzm.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/t_me_neldrp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/wombat_org_ua_ogvkhb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/www_ozon_ru_guqtxy.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/git-scm_com_jxyxlg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/www_youtube_com_kcpyba.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/www_youtube_com_dzdfdr.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/www_codecademy_com_ypkykw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/m_habr_com_anqcth.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/www_jetbrains_com_jcqqnp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/stepik_org_vhfztv.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/stepik_org_sgynmw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/stepik_org_dxhapi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/stepik_org_uvydgm.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/stepik_org_scegjy.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/stepik_org_zbhuri.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:31] "[36mGET /load-screen/habr_com_tnjnce.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:32] "[36mGET /load-screen/learndb_ru_ctnpof.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:32] "[36mGET /load-screen/stepik_org_wlyszi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:32] "[36mGET /load-screen/stepik_org_rjkhvq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:32] "[36mGET /load-screen/learn_javascript_ru_gufaog.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:32] "[36mGET /load-screen/stepik_org_wybsnn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:32] "[36mGET /load-screen/www_w3schools_com_asmjna.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:32] "[36mGET /load-screen/checkio_org_xcmijg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:32] "[36mGET /load-screen/www_codewars_com_hsgfuw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:32] "[36mGET /load-screen/www_codingame_com_rmbvlp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:32] "[36mGET /load-screen/learngitbranching_js_org_iujaec.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:51:32] "[36mGET /load-screen/empireofcode_com_tsjbzb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:43] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:43] "[36mGET /static/design.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:43] "[36mGET /load-screen/habr_com_vbxxji.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/developer_mozilla_org_ehnhqv.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/github_com_pklmuo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/netology-university_bitbucket_io_jvhriq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/pyneng_readthedocs_io_nysvdg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/www_learnbyexample_org_oszqog.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/proglib_io_kkqbve.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/flask-russian-docs_readthedocs_io_asccxt.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/pythonru_com_jsojcl.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /static/js/form_validations.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/habr_com_nkrmpd.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/github_com_rgcvtt.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/pythonist_ru_sxyznk.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/www_google_com_wytgwp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/cheat_sh_kuqons.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/schegel_net_ghskyl.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/realpython_com_xwqcey.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/github_com_rtjmon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:44] "[36mGET /load-screen/groosha_gitbook_io_fqvvyf.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/habr_com_jqhidu.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/tutorial_djangogirls_org_qcaxbj.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/www_sqlstyle_guide_iiunvx.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/habr_com_obhork.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[37mGET /load-screen/0 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/wombat_org_ua_lojwuo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/pythonru_com_gymncv.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/t_me_neldrp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/coderlessons_com_kenmzm.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/wombat_org_ua_ogvkhb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/www_ozon_ru_guqtxy.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/git-scm_com_jxyxlg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/m_habr_com_anqcth.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/www_youtube_com_dzdfdr.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/www_jetbrains_com_jcqqnp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/www_youtube_com_kcpyba.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/www_codecademy_com_ypkykw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:45] "[36mGET /load-screen/stepik_org_vhfztv.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/stepik_org_uvydgm.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/stepik_org_sgynmw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/stepik_org_dxhapi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/stepik_org_scegjy.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/stepik_org_zbhuri.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/habr_com_tnjnce.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/learndb_ru_ctnpof.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/stepik_org_rjkhvq.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/learn_javascript_ru_gufaog.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/stepik_org_wlyszi.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/stepik_org_wybsnn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/www_w3schools_com_asmjna.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/www_codewars_com_hsgfuw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/checkio_org_xcmijg.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/empireofcode_com_tsjbzb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/www_codingame_com_rmbvlp.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jul/2020 14:53:46] "[36mGET /load-screen/learngitbranching_js_org_iujaec.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\Codingrep\\lib_praktikum\\config.py', reloading
+INFO:werkzeug: * Restarting with stat

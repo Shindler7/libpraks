@@ -143,9 +143,6 @@ class CategoryManager:
         Удаляет выбранный элемент по ID.
         """
 
-        # Category.query.filter(Category.id == id_num).delete()
-        # db_lib.session.commit()
-
         content = Content.query.get(id_num)
         content.user_id = []
         db_lib.session.commit()
