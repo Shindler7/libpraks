@@ -1,0 +1,19 @@
+{# Страница генератора паролей #}
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="card text-white bg-info mb-3 text-center">
+        <div class="card-header">
+            {{ title }}
+        </div>
+        <div class="card-body">
+            <h3 class="card-title">{{ password }}</h3><br>
+            <a href="{{ url_for('mdpass') }}" class="btn btn-primary">Обновить</a>
+        </div>
+        <div class="card-footer">
+            Мы не собираем и не храним сформированные пароли.
+        </div>
+    </div>
+
+{% endblock %}

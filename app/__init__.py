@@ -41,6 +41,7 @@ images = Images(application)
 
 
 from app import views  # noqa
+from app import viewsfuture  # noqa
 from app import admin  # noqa
 
 
