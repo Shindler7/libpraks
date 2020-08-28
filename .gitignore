@@ -4,6 +4,7 @@
 /venv*
 venv_note/
 app/__pycache__/*
+app/logs/
 passenger_wsgi.py
 libprak.fsgi
 lib_prak.code-workspace
