@@ -9,6 +9,7 @@ from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy as SQLA
 from flask_sslify import SSLify
 from flask_wtf.csrf import CSRFProtect
+from flask_cors import CORS
 
 from config import Config
 
@@ -24,6 +25,9 @@ application.config.from_object(Config)
 
 # Подключение (обслуживание) SSL
 sslify = SSLify(application)
+
+# CORS
+CORS(application)
 
 # SQLAlchemy + Migrate
 db_lib = SQLA(application)

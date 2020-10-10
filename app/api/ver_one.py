@@ -8,8 +8,11 @@ from app import application
 from app.models import Types
 from app.views import load_screen
 
+from flask_cors import cross_origin
+
 
 @application.route('/v1/data', methods=['GET'])
+@cross_origin()
 def api_index():
     """
     Возвращает JSON с данными, структурированными по типам.
