@@ -34,6 +34,9 @@ class Config(object):
     RECAPTCHA_PARAMETERS = {'hl': 'ru'}
     RECAPTCHA_DATA_ATTRS = {'theme': 'dark', 'size': 'normal'}
 
+    # JSONIFY
+    JSONIFY_PRETTYPRINT_REGULAR = True
+
     # Конфигурация screenshoter
     SCREEN_SERVER = 'http://djap.fun/'
     SCREEN_SERVER_SECRET_KEY = os.getenv('SCREEN_SERVER_SECRET_KEY')

@@ -191,14 +191,14 @@ class TypesManager:
             query = query.order_by(Types.name)
         return query.all()
 
-    def get_by(self, category: str, *,
-               dictionary: bool = False,
+    def get_by(self, category: str = None,
+               *, dictionary: bool = False,
                sort: bool = True):
         """
         Формирует выборку типов, связанных с переданной категорией.
         """
 
-        if not category:
+        if not category or category is None:
             query = self.get_all(sort=sort)
             if dictionary:
                 return {type_.id: type_.name for type_ in query}

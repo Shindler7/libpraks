@@ -212,11 +212,11 @@ def save_screenshot():
 
 
 @application.route('/load-screen/<filename>')
-def load_screen(filename=''):
+def load_screen(filename='', *, only_url: bool = False):
     """
     Обеспечивает извлечение изображений, при отсутствии возвращает заглушку.
     """
-    if filename != '0':
+    if filename is not None and filename != '0':
         url_to_img = os.path.join(
             'static',
             application.config['SCREEN_URL_ROOT'],
@@ -231,6 +231,9 @@ def load_screen(filename=''):
         )
 
         if os.path.exists(check_img):
+            if only_url:
+                return os.path.join(url_to_img, filename)
+
             return send_from_directory(url_to_img, filename=filename)
 
     filename = choice(('default_dog.jpg', 'default-cat-2.jpg',
@@ -241,6 +244,8 @@ def load_screen(filename=''):
         application.config['SCREEN_URL_ROOT'],
         application.config['IMAGE_OUTPUT']
     )
+    if only_url:
+        return os.path.join(url_to_img, filename)
 
     return send_from_directory(url_to_img, filename=filename)
 

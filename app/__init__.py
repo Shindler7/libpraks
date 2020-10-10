@@ -39,9 +39,9 @@ csrf = CSRFProtect(application)
 # Flask image
 images = Images(application)
 
-
 from app import views  # noqa
 from app import admin  # noqa
+from .api import ver_one  # noqa
 
 
 if __name__ == "__main__":
