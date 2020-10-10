@@ -40,6 +40,7 @@ csrf = CSRFProtect(application)
 images = Images(application)
 
 from app import views  # noqa
+from app import viewsfuture  # noqa
 from app import admin  # noqa
 from .api import ver_one  # noqa
 
