@@ -35,7 +35,7 @@ mccabe==0.6.1
 mysql-connector-python==8.0.19
 pbr==5.4.5
 PIL==1.1.7
-Pillow==7.2.0
+Pillow==8.1.1
 pillowcase==2.0.0
 protobuf==3.6.1
 pycodestyle==2.6.0
